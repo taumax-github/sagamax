@@ -99,7 +99,7 @@ header.pc {
 }
 /*マウスオン時のheaderブロック*/
 header.pc:hover {
-	width: 20%;	/*幅*/
+	width: 18%;	/*幅*/
 	overflow: auto;	/*ウィンドウの高さよりコンテンツが増えた場合に切れないように自動でスクロールバーを出す設定*/
 	background-color: #000;	/*背景色（古いブラウザ用）*/
 	background-color: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
