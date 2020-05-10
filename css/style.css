@@ -50,8 +50,8 @@ a:hover {
 }
 /*defaultbodyの背景画像指定*/
 .defaultbody #container {
-	background: url(../images/1.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
-	background: url(../images/1.jpg) no-repeat center center / cover;	/*背景画像*/
+	background: url(../images/home_normal.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
+	background: url(../images/home_normal.jpg) no-repeat center center / cover;	/*背景画像*/
 }
 /*works.htmlの背景画像指定*/
 .works #container {
@@ -91,15 +91,17 @@ header.pc {
 	left: 0px;
 	top:0px;
 	z-index: 100;
-	width: 100px;		/*幅*/
+	width: 120px;		/*幅*/
 	height: 100%;		/*高さ*/
 	border-right: 1px solid #fff;	/*右側の線の幅、線種、色（古いブラウザ用）*/
 	border-right: 1px solid rgba(255,255,255,0.3);	/*右側の線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
 	transition: 1s;	/*hove時に１秒かけて動く*/
+	background-color: #000;	/*背景色（古いブラウザ用）*/
+	background-color: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
 }
 /*マウスオン時のheaderブロック*/
 header.pc:hover {
-	width: 10%;	/*幅*/
+	width: 180px;	/*幅*/
 	overflow: auto;	/*ウィンドウの高さよりコンテンツが増えた場合に切れないように自動でスクロールバーを出す設定*/
 	background-color: #000;	/*背景色（古いブラウザ用）*/
 	background-color: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
@@ -201,7 +203,7 @@ header .icon li {
 }
 /*アイコン画像の設定*/
 header .icon img {
-	width: 20%;		/*画像の幅*/
+	width: 40%;		/*画像の幅*/
 }
 
 /*mainブロック
