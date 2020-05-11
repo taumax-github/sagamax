@@ -29,6 +29,25 @@ img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
 table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
 iframe {width: 100%;}
 
+/* スクロールバーの幅の設定 */
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+/* スクロールバーの背景の設定 */
+::-webkit-scrollbar-track{
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px #aaa; 
+}
+
+/* スクロールバーのつまみ部分の設定 */
+::-webkit-scrollbar-thumb{
+  background: #1959A8;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
@@ -50,8 +69,8 @@ a:hover {
 }
 /*defaultbodyの背景画像指定*/
 .defaultbody #container {
-	background: url(../images/home_normal.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
-	background: url(../images/home_normal.jpg) no-repeat center center / cover;	/*背景画像*/
+	background: url(../images/background.png) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
+	background: url(../images/background.png) no-repeat center center / cover;	/*背景画像*/
 }
 /*works.htmlの背景画像指定*/
 .works #container {
@@ -120,6 +139,12 @@ header.pc .logo img {
 header.pc p {
 	padding: 10px;	/*余白*/
 }
+
+/* スクロールバーの幅の設定 */
+header.pc::-webkit-scrollbar{
+  width: 6px;
+}
+
 
 /*メインメニュー
 ---------------------------------------------------------------------------*/
@@ -548,7 +573,7 @@ header.sh .logo {
 	position: fixed;
 	z-index: 3;
 	top: 0px;
-	width: 100%;
+	width: 70%;
 	height: 100%;
 	overflow: auto;
 	background: rgba(0,0,0,0.8);	/*背景色*/
@@ -773,5 +798,4 @@ ol {
 /*その他
 ---------------------------------------------------------------------------*/
 .ws,.wl {width: 94%;}
-
 }
