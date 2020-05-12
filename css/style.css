@@ -110,7 +110,7 @@ header.pc {
 	left: 0px;
 	top:0px;
 	z-index: 100;
-	width: 120px;		/*幅*/
+	width: 130px;		/*幅*/
 	height: 100%;		/*高さ*/
 	border-right: 1px solid #fff;	/*右側の線の幅、線種、色（古いブラウザ用）*/
 	border-right: 1px solid rgba(255,255,255,0.3);	/*右側の線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
