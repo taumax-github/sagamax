@@ -295,6 +295,13 @@ header .icon img {
 	font-size: 24px;		/*文字サイズ*/
 	color: #c1bc9e;			/*文字色*/
 }
+/*h4タグ*/
+#main h4 {
+	clear: both;
+	margin-bottom: 15px;	/*見出しの下に空けるスペース*/
+	font-size: 20px;		/*文字サイズ*/
+	color: #c1bc9e;			/*文字色*/
+}
 /*段落(p)タグ*/
 #main p {
 	padding: 0 20px 20px;	/*上、左右、下への余白*/
