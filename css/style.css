@@ -130,10 +130,10 @@ header.pc .logo {
 	text-align: center;	/*内容をセンタリング*/
 	border-bottom: 1px solid #fff;	/*下線の幅、線種、色（古いブラウザ用）*/
 	border-bottom: 1px solid rgba(255,255,255,0.3);	/*下線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
-	height: 100px;	/*高さ*/
+	height: 90px;	/*高さ*/
 }
 header.pc .logo img {
-	width: 100px;	/*画像の幅。マウスオン時に同じ大きさを保つ為。*/
+	width: 55px;	/*画像の幅。マウスオン時に同じ大きさを保つ為。*/
 }
 /*header内のp(段落)タグ*/
 header.pc p {
@@ -228,6 +228,21 @@ header .icon li {
 }
 /*アイコン画像の設定*/
 header .icon img {
+	width: 20%;		/*画像の幅*/
+}
+
+header .icon_middle {
+	text-align: center;	/*内容をセンタリング*/
+	border-bottom: 1px solid #fff;	/*下線の幅、線種、色（古いブラウザ用）*/
+	border-bottom: 1px solid rgba(255,255,255,0.3);	/*下線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
+	padding: 10px 0;	/*上下、左右への余白*/
+}
+/*アイコン１個あたりの設定*/
+header .icon_middle li {
+	display: inline;	/*横並びにさせる指定*/
+}
+/*アイコン画像の設定*/
+header .icon_middle img {
 	width: 40%;		/*画像の幅*/
 }
 
