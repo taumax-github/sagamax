@@ -30,10 +30,6 @@ h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {
   font-weight: normal;
 }
 
-ul {
-  list-style-type: none;
-}
-
 img {
   border: none;
   max-width: 100%;
@@ -182,7 +178,8 @@ header.pc::-webkit-scrollbar{
 	position: relative;
 }
 #menubar li a {
-	display:  block;text-decoration: none;
+	display:  block;
+	text-decoration: none;
 	border-bottom: 1px solid #fff;	/*下線の幅、線種、色（古いブラウザ用）*/
 	border-bottom: 1px solid rgba(255,255,255,0.3);	/*下線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
 	width: auto;	/*幅*/
@@ -567,7 +564,11 @@ p.check a {color: #fff;}
 }
 /*設定*/
 .nav-fix-pos-pagetop a {
-	display: block;text-decoration: none;text-align: center;z-index: 100;position: fixed;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	z-index: 100;
+	position: fixed;
 	width: 40px;		/*ボタンの幅*/
 	line-height: 40px;	/*ボタンの高さ*/
 	bottom: 20px;		/*ウィンドウの下から20pxの場所に配置*/
@@ -593,16 +594,6 @@ p.check a {color: #fff;}
 	border-radius: 2px;
 	margin: 0px 5px;
 	vertical-align: text-top;
-}
-
-/*ul.disc,olタグ
----------------------------------------------------------------------------*/
-ul.disc {
-	list-style: disc;
-	padding: 0 20px 20px 45px;
-}
-ol {
-	padding: 0 20px 20px 45px;
 }
 
 /*box
@@ -679,7 +670,9 @@ header.sh .logo {
 }
 /*メニュー１個あたりの設定*/
 #menubar-s nav li a {
-	display: block;text-decoration: none;width: 100%;
+	display: block;
+	text-decoration: none;
+	width: 100%;
 	border-bottom: 1px solid #fff;	/*下の線の幅、線種、色*/
 	font-size: 16px;	/*文字サイズ*/
 	height: 100px;		/*高さ*/
