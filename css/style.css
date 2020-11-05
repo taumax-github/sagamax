@@ -23,19 +23,37 @@ body {
 	background: #fff;	/*背景色*/
 	-webkit-text-size-adjust: none;
 }
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+  font-weight: normal;
+}
 
 ul {
   list-style-type: none;
 }
 
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
-table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
-iframe {width: 100%;}
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse:collapse;
+  font-size: 100%;
+  border-spacing: 0;
+}
+
+iframe {
+  width: 100%;
+}
 
 /* スクロールバーの幅の設定 */
 ::-webkit-scrollbar{
-  width: 10px;
+  width: 12px;
 }
 
 /* スクロールバーの背景の設定 */
@@ -463,6 +481,45 @@ footer a {text-decoration: none;}
 	width: 140px;		/*幅*/
 	text-align: center;	/*センタリング*/
 }
+
+/* スクロール対象のテーブル */
+#sclTbl {
+  border-collapse:separate; /* 枠線の表示の仕方 */
+  font-size: 16px;/* 文字のサイズ */
+}
+
+/* 全体の枠。ここにヘッダを格納 */
+#out_Div {
+  position: relative; /* 相対位置 */
+  padding-top: 26px;  /*  #in_Div の開始位置 */
+  width: 705px; /* 列幅の合計＋セル間の幅(2px)の合計＋20px 程度 */
+}
+
+#in_Div {/* tbodyが入っている。ここがスクロール対象*/
+  overflow: auto; /* スクロールバー*/
+  height: 700px;      /* ポイント */
+}
+
+#sclTbl thead tr {/* ヘッダ 見出し行,位置を #out_Div の左上端に移動 */
+  position: absolute; /* 絶対位置 */
+  top: 0px; /* 上からの位置 */
+  left: 0px; /* 左からの位置 */
+  width: 690px; /* 列幅の合計＋セル間の幅(2px)の合計＋20px 程度 */
+}
+
+#sclTbl thead tr th{/* thead 'th'のスタイル */
+  color: #fff; /* 文字色 */
+  padding: 3px 0px;
+  background-color: #0099cc;  /* 背景色 */
+  background-color: rgba(00,99,cc,0.1);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
+}
+
+#sclTbl tbody tr td{/* tbody 'td'のスタイル */
+  padding: 3px 6px;
+  background-color: #000;	/*背景色（古いブラウザ用）*/
+  background-color: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
+}
+
 
 /*フォーム関連
 ---------------------------------------------------------------------------*/
