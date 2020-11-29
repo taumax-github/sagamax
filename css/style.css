@@ -124,6 +124,7 @@ a:hover {
   list-style-type: none;
   background: url(../images/right.png) no-repeat left center;
   padding-left: 40px;
+  background-position:0px 4px;
 }
 
 /*header（大きな端末用：左ブロック）
