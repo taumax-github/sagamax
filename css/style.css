@@ -158,7 +158,7 @@ header.pc .logo {
 	height: 90px;	/*高さ*/
 }
 header.pc .logo img {
-	width: 55px;	/*画像の幅。マウスオン時に同じ大きさを保つ為。*/
+	width: 90px;	/*画像の幅。マウスオン時に同じ大きさを保つ為。*/
 }
 /*header内のp(段落)タグ*/
 header.pc p {
