@@ -127,6 +127,12 @@ a:hover {
   background-position:0px 4px;
 }
 
+#contents li.none {
+  list-style-type: none;
+  background: none;
+  padding-left: 0px;
+}
+
 /*header（大きな端末用：左ブロック）
 ---------------------------------------------------------------------------*/
 /*headerブロック*/
