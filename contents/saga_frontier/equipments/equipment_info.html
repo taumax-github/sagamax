@@ -61,7 +61,7 @@
  //===============================================================
  //  テーブルソートの共通変数　設定要！
  //===============================================================
-var gTabldID = 'sortableTable';  // テーブルのエリアのIDを設定
+var gTabldIDList = ['sortableTable1', 'sortableTable2', 'sortableTable3', 'sortableTable4', 'sortableTable5', 'sortableTable6'];  // テーブルのエリアのIDを設定
 var gSortNum = 1;              // 1 : 数値に見える列は数値でソート
 var gSortAa  = 1;              // 1 : 英大文字と小文字を区別しない
  
@@ -78,43 +78,46 @@ function tSortInit(){
  //===============================================================
  //  テーブルの初期設定
  //===============================================================
- 
-  var wTABLE  = document.getElementById(gTabldID);
-  var wTR     = wTABLE.rows;
-  var wAddBtn = '';
- 
-  // --- テーブル内を検索してソートボタンを付ける ----------------
-  for(var i=0; i < wTR.length; i++){
- 
-    var wTD     = wTABLE.rows[i].cells;
-    for(var j=0; j < wTD.length; j++){
- 
-      if(wTD[j].getAttribute('cmanSortBtn') !== null){
- 
-        wAddBtn  = '<div class="tsImgArea">';
-        wAddBtn += '<svg class="tsImg" id="ts_A_'+j+'" onclick="tSort(this)"><path d="M4 0 L0 6 L8 6 Z"></path></svg>';
-        wAddBtn += '<svg class="tsImg" id="ts_D_'+j+'" onclick="tSort(this)"><path d="M0 0 L8 0 L4 7 Z"></path></svg>';
-        wAddBtn += '</div>';
- 
-        wTD[j].innerHTML = wTD[j].innerHTML+wAddBtn;
+
+  gTabldIDList.forEach(function(element){
+
+    var wTABLE  = document.getElementById(element);
+    var wTR     = wTABLE.rows;
+    var wAddBtn = '';
+   
+    // --- テーブル内を検索してソートボタンを付ける ----------------
+    for(var i=0; i < wTR.length; i++){
+   
+      var wTD     = wTABLE.rows[i].cells;
+      for(var j=0; j < wTD.length; j++){
+   
+        if(wTD[j].getAttribute('cmanSortBtn') !== null){
+          wAddBtn  = '<div class="tsImgArea">';
+          wAddBtn += '<svg class="tsImg" id="ts_A_'+j+","+element+'" onclick="tSort(this)"><path d="M4 0 L0 6 L8 6 Z"></path></svg>';
+          wAddBtn += '<svg class="tsImg" id="ts_D_'+j+","+element+'" onclick="tSort(this)"><path d="M0 0 L8 0 L4 7 Z"></path></svg>';
+          wAddBtn += '</div>';
+   
+          wTD[j].innerHTML = wTD[j].innerHTML+wAddBtn;
+        }
+      }
+   
+      // --- ボタンを付けたら以降の行は無視する --------------------
+      if(wAddBtn != ''){
+        gSortBtnRow = i;
+        break;
       }
     }
- 
-    // --- ボタンを付けたら以降の行は無視する --------------------
-    if(wAddBtn != ''){
-      gSortBtnRow = i;
-      break;
-    }
-  }
+  });
 }
 
 function tSort(argObj){
  //===============================================================
  //  ソート実行
  //===============================================================
- 
-   // 「ts_A_1」形式 [1]:A-昇順,D-降順  [2]:列番号
-  var wSortKey  = argObj.id.split('_');
+  var wSortKeyId  = argObj.id.split(',')[0];
+  var gTabldID  = argObj.id.split(',')[1];
+  // 「ts_A_1」形式 [1]:A-昇順,D-降順  [2]:列番号
+  var wSortKey  = wSortKeyId.split('_');
  
   var wTABLE    = document.getElementById(gTabldID);
   var wTR       = wTABLE.rows;
@@ -192,7 +195,6 @@ function tSort(argObj){
   // ------------------------------------------------------
   var elmImg = document.getElementsByClassName('tsImg');
   for (var i=0; i < elmImg.length; i++) {
- 
     if(elmImg[i].id == argObj.id){
       elmImg[i].style.backgroundColor = '#ffff00';
     }else{
@@ -335,7 +337,7 @@ function sortStrD(a, b){
       <span id="body"></span>
       <h3 class="title"><img src="img/body.png">体防具</h3>
 
-      <TABLE border="2" id="sortableTable">
+      <TABLE border="2" id="sortableTable1" class="sortableTable">
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
@@ -346,8 +348,10 @@ function sortStrD(a, b){
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL3"></colgroup>
-        <tbody>
+        <thead>
           <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
+        <tbody>
           <TR><TD>修士の法衣</TD><TD>10</TD><TD>10</TD><TD>10</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>30</TD><TD>・霊感+5</TD></TR>
           <TR><TD>ボーンブレスト</TD><TD>13</TD><TD>13</TD><TD>1</TD><TD>-7</TD><TD>13</TD><TD>13</TD><TD>5</TD><TD>5</TD><TD>・</TD></TR>
           <TR><TD>毛皮</TD><TD>6</TD><TD>12</TD><TD>12</TD><TD>2</TD><TD>12</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・</TD></TR>
@@ -366,85 +370,125 @@ function sortStrD(a, b){
       <br><br>
       <span id="cloth"></span>
       <h3 class="title"><img src="img/cloth.png">服</h3>
-      <TABLE border="2" id="horizontalTbl">
+      <TABLE border="2" id="sortableTable2" class="sortableTable">
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
-        <colgroup class="coL3"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL3"></colgroup>
+        <thead>
+          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
         <tbody>
-          <TR><TD ROWSPAN="5">コットンシャツ</TD><TH>斬</TH><TD>3</TD><TH>冷</TH><TD>3</TD></TR><TR><TH>打</TH><TD>7</TD><TH>雷</TH><TD>3</TD></TR><TR><TH>突</TH><TD>3</TD><TH>気</TH><TD>3</TD></TR><TR><TH>熱</TH><TD>3</TD><TH>状</TH><TD>3</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
-          <TR><TD ROWSPAN="5">シルティーク</TD><TH>斬</TH><TD>3</TD><TH>冷</TH><TD>11</TD></TR><TR><TH>打</TH><TD>3</TD><TH>雷</TH><TD>3</TD></TR><TR><TH>突</TH><TD>3</TD><TH>気</TH><TD>3</TD></TR><TR><TH>熱</TH><TD>3</TD><TH>状</TH><TD>3</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
-          <TR><TD ROWSPAN="5">魔道着</TD><TH>斬</TH><TD>4</TD><TH>冷</TH><TD>14</TD></TR><TR><TH>打</TH><TD>4</TD><TH>雷</TH><TD>14</TD></TR><TR><TH>突</TH><TD>4</TD><TH>気</TH><TD>4</TD></TR><TR><TH>熱</TH><TD>14</TD><TH>状</TH><TD>4</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・集中力+5</TD></TR>
-          <TR><TD ROWSPAN="5">武道着</TD><TH>斬</TH><TD>7</TD><TH>冷</TH><TD>7</TD></TR><TR><TH>打</TH><TD>12</TD><TH>雷</TH><TD>7</TD></TR><TR><TH>突</TH><TD>7</TD><TH>気</TH><TD>7</TD></TR><TR><TH>熱</TH><TD>7</TD><TH>状</TH><TD>7</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD>コットンシャツ</TD><TD>3</TD><TD>7</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>・</TD></TR>
+          <TR><TD>シルティーク</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>11</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>・</TD></TR>
+          <TR><TD>魔道着</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>14</TD><TD>14</TD><TD>14</TD><TD>4</TD><TD>4</TD><TD>・集中力+5</TD></TR>
+          <TR><TD>武道着</TD><TD>7</TD><TD>12</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>・</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="head"></span>
       <h3 class="title"><img src="img/head.png">頭</h3>
-      <TABLE border="2" id="horizontalTbl">
+      <TABLE border="2" id="sortableTable3" class="sortableTable">
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
-        <colgroup class="coL3"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL3"></colgroup>
+        <thead>
+          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
         <tbody>
-          <TR><TD ROWSPAN="5">赤外線スコープ</TD><TH>斬</TH><TD>6</TD><TH>冷</TH><TD>2</TD></TR><TR><TH>打</TH><TD>6</TD><TH>雷</TH><TD>2</TD></TR><TR><TH>突</TH><TD>6</TD><TH>気</TH><TD>2</TD></TR><TR><TH>熱</TH><TD>2</TD><TH>状</TH><TD>2</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・属性耐性：暗闇耐性が付く<BR>・所持していると、ディスペアの赤外線センサーが視認できる</TD></TR>
-          <TR><TD ROWSPAN="5">レーザースコープ</TD><TH>斬</TH><TD>7</TD><TH>冷</TH><TD>3</TD></TR><TR><TH>打</TH><TD>7</TD><TH>雷</TH><TD>3</TD></TR><TR><TH>突</TH><TD>7</TD><TH>気</TH><TD>3</TD></TR><TR><TH>熱</TH><TD>3</TD><TH>状</TH><TD>3</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・集中力+10<BR>・属性耐性：暗闇耐性が付く</TD></TR>
+          <TR><TD>赤外線スコープ</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・属性耐性：暗闇耐性が付く<BR>・所持していると、ディスペアの赤外線センサーが視認できる</TD></TR>
+          <TR><TD>レーザースコープ</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>・集中力+10<BR>・属性耐性：暗闇耐性が付く</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="arm"></span>
       <h3 class="title"><img src="img/arm.png">腕</h3>
-      <TABLE border="2" id="horizontalTbl">
+      <TABLE border="2" id="sortableTable4" class="sortableTable">
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
-        <colgroup class="coL3"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL3"></colgroup>
+        <thead>
+          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
         <tbody>
-          <TR><TD ROWSPAN="5">レザーグラブ</TD><TH>斬</TH><TD>4</TD><TH>冷</TH><TD>2</TD></TR><TR><TH>打</TH><TD>4</TD><TH>雷</TH><TD>2</TD></TR><TR><TH>突</TH><TD>4</TD><TH>気</TH><TD>2</TD></TR><TR><TH>熱</TH><TD>4</TD><TH>状</TH><TD>2</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD>レザーグラブ</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="foot"></span>
       <h3 class="title"><img src="img/foot.png">足</h3>
-      <TABLE border="2" id="horizontalTbl">
+      <TABLE border="2" id="sortableTable5" class="sortableTable">
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
-        <colgroup class="coL3"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL3"></colgroup>
+        <thead>
+          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
         <tbody>
-          <TR><TD ROWSPAN="5">レザーブーツ</TD><TH>斬</TH><TD>3</TD><TH>冷</TH><TD>1</TD></TR><TR><TH>打</TH><TD>3</TD><TH>雷</TH><TD>1</TD></TR><TR><TH>突</TH><TD>3</TD><TH>気</TH><TD>1</TD></TR><TR><TH>熱</TH><TD>3</TD><TH>状</TH><TD>1</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
-          <TR><TD ROWSPAN="5">ラバーソウル</TD><TH>斬</TH><TD>5</TD><TH>冷</TH><TD>5</TD></TR><TR><TH>打</TH><TD>5</TD><TH>雷</TH><TD>25</TD></TR><TR><TH>突</TH><TD>5</TD><TH>気</TH><TD>2</TD></TR><TR><TH>熱</TH><TD>5</TD><TH>状</TH><TD>2</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・運動性+2<BR>・雷属性の攻撃によるダメージを軽減</TD></TR>
-          <TR><TD ROWSPAN="5">鉄下駄</TD><TH>斬</TH><TD>8</TD><TH>冷</TH><TD>8</TD></TR><TR><TH>打</TH><TD>8</TD><TH>雷</TH><TD>0</TD></TR><TR><TH>突</TH><TD>8</TD><TH>気</TH><TD>8</TD></TR><TR><TH>熱</TH><TD>8</TD><TH>状</TH><TD>8</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・丈夫さ+10</TD></TR>
+          <TR><TD>レザーブーツ</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>・</TD></TR>
+          <TR><TD>ラバーソウル</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>25</TD><TD>2</TD><TD>2</TD><TD>・運動性+2<BR>・雷属性の攻撃によるダメージを軽減</TD></TR>
+          <TR><TD>鉄下駄</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>0</TD><TD>8</TD><TD>8</TD><TD>・丈夫さ+10</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="accessory"></span>
       <h3 class="title"><img src="img/accessory.png">装飾品</h3>
-      <TABLE border="2" id="horizontalTbl">
+      <TABLE border="2" id="sortableTable6" class="sortableTable">
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
-        <colgroup class="coL3"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL3"></colgroup>
+        <thead>
+          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
         <tbody>
-          <TR><TD ROWSPAN="5">牙のお守り</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>6</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>6</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>1</TD></TR><TR><TH>熱</TH><TD>6</TD><TH>状</TH><TD>6</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・筋力+5</TD></TR>
-          <TR><TD ROWSPAN="5">翼のお守り</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>6</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>6</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>1</TD></TR><TR><TH>熱</TH><TD>6</TD><TH>状</TH><TD>6</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・運動性+5</TD></TR>
-          <TR><TD ROWSPAN="5">花のお守り</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>6</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>6</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>1</TD></TR><TR><TH>熱</TH><TD>6</TD><TH>状</TH><TD>6</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・霊感+5<BR>・魅力+5</TD></TR>
-          <TR><TD ROWSPAN="5">鋼のお守り</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>1</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>1</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>1</TD></TR><TR><TH>熱</TH><TD>1</TD><TH>状</TH><TD>6</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・丈夫さ+5</TD></TR>
-          <TR><TD ROWSPAN="5">銀氷石</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>25</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>1</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>1</TD></TR><TR><TH>熱</TH><TD>1</TD><TH>状</TH><TD>1</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・冷属性の攻撃によるダメージを軽減。<BR>・使用すると消滅する。「フリーズバリア」をまとえる。</TD></TR>
-          <TR><TD ROWSPAN="5">雷の結晶</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>1</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>25</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>1</TD></TR><TR><TH>熱</TH><TD>1</TD><TH>状</TH><TD>1</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・雷属性の攻撃によるダメージを軽減。<BR>・使用すると消滅する。「サンダーバリア」をまとえる。</TD></TR>
-          <TR><TD ROWSPAN="5">ブラッドチャリス</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>1</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>1</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>-15</TD></TR><TR><TH>熱</TH><TD>-15</TD><TH>状</TH><TD>-15</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・霊感+5<BR>・属性耐性：気絶耐性が付く</TD></TR>
-          <TR><TD ROWSPAN="5">パープルアイ</TD><TH>斬</TH><TD>4</TD><TH>冷</TH><TD>4</TD></TR><TR><TH>打</TH><TD>4</TD><TH>雷</TH><TD>4</TD></TR><TR><TH>突</TH><TD>4</TD><TH>気</TH><TD>4</TD></TR><TR><TH>熱</TH><TD>4</TD><TH>状</TH><TD>14</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・霊感+7<BR>・属性耐性：凝視耐性が付く。<BR>・固有能力：幻夢の一撃。</TD></TR>
-          <TR><TD ROWSPAN="5">パールハート</TD><TH>斬</TH><TD>2</TD><TH>冷</TH><TD>7</TD></TR><TR><TH>打</TH><TD>2</TD><TH>雷</TH><TD>-3</TD></TR><TR><TH>突</TH><TD>2</TD><TH>気</TH><TD>2</TD></TR><TR><TH>熱</TH><TD>2</TD><TH>状</TH><TD>2</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・属性耐性：水攻撃耐性が付く。</TD></TR>
-          <TR><TD ROWSPAN="5">鎮魂の勾玉</TD><TH>斬</TH><TD>1</TD><TH>冷</TH><TD>11</TD></TR><TR><TH>打</TH><TD>1</TD><TH>雷</TH><TD>11</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>11</TD></TR><TR><TH>熱</TH><TD>11</TD><TH>状</TH><TD>11</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・固有能力：聖歌</TD></TR>
+          <TR><TD>牙のお守り</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>1</TD><TD>6</TD><TD>・筋力+5</TD></TR>
+          <TR><TD>翼のお守り</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>1</TD><TD>6</TD><TD>・運動性+5</TD></TR>
+          <TR><TD>花のお守り</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>1</TD><TD>6</TD><TD>・霊感+5<BR>・魅力+5</TD></TR>
+          <TR><TD>鋼のお守り</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>6</TD><TD>・丈夫さ+5</TD></TR>
+          <TR><TD>銀氷石</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>25</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>・冷属性の攻撃によるダメージを軽減。<BR>・使用すると消滅する。「フリーズバリア」をまとえる。</TD></TR>
+          <TR><TD>雷の結晶</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>25</TD><TD>1</TD><TD>1</TD><TD>・雷属性の攻撃によるダメージを軽減。<BR>・使用すると消滅する。「サンダーバリア」をまとえる。</TD></TR>
+          <TR><TD>ブラッドチャリス</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>-15</TD><TD>1</TD><TD>1</TD><TD>-15</TD><TD>-15</TD><TD>・霊感+5<BR>・属性耐性：気絶耐性が付く</TD></TR>
+          <TR><TD>パープルアイ</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>14</TD><TD>・霊感+7<BR>・属性耐性：凝視耐性が付く。<BR>・固有能力：幻夢の一撃。</TD></TR>
+          <TR><TD>パールハート</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>7</TD><TD>-3</TD><TD>2</TD><TD>2</TD><TD>・属性耐性：水攻撃耐性が付く。</TD></TR>
+          <TR><TD>鎮魂の勾玉</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>・固有能力：聖歌</TD></TR>
         </tbody>
       </TABLE>
 

@@ -98,14 +98,14 @@ ul.indent_no {
  
  
 /* --- （参考）テーブル全体のスタイル指定 ------- */
-#sortableTable {
+.sortableTable {
   width          : 100%;
   border-collapse: collapse;         /* 境界線結合 */
   border-spacing : 0;                /* 罫線間余白 */
   font-size      : 15px;              /* 文字サイズ */
 }
  /* --- ヘッダーのスタイル指定 ------------------- */
-#sortableTable th {
+.sortableTable th {
   text-align    : center;            /* 文字位置   */
   font-weight   : bold;              /* 太文字     */
   padding       : 6px 5px;          /* 余白       */
@@ -115,7 +115,7 @@ ul.indent_no {
 }
 
 /* --- 明細のスタイル指定 ----------------------- */
-#sortableTable td {
+.sortableTable td {
   text-align    : left;            /* 文字位置   */
   padding       : 6px 5px;           /* 余白       */
   border        : 1px #666666 solid; /* 罫線       */
