@@ -57,201 +57,6 @@
       gtag('config', 'UA-156501005-1');
     </script>
     <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script type="text/javascript">
- //===============================================================
- //  テーブルソートの共通変数　設定要！
- //===============================================================
-var gTabldID = 'sortableTable';  // テーブルのエリアのIDを設定
-var gSortNum = 1;              // 1 : 数値に見える列は数値でソート
-var gSortAa  = 1;              // 1 : 英大文字と小文字を区別しない
- 
-var gSortBtnRow = 0;
- 
- //===============================================================
- //  オンロードでテーブル初期設定関数をCALL
- //===============================================================
-window.onload = function() {
-  tSortInit();
-}
-
-function tSortInit(){
- //===============================================================
- //  テーブルの初期設定
- //===============================================================
- 
-  var wTABLE  = document.getElementById(gTabldID);
-  var wTR     = wTABLE.rows;
-  var wAddBtn = '';
- 
-  // --- テーブル内を検索してソートボタンを付ける ----------------
-  for(var i=0; i < wTR.length; i++){
- 
-    var wTD     = wTABLE.rows[i].cells;
-    for(var j=0; j < wTD.length; j++){
- 
-      if(wTD[j].getAttribute('cmanSortBtn') !== null){
- 
-        wAddBtn  = '<div class="tsImgArea">';
-        wAddBtn += '<svg class="tsImg" id="ts_A_'+j+'" onclick="tSort(this)"><path d="M4 0 L0 6 L8 6 Z"></path></svg>';
-        wAddBtn += '<svg class="tsImg" id="ts_D_'+j+'" onclick="tSort(this)"><path d="M0 0 L8 0 L4 7 Z"></path></svg>';
-        wAddBtn += '</div>';
- 
-        wTD[j].innerHTML = wTD[j].innerHTML+wAddBtn;
-      }
-    }
- 
-    // --- ボタンを付けたら以降の行は無視する --------------------
-    if(wAddBtn != ''){
-      gSortBtnRow = i;
-      break;
-    }
-  }
-}
-
-function tSort(argObj){
- //===============================================================
- //  ソート実行
- //===============================================================
- 
-   // 「ts_A_1」形式 [1]:A-昇順,D-降順  [2]:列番号
-  var wSortKey  = argObj.id.split('_');
- 
-  var wTABLE    = document.getElementById(gTabldID);
-  var wTR       = wTABLE.rows;
-  var wItem     = [];              // クリックされた列の値
-  var wItemSort = [];              // クリックされた列の値（項目ソート後）
-  var wMoveRow  = [];              // 元の行位置（行削除考慮位置）
-  var wNotNum   = 0;               // 1 : 数字でない
-  var wStartRow = gSortBtnRow + 1; // ソートを開始する行はボタンの次の行
- 
-  // ------------------------------------------------------
-  //  クリックされた列の値を取得する
-  // ------------------------------------------------------
-  for(var i=wStartRow; i < wTR.length; i++){
-    var j = i - wStartRow;
-    wItem[j] = wTR[i].cells[wSortKey[2]].innerText.toString();
- 
-    if(wItem[j].match(/^[-]?[0-9,\.]+$/)){
-    }else{
-        wNotNum = 1;
-    }
- 
-  }
-  // ソート用に配列をコピー
-  wItemSort = wItem.slice(0, wItem.length);
- 
-  // ------------------------------------------------------
-  //  列の値でソートを実行
-  // ------------------------------------------------------
-  if(wSortKey[1] == 'A'){
-    if((gSortNum == 1)&&(wNotNum == 0)){
-      wItemSort.sort(sortNumA);           // 数値で昇順
-    }else{
-      wItemSort.sort(sortStrA);           // 文字で昇順
-    }
-  }else{
-    if((gSortNum == 1)&&(wNotNum == 0)){
-      wItemSort.sort(sortNumD);           // 数値で降順
-    }else{
-      wItemSort.sort(sortStrD);           // 文字で降順
-    }
-  }
- 
-  // ------------------------------------------------------
-  //  行の入れ替え順を取得
-  //    ソート前後の列の値を比較して行の移動順を確定
-  //    配列を削除して前詰めしている（移動時も同じ動き）
-  // ------------------------------------------------------
-  for(var i=0; i < wItemSort.length; i++){
-     for(var j=0; j < wItem.length; j++){
-      if(wItemSort[i] == wItem[j]){
-          wMoveRow[i] = j + wStartRow;
-          wItem.splice(j, 1);
-          break;
-      }
-    }
-  }
- 
-  // ------------------------------------------------------
-  //  ソート順に行を移動
-  // ------------------------------------------------------
-  for(var i=0; i < wMoveRow.length; i++){
- 
- 
-    var wMoveTr = wTABLE.rows[wMoveRow[i]];                  // 移動対象
-    var wLastTr = wTABLE.rows[wTABLE.rows.length - 1];   // 最終行
- 
-    // 最終行にコピーしてから移動元を削除
-    wLastTr.parentNode.insertBefore(wMoveTr.cloneNode(true), wLastTr.nextSibling);
-    wTABLE.deleteRow(wMoveRow[i]);
- 
-  }
- 
-  // ------------------------------------------------------
-  //  クリックされたソートボタンの色付け
-  // ------------------------------------------------------
-  var elmImg = document.getElementsByClassName('tsImg');
-  for (var i=0; i < elmImg.length; i++) {
- 
-    if(elmImg[i].id == argObj.id){
-      elmImg[i].style.backgroundColor = '#ffff00';
-    }else{
-      elmImg[i].style.backgroundColor = '';
-    }
- 
-  }
- 
-}
-
-function sortNumA(a, b) {
- //===============================================================
- //  数字のソート関数（昇順）
- //===============================================================
-  a = parseInt(a.replace(/,/g, ''));
-  b = parseInt(b.replace(/,/g, ''));
-  return a - b;
-}
-
-function sortNumD(a, b) {
- //===============================================================
- //  数字のソート関数（降順）
- //===============================================================
-  a = parseInt(a.replace(/,/g, ''));
-  b = parseInt(b.replace(/,/g, ''));
-  return b - a;
-}
-
-function sortStrA(a, b){
- //===============================================================
- //  文字のソート関数（昇順）
- //===============================================================
-  a = a.toString();
-  b = b.toString();
-  if(gSortAa == 1){             // 1 : 英大文字小文字を区別しない
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-  }
-  if     (a < b){ return -1; }
-  else if(a > b){ return  1; }
-  return 0;
-}
-
-function sortStrD(a, b){
- //===============================================================
- //  文字のソート関数（降順）
- //===============================================================
-  a = a.toString();
-  b = b.toString();
-  if(gSortAa == 1){             // 1 : 英大文字小文字を区別しない
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-  }
- 
-  if     (b < a){ return -1; }
-  else if(b > a){ return  1; }
-  return 0;
-}
-</script>
   </head>
 
 <!--PC用（801px以上端末）で表示させるブロック-->
@@ -335,31 +140,25 @@ function sortStrD(a, b){
       <span id="body"></span>
       <h3 class="title"><img src="img/body.png">体防具</h3>
 
-      <TABLE border="2" id="sortableTable">
+      <TABLE border="2" id="horizontalTbl">
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
-        <colgroup class="coL2"></colgroup>
-        <colgroup class="coL2"></colgroup>
-        <colgroup class="coL2"></colgroup>
-        <colgroup class="coL2"></colgroup>
-        <colgroup class="coL2"></colgroup>
-        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL3"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL3"></colgroup>
         <tbody>
-          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
-          <TR><TD>修士の法衣</TD><TD>10</TD><TD>10</TD><TD>10</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>30</TD><TD>・霊感+5</TD></TR>
-          <TR><TD>ボーンブレスト</TD><TD>13</TD><TD>13</TD><TD>1</TD><TD>-7</TD><TD>13</TD><TD>13</TD><TD>5</TD><TD>5</TD><TD>・</TD></TR>
-          <TR><TD>毛皮</TD><TD>6</TD><TD>12</TD><TD>12</TD><TD>2</TD><TD>12</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・</TD></TR>
-          <TR><TD>闇のローブ</TD><TD>8</TD><TD>8</TD><TD>26</TD><TD>2</TD><TD>8</TD><TD>8</TD><TD>26</TD><TD>26</TD><TD>・霊感+5<BR>・属性耐性：暗闇耐性が付く</TD></TR>
-          <TR><TD>ファイバーべスト</TD><TD>8</TD><TD>8</TD><TD>12</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>・</TD></TR>
-          <TR><TD>防弾ベスト</TD><TD>18</TD><TD>22</TD><TD>60</TD><TD>18</TD><TD>18</TD><TD>18</TD><TD>18</TD><TD>18</TD><TD>・</TD></TR>
-          <TR><TD>星屑のマント</TD><TD>16</TD><TD>16</TD><TD>26</TD><TD>26</TD><TD>26</TD><TD>51</TD><TD>26</TD><TD>26</TD><TD>・属性耐性：気絶耐性が付く<BR>・集中力+5<BR>・霊感+5<BR>・魅力+5</TD></TR>
-          <TR><TD>炎獣の革</TD><TD>16</TD><TD>16</TD><TD>16</TD><TD>48</TD><TD>16</TD><TD>16</TD><TD>16</TD><TD>16</TD><TD>・</TD></TR>
-          <TR><TD>強化装甲</TD><TD>30</TD><TD>20</TD><TD>30</TD><TD>20</TD><TD>10</TD><TD>20</TD><TD>20</TD><TD>20</TD><TD>・</TD></TR>
-          <TR><TD>飛天の鎧</TD><TD>27</TD><TD>27</TD><TD>27</TD><TD>17</TD><TD>17</TD><TD>17</TD><TD>17</TD><TD>17</TD><TD>・運動性+10<BR>・足元攻撃耐性が付く</TD></TR>
-          <TR><TD>プロテクター</TD><TD>10</TD><TD>10</TD><TD>15</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>・</TD></TR>
-          <TR><TD>月白のショール</TD><TD>17</TD><TD>17</TD><TD>27</TD><TD>17</TD><TD>62</TD><TD>27</TD><TD>27</TD><TD>27</TD><TD>・属性耐性：マヒ耐性、睡眠耐性</TD></TR>
+          <TR><TD ROWSPAN="5">修士の法衣</TD><TH>斬</TH><TD>10</TD><TH>冷</TH><TD>25</TD></TR><TR><TH>打</TH><TD>10</TD><TH>雷</TH><TD>25</TD></TR><TR><TH>突</TH><TD>10</TD><TH>気</TH><TD>25</TD></TR><TR><TH>熱</TH><TD>25</TD><TH>状</TH><TD>30</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・霊感+5</TD></TR>
+          <TR><TD ROWSPAN="5">ボーンブレスト</TD><TH>斬</TH><TD>13</TD><TH>冷</TH><TD>13</TD></TR><TR><TH>打</TH><TD>13</TD><TH>雷</TH><TD>13</TD></TR><TR><TH>突</TH><TD>1</TD><TH>気</TH><TD>5</TD></TR><TR><TH>熱</TH><TD>-7</TD><TH>状</TH><TD>5</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD ROWSPAN="5">毛皮</TD><TH>斬</TH><TD>6</TD><TH>冷</TH><TD>12</TD></TR><TR><TH>打</TH><TD>12</TD><TH>雷</TH><TD>2</TD></TR><TR><TH>突</TH><TD>12</TD><TH>気</TH><TD>2</TD></TR><TR><TH>熱</TH><TD>2</TD><TH>状</TH><TD>2</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD ROWSPAN="5">闇のローブ</TD><TH>斬</TH><TD>8</TD><TH>冷</TH><TD>8</TD></TR><TR><TH>打</TH><TD>8</TD><TH>雷</TH><TD>8</TD></TR><TR><TH>突</TH><TD>26</TD><TH>気</TH><TD>26</TD></TR><TR><TH>熱</TH><TD>2</TD><TH>状</TH><TD>26</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・霊感+5<BR>・属性耐性：暗闇耐性が付く</TD></TR>
+          <TR><TD ROWSPAN="5">ファイバーべスト</TD><TH>斬</TH><TD>8</TD><TH>冷</TH><TD>8</TD></TR><TR><TH>打</TH><TD>8</TD><TH>雷</TH><TD>8</TD></TR><TR><TH>突</TH><TD>12</TD><TH>気</TH><TD>8</TD></TR><TR><TH>熱</TH><TD>8</TD><TH>状</TH><TD>8</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD ROWSPAN="5">防弾ベスト</TD><TH>斬</TH><TD>18</TD><TH>冷</TH><TD>18</TD></TR><TR><TH>打</TH><TD>22</TD><TH>雷</TH><TD>18</TD></TR><TR><TH>突</TH><TD>60</TD><TH>気</TH><TD>18</TD></TR><TR><TH>熱</TH><TD>18</TD><TH>状</TH><TD>18</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD ROWSPAN="5">星屑のマント</TD><TH>斬</TH><TD>16</TD><TH>冷</TH><TD>26</TD></TR><TR><TH>打</TH><TD>16</TD><TH>雷</TH><TD>51</TD></TR><TR><TH>突</TH><TD>26</TD><TH>気</TH><TD>26</TD></TR><TR><TH>熱</TH><TD>26</TD><TH>状</TH><TD>26</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・属性耐性：気絶耐性が付く<BR>・集中力+5<BR>・霊感+5<BR>・魅力+5</TD></TR>
+          <TR><TD ROWSPAN="5">炎獣の革</TD><TH>斬</TH><TD>16</TD><TH>冷</TH><TD>16</TD></TR><TR><TH>打</TH><TD>16</TD><TH>雷</TH><TD>16</TD></TR><TR><TH>突</TH><TD>16</TD><TH>気</TH><TD>16</TD></TR><TR><TH>熱</TH><TD>48</TD><TH>状</TH><TD>16</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD ROWSPAN="5">強化装甲</TD><TH>斬</TH><TD>30</TD><TH>冷</TH><TD>10</TD></TR><TR><TH>打</TH><TD>20</TD><TH>雷</TH><TD>20</TD></TR><TR><TH>突</TH><TD>30</TD><TH>気</TH><TD>20</TD></TR><TR><TH>熱</TH><TD>20</TD><TH>状</TH><TD>20</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD ROWSPAN="5">飛天の鎧</TD><TH>斬</TH><TD>27</TD><TH>冷</TH><TD>17</TD></TR><TR><TH>打</TH><TD>27</TD><TH>雷</TH><TD>17</TD></TR><TR><TH>突</TH><TD>27</TD><TH>気</TH><TD>17</TD></TR><TR><TH>熱</TH><TD>17</TD><TH>状</TH><TD>17</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・運動性+10<BR>・足元攻撃耐性が付く</TD></TR>
+          <TR><TD ROWSPAN="5">プロテクター</TD><TH>斬</TH><TD>10</TD><TH>冷</TH><TD>5</TD></TR><TR><TH>打</TH><TD>10</TD><TH>雷</TH><TD>5</TD></TR><TR><TH>突</TH><TD>15</TD><TH>気</TH><TD>5</TD></TR><TR><TH>熱</TH><TD>5</TD><TH>状</TH><TD>5</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・</TD></TR>
+          <TR><TD ROWSPAN="5">月白のショール</TD><TH>斬</TH><TD>17</TD><TH>冷</TH><TD>62</TD></TR><TR><TH>打</TH><TD>17</TD><TH>雷</TH><TD>27</TD></TR><TR><TH>突</TH><TD>27</TD><TH>気</TH><TD>27</TD></TR><TR><TH>熱</TH><TD>17</TD><TH>状</TH><TD>27</TD></TR><TR><TH>備考</TH><TD COLSPAN="3">・属性耐性：マヒ耐性、睡眠耐性</TD></TR>
         </tbody>
       </TABLE>
 
@@ -451,16 +250,12 @@ function sortStrD(a, b){
 
       <BR><BR><BR>
       <!-- サントラ -->
-      <!--
       サガ フロンティア オリジナル・サウンドトラック（CD）<br>
       <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B000CPGWM8/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B000CPGWM8&linkCode=as2&tag=sagamax-22&linkId=092c2cd7ddd3ac19368cdcb561e1d894"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B000CPGWM8&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
-      -->
 
-      <!--
       <br><br>
       サガ フロンティア オリジナル・サウンドトラック（Streaming）<br>
       <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B082DV5VZZ/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B082DV5VZZ&linkCode=as2&tag=sagamax-22&linkId=7dddb6697a7ea0cdf6af9b69d6571703"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B082DV5VZZ&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
-      -->
 
     </section><!-- section class="box" -->
 
