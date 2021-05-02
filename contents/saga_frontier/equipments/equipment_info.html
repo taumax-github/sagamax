@@ -15,9 +15,8 @@
     <!-- twitter投稿用の設定 -->
     <meta name="twitter:card" content="summary" /> <!--カード種類：summary か summary_large_image-->
     <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
-    <meta property="og:url" content="https://taumax-github.github.io/sagamax/poison/poisondamage.html" /> <!--記事のURL-->
-    <meta property="og:title" content="【整備中】サガフロ装備情報" /> <!--記事のタイトル-->
-    <meta property="og:description" content="【整備中】サガフロンティア リマスターの装備情報（耐性情報など）" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:title" content="【整備中】サガフロ装備情報（防具・盾）" /> <!--記事のタイトル-->
+    <meta property="og:description" content="【整備中】サガフロンティア リマスターの装備情報（防具・盾の防御力、回避率および耐性などの情報）" /> <!--記事の要約（ディスクリプション）-->
     <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/saga_frontier/image/sf_logo.jpg" /> <!--画像のURL-->
 
     <link rel="icon"       href="../../../images/favicon.ico">
@@ -61,7 +60,7 @@
  //===============================================================
  //  テーブルソートの共通変数　設定要！
  //===============================================================
-var gTabldIDList = ['sortableTable1', 'sortableTable2', 'sortableTable3', 'sortableTable4', 'sortableTable5', 'sortableTable6'];  // テーブルのエリアのIDを設定
+var gTabldIDList = ['sortableTable1', 'sortableTable2', 'sortableTable3', 'sortableTable4', 'sortableTable5', 'sortableTable6', 'sortableTable7', 'sortableTable8'];  // テーブルのエリアのIDを設定
 var gSortNum = 1;              // 1 : 数値に見える列は数値でソート
 var gSortAa  = 1;              // 1 : 英大文字と小文字を区別しない
  
@@ -275,11 +274,13 @@ function sortStrD(a, b){
   <nav>
     <ul class="indent_no">
       <li><a href="#body"><img src="img/body.png">体</a></li>
+      <li><a href="#whole_arm"><img src="img/whole_arm.png">全身</a></li>
       <li><a href="#cloth"><img src="img/cloth.png">服</a></li>
       <li><a href="#head"><img src="img/head.png">頭</a></li>
       <li><a href="#arm"><img src="img/arm.png">腕</a></li>
       <li><a href="#foot"><img src="img/foot.png">足</a></li>
       <li><a href="#accessory"><img src="img/accessory.png">装飾</a></li>
+      <li><a href="#shield"><img src="img/shield.png">盾</a></li>
     </ul>
   </nav>
 </header>
@@ -292,11 +293,13 @@ function sortStrD(a, b){
     <nav>
       <ul class="icon">
         <li><a href="#body"><img src="img/body.png">体</a></li>
+        <li><a href="#whole_arm"><img src="img/whole_arm.png">全身</a></li>
         <li><a href="#cloth"><img src="img/cloth.png">服</a></li>
         <li><a href="#head"><img src="img/head.png">頭</a></li>
         <li><a href="#arm"><img src="img/arm.png">腕</a></li>
         <li><a href="#foot"><img src="img/foot.png">足</a></li>
         <li><a href="#accessory"><img src="img/accessory.png">装飾</a></li>
+        <li><a href="#shield"><img src="img/shield.png">盾</a></li>
       </ul>
     </nav>
     <h1 class="logo">
@@ -338,6 +341,7 @@ function sortStrD(a, b){
       <h3 class="title"><img src="img/body.png">体防具</h3>
 
       <TABLE border="2" id="sortableTable1" class="sortableTable">
+      <caption>防御力</caption>
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
@@ -352,25 +356,58 @@ function sortStrD(a, b){
           <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
         </thead>
         <tbody>
-          <TR><TD>修士の法衣</TD><TD>10</TD><TD>10</TD><TD>10</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>30</TD><TD>・霊感+5</TD></TR>
-          <TR><TD>ボーンブレスト</TD><TD>13</TD><TD>13</TD><TD>1</TD><TD>-7</TD><TD>13</TD><TD>13</TD><TD>5</TD><TD>5</TD><TD>・</TD></TR>
-          <TR><TD>毛皮</TD><TD>6</TD><TD>12</TD><TD>12</TD><TD>2</TD><TD>12</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・</TD></TR>
-          <TR><TD>闇のローブ</TD><TD>8</TD><TD>8</TD><TD>26</TD><TD>2</TD><TD>8</TD><TD>8</TD><TD>26</TD><TD>26</TD><TD>・霊感+5<BR>・属性耐性：暗闇耐性が付く</TD></TR>
           <TR><TD>ファイバーべスト</TD><TD>8</TD><TD>8</TD><TD>12</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>・</TD></TR>
+          <TR><TD>リジッドレザー</TD><TD>12</TD><TD>16</TD><TD>22</TD><TD>12</TD><TD>12</TD><TD>12</TD><TD>12</TD><TD>12</TD><TD>・</TD></TR>
           <TR><TD>防弾ベスト</TD><TD>18</TD><TD>22</TD><TD>60</TD><TD>18</TD><TD>18</TD><TD>18</TD><TD>18</TD><TD>18</TD><TD>・</TD></TR>
-          <TR><TD>星屑のマント</TD><TD>16</TD><TD>16</TD><TD>26</TD><TD>26</TD><TD>26</TD><TD>51</TD><TD>26</TD><TD>26</TD><TD>・属性耐性：気絶耐性が付く<BR>・集中力+5<BR>・霊感+5<BR>・魅力+5</TD></TR>
+          <TR><TD>闇のローブ</TD><TD>8</TD><TD>8</TD><TD>26</TD><TD>2</TD><TD>8</TD><TD>8</TD><TD>26</TD><TD>26</TD><TD>・霊感+5<BR>・暗闇耐性</TD></TR>
+          <TR><TD>ブルーエルフ</TD><TD>20</TD><TD>20</TD><TD>20</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>20</TD><TD>・水攻撃耐性</TD></TR>
+          <TR><TD>陽炎のケープ</TD><TD>18</TD><TD>18</TD><TD>28</TD><TD>53</TD><TD>18</TD><TD>28</TD><TD>28</TD><TD>28</TD><TD>・知力+7<BR>・集中力+7</TD></TR>
+          <TR><TD>月白のショール</TD><TD>17</TD><TD>17</TD><TD>27</TD><TD>17</TD><TD>62</TD><TD>27</TD><TD>27</TD><TD>27</TD><TD>・マヒ耐性、睡眠耐性</TD></TR>
+          <TR><TD>星屑のマント</TD><TD>16</TD><TD>16</TD><TD>26</TD><TD>26</TD><TD>26</TD><TD>51</TD><TD>26</TD><TD>26</TD><TD>・集中力+5<BR>・霊感+5<BR>・魅力+5<BR>・気絶耐性</TD></TR>
+          <TR><TD>木陰のローブ</TD><TD>9</TD><TD>9</TD><TD>9</TD><TD>24</TD><TD>24</TD><TD>24</TD><TD>24</TD><TD>24</TD><TD>・集中力+9<BR>・使用すると味方単体のHP回復＋毒を治療。ただしメカは無効。</TD></TR>
           <TR><TD>炎獣の革</TD><TD>16</TD><TD>16</TD><TD>16</TD><TD>48</TD><TD>16</TD><TD>16</TD><TD>16</TD><TD>16</TD><TD>・</TD></TR>
           <TR><TD>強化装甲</TD><TD>30</TD><TD>20</TD><TD>30</TD><TD>20</TD><TD>10</TD><TD>20</TD><TD>20</TD><TD>20</TD><TD>・</TD></TR>
           <TR><TD>飛天の鎧</TD><TD>27</TD><TD>27</TD><TD>27</TD><TD>17</TD><TD>17</TD><TD>17</TD><TD>17</TD><TD>17</TD><TD>・運動性+10<BR>・足元攻撃耐性が付く</TD></TR>
+          <TR><TD>毛皮</TD><TD>6</TD><TD>12</TD><TD>12</TD><TD>2</TD><TD>12</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・</TD></TR>
           <TR><TD>プロテクター</TD><TD>10</TD><TD>10</TD><TD>15</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>・</TD></TR>
-          <TR><TD>月白のショール</TD><TD>17</TD><TD>17</TD><TD>27</TD><TD>17</TD><TD>62</TD><TD>27</TD><TD>27</TD><TD>27</TD><TD>・属性耐性：マヒ耐性、睡眠耐性</TD></TR>
+          <TR><TD>ボーンブレスト</TD><TD>13</TD><TD>13</TD><TD>1</TD><TD>-7</TD><TD>13</TD><TD>13</TD><TD>5</TD><TD>5</TD><TD>・</TD></TR>
+          <TR><TD>精霊銀の鎧</TD><TD>24</TD><TD>24</TD><TD>24</TD><TD>20</TD><TD>20</TD><TD>24</TD><TD>40</TD><TD>40</TD><TD>・音波耐性が付く。</TD></TR>
+          <TR><TD>修士の法衣</TD><TD>10</TD><TD>10</TD><TD>10</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>25</TD><TD>30</TD><TD>・霊感+5</TD></TR>
+          <TR><TD>ゴールデンフリース</TD><TD>28</TD><TD>28</TD><TD>28</TD><TD>38</TD><TD>38</TD><TD>38</TD><TD>38</TD><TD>43</TD><TD>・マヒ耐性、睡眠耐性</TD></TR>
+        </tbody>
+      </TABLE>
+
+      <br>
+      <span id="whole_arm"></span>
+      <h3 class="title"><img src="img/whole_arm.png">全身防具</h3>
+
+      <TABLE border="2" id="sortableTable2" class="sortableTable">
+      <caption>防御力</caption>
+        <colgroup class="coL1"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL3"></colgroup>
+        <thead>
+          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
+        <tbody>
+          <TR><TD>ジャンプスーツ</TD><TD>25</TD><TD>15</TD><TD>25</TD><TD>30</TD><TD>30</TD><TD>15</TD><TD>15</TD><TD>15</TD><TD>・暗闇耐性</TD></TR>
+          <TR><TD>スプリガンスーツ</TD><TD>55</TD><TD>55</TD><TD>55</TD><TD>35</TD><TD>35</TD><TD>35</TD><TD>35</TD><TD>35</TD><TD>・暗闇耐性</TD></TR>
+          <TR><TD>ラバースーツ</TD><TD>22</TD><TD>22</TD><TD>22</TD><TD>12</TD><TD>12</TD><TD>52</TD><TD>12</TD><TD>12</TD><TD>・暗闇耐性</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="cloth"></span>
       <h3 class="title"><img src="img/cloth.png">服</h3>
-      <TABLE border="2" id="sortableTable2" class="sortableTable">
+      <TABLE border="2" id="sortableTable3" class="sortableTable">
+      <caption>防御力</caption>
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
@@ -389,13 +426,15 @@ function sortStrD(a, b){
           <TR><TD>シルティーク</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>11</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>・</TD></TR>
           <TR><TD>魔道着</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>14</TD><TD>14</TD><TD>14</TD><TD>4</TD><TD>4</TD><TD>・集中力+5</TD></TR>
           <TR><TD>武道着</TD><TD>7</TD><TD>12</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>・</TD></TR>
+          <TR><TD>防護服</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>18</TD><TD>18</TD><TD>18</TD><TD>8</TD><TD>8</TD><TD>・</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="head"></span>
       <h3 class="title"><img src="img/head.png">頭</h3>
-      <TABLE border="2" id="sortableTable3" class="sortableTable">
+      <TABLE border="2" id="sortableTable4" class="sortableTable">
+      <caption>防御力</caption>
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
@@ -410,15 +449,17 @@ function sortStrD(a, b){
           <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
         </thead>
         <tbody>
-          <TR><TD>赤外線スコープ</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・属性耐性：暗闇耐性が付く<BR>・所持していると、ディスペアの赤外線センサーが視認できる</TD></TR>
-          <TR><TD>レーザースコープ</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>・集中力+10<BR>・属性耐性：暗闇耐性が付く</TD></TR>
+          <TR><TD>ヨーク綿の帽子</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>2</TD><TD>10</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・暗闇耐性</TD></TR>
+          <TR><TD>レーザースコープ</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>・集中力+10<BR>・暗闇耐性</TD></TR>
+          <TR><TD>赤外線スコープ</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・暗闇耐性<BR>・所持していると、ディスペアの赤外線センサーが視認できる</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="arm"></span>
       <h3 class="title"><img src="img/arm.png">腕</h3>
-      <TABLE border="2" id="sortableTable4" class="sortableTable">
+      <TABLE border="2" id="sortableTable5" class="sortableTable">
+      <caption>防御力</caption>
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
@@ -434,13 +475,16 @@ function sortStrD(a, b){
         </thead>
         <tbody>
           <TR><TD>レザーグラブ</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>・</TD></TR>
+          <TR><TD>シェルブレーサー</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>・</TD></TR>
+          <TR><TD>アーマーグラブ</TD><TD>8</TD><TD>12</TD><TD>12</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>・</TD></TR>
         </tbody>
       </TABLE>
 
       <br><br>
       <span id="foot"></span>
       <h3 class="title"><img src="img/foot.png">足</h3>
-      <TABLE border="2" id="sortableTable5" class="sortableTable">
+      <TABLE border="2" id="sortableTable6" class="sortableTable">
+      <caption>防御力</caption>
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
@@ -457,6 +501,8 @@ function sortStrD(a, b){
         <tbody>
           <TR><TD>レザーブーツ</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>・</TD></TR>
           <TR><TD>ラバーソウル</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>25</TD><TD>2</TD><TD>2</TD><TD>・運動性+2<BR>・雷属性の攻撃によるダメージを軽減</TD></TR>
+          <TR><TD>ジェットブーツ</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>2</TD><TD>7</TD><TD>7</TD><TD>・運動性+5<BR>・足元攻撃耐性</TD></TR>
+          <TR><TD>フェザーグリーブ</TD><TD>7</TD><TD>7</TD><TD>7</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>12</TD><TD>12</TD><TD>・</TD></TR>
           <TR><TD>鉄下駄</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>8</TD><TD>0</TD><TD>8</TD><TD>8</TD><TD>・丈夫さ+10</TD></TR>
         </tbody>
       </TABLE>
@@ -464,7 +510,8 @@ function sortStrD(a, b){
       <br><br>
       <span id="accessory"></span>
       <h3 class="title"><img src="img/accessory.png">装飾品</h3>
-      <TABLE border="2" id="sortableTable6" class="sortableTable">
+      <TABLE border="2" id="sortableTable7" class="sortableTable">
+      <caption>防御力</caption>
         <colgroup class="coL1"></colgroup>
         <colgroup class="coL2"></colgroup>
         <colgroup class="coL2"></colgroup>
@@ -483,12 +530,46 @@ function sortStrD(a, b){
           <TR><TD>翼のお守り</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>1</TD><TD>6</TD><TD>・運動性+5</TD></TR>
           <TR><TD>花のお守り</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>6</TD><TD>6</TD><TD>6</TD><TD>1</TD><TD>6</TD><TD>・霊感+5<BR>・魅力+5</TD></TR>
           <TR><TD>鋼のお守り</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>6</TD><TD>・丈夫さ+5</TD></TR>
-          <TR><TD>銀氷石</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>25</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>・冷属性の攻撃によるダメージを軽減。<BR>・使用すると消滅する。「フリーズバリア」をまとえる。</TD></TR>
-          <TR><TD>雷の結晶</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>25</TD><TD>1</TD><TD>1</TD><TD>・雷属性の攻撃によるダメージを軽減。<BR>・使用すると消滅する。「サンダーバリア」をまとえる。</TD></TR>
-          <TR><TD>ブラッドチャリス</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>-15</TD><TD>1</TD><TD>1</TD><TD>-15</TD><TD>-15</TD><TD>・霊感+5<BR>・属性耐性：気絶耐性が付く</TD></TR>
-          <TR><TD>パープルアイ</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>14</TD><TD>・霊感+7<BR>・属性耐性：凝視耐性が付く。<BR>・固有能力：幻夢の一撃。</TD></TR>
-          <TR><TD>パールハート</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>7</TD><TD>-3</TD><TD>2</TD><TD>2</TD><TD>・属性耐性：水攻撃耐性が付く。</TD></TR>
+          <TR><TD>銀氷石</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>25</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>・使用すると消滅する。「フリーズバリア」をまとえる。</TD></TR>
+          <TR><TD>雷の結晶</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>25</TD><TD>1</TD><TD>1</TD><TD>・使用すると消滅する。「サンダーバリア」をまとえる。</TD></TR>
+          <TR><TD>ブラッドチャリス</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>-15</TD><TD>1</TD><TD>1</TD><TD>-15</TD><TD>-15</TD><TD>・霊感+5<BR>・気絶耐性</TD></TR>
+          <TR><TD>精霊銀のピアス</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>21</TD><TD>・音波耐性</TD></TR>
+          <TR><TD>エメス・タグ</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>15</TD><TD>15</TD><TD>・石化耐性</TD></TR>
+          <TR><TD>パープルアイ</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>4</TD><TD>14</TD><TD>・霊感+7<BR>・凝視耐性<BR>・固有能力：幻夢の一撃</TD></TR>
+          <TR><TD>パールハート</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>7</TD><TD>-3</TD><TD>2</TD><TD>2</TD><TD>・水攻撃耐性</TD></TR>
+          <TR><TD>クリスナイフ</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>13</TD><TD>13</TD><TD>13</TD><TD>13</TD><TD>43</TD><TD>・</TD></TR>
+          <TR><TD>ユニコーンの涙</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>・霊感+1<BR>・毒耐性</TD></TR>
+          <TR><TD>トウテツパターン</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>3</TD><TD>23</TD><TD>23</TD><TD>・精神耐性<BR>・バーサーカー・混乱・魅惑効果を無効化</TD></TR>
+          <TR><TD>砂の器</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>18</TD><TD>18</TD><TD>・石化耐性<BR>・固有能力：流砂</TD></TR>
+          <TR><TD>天使のブローチ</TD><TD>5</TD><TD>5</TD><TD>5</TD><TD>15</TD><TD>15</TD><TD>15</TD><TD>15</TD><TD>15</TD><TD>・精神耐性<BR>・バーサーカー・混乱・魅惑効果を無効化</TD></TR>
+          <TR><TD>がらくた</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>2</TD><TD>12</TD><TD>・</TD></TR>
           <TR><TD>鎮魂の勾玉</TD><TD>1</TD><TD>1</TD><TD>1</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>11</TD><TD>・固有能力：聖歌</TD></TR>
+        </tbody>
+      </TABLE>
+
+      <br><br>
+      <span id="shield"></span>
+      <h3 class="title"><img src="img/shield.png">盾</h3>
+      <TABLE border="2" id="sortableTable8" class="sortableTable">
+      <caption>回避率</caption>
+        <colgroup class="coL1"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL2"></colgroup>
+        <colgroup class="coL3"></colgroup>
+        <thead>
+          <TR><TH></TH><TH cmanSortBtn>斬</TH><TH cmanSortBtn>打</TH><TH cmanSortBtn>突</TH><TH cmanSortBtn>熱</TH><TH cmanSortBtn>冷</TH><TH cmanSortBtn>雷</TH><TH cmanSortBtn>気</TH><TH cmanSortBtn>状</TH><TH>備考</TH></TR>
+        </thead>
+        <tbody>
+          <TR><TD>バックラー</TD><TD>20</TD><TD>20</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>・</TD></TR>
+          <TR><TD>シェルガード</TD><TD>16</TD><TD>16</TD><TD>16</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>・</TD></TR>
+          <TR><TD>玄武の盾</TD><TD>24</TD><TD>24</TD><TD>24</TD><TD>0</TD><TD>24</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>・水攻撃耐性</TD></TR>
+          <TR><TD>水鏡の盾</TD><TD>24</TD><TD>24</TD><TD>24</TD><TD>24</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>・水攻撃耐性</TD></TR>
         </tbody>
       </TABLE>
 

@@ -43,6 +43,10 @@ table {
   border-spacing: 0;
 }
 
+caption {
+  text-align:left;
+}
+
 iframe {
   width: 100%;
 }
