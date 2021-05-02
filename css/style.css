@@ -101,12 +101,12 @@ ul.indent_no {
 }
  
  
-/* --- （参考）テーブル全体のスタイル指定 ------- */
+/* --- ソート可能テーブルのスタイル指定 ------- */
 .sortableTable {
   width          : 100%;
   border-collapse: collapse;         /* 境界線結合 */
   border-spacing : 0;                /* 罫線間余白 */
-  font-size      : 15px;              /* 文字サイズ */
+  font-size      : 12px;              /* 文字サイズ */
 }
 
  /* --- ヘッダーのスタイル指定 ------------------- */
@@ -378,6 +378,7 @@ header .icon_middle img {
 	border-left: 3px solid #c1bc9e;	/*左の線の幅、線種、色*/
 	padding-left: 20px;				/*線と文字の間の余白*/
 }
+
 /*h2タグにclass="title"をつけたタイプ。大見出し。*/
 #main h2.title {
 	font-family: 'Poiret One';	/*冒頭のgoogle fontsの指定*/
@@ -385,10 +386,12 @@ header .icon_middle img {
 	margin-bottom: 40px;		/*見出しの下に空けるスペース*/
 	border-bottom: 1px solid #c1bc9e;	/*下線の幅、線種、色*/
 }
+
 #main h2.title::first-letter {
 	border-left: none;
 	padding-left: 0;
 }
+
 /*h2タグにclass="title"をつけたタイプ内にあるspanタグ*/
 #main h2.title span {
 	display: block;
@@ -396,6 +399,7 @@ header .icon_middle img {
 	float: right;		/*右に回り込み*/
 	margin-top: 60px;	/*上に空ける余白。上下のバランスをここでとります。*/
 }
+
 /*h3タグ*/
 #main h3 {
 	clear: both;
@@ -404,6 +408,7 @@ header .icon_middle img {
 	text-decoration: underline;
 	color: #c1bc9e;			/*文字色*/
 }
+
 /*h4タグ*/
 #main h4 {
 	clear: both;
