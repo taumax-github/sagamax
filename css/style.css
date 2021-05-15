@@ -23,6 +23,7 @@ body {
 	background: #fff;	/*背景色*/
 	-webkit-text-size-adjust: none;
 }
+
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {
   margin: 0px;
   padding: 0px;
@@ -99,8 +100,7 @@ ul.indent_no {
 .tsImg path{
   fill       : #777;
 }
- 
- 
+
 /* --- ソート可能テーブルのスタイル指定 ------- */
 .sortableTable {
   width          : 100%;
@@ -141,25 +141,33 @@ a:hover {
 ---------------------------------------------------------------------------*/
 /*containerブロック共通*/
 #container {
-	position: fixed;
+	/*position: fixed;*/
 	width: 100%;
-	height: 100%;
 }
+
 /*defaultbodyの背景画像指定*/
 .defaultbody #container {
-	background: url(../images/background.png) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
-	background: url(../images/background.png) no-repeat center center / cover;	/*背景画像*/
+	/*背景画像（※IE8以下の古いブラウザ用）*/
+	/*background: url(../images/background.png) no-repeat center center;*/
+	background-image: url(../images/background.png);
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: center bottom
+	/* no-repeat:center center / cover;*/	/*背景画像*/
 }
+
 /*works.htmlの背景画像指定*/
 .works #container {
 	background: url(../images/2.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
 	background: url(../images/2.jpg) no-repeat center center / cover;	/*背景画像*/
 }
+
 /*link.htmlの背景画像指定*/
 .link #container {
 	background: url(../images/3.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
 	background: url(../images/3.jpg) no-repeat center center / cover;	/*背景画像*/
 }
+
 /*contact.htmlにも背景画像を指定したい場合は、以下にスタイルを追加して下さい。*/
 .contact #container {
 	background: #000;
@@ -353,6 +361,7 @@ header .icon_middle img {
 	top: 0px;
 }
 }
+
 /*mainブロック*/
 #main {
 	overflow: auto;
