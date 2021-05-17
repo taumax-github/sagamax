@@ -120,9 +120,10 @@ ul.indent_no {
 
 /* --- 明細のスタイル指定 ----------------------- */
 .sortableTable td {
-  text-align    : left;            /* 文字位置   */
-  padding       : 6px 0px;           /* 余白       */
-  border        : 1px #666666 solid; /* 罫線       */
+  text-align      : left;            /* 文字位置   */
+  padding         : 6px 0px;           /* 余白       */
+  border          : 1px #666666 solid; /* 罫線       */
+  background-color: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
 }
 
 
