@@ -731,7 +731,7 @@ p.check a {color: #fff;}
 
 .box_darker {
 	background: #000;				/*背景色（古いブラウザ用）*/
-	background: rgba(0,0,0,0.85);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
+	background: rgba(0,0,0,0.8);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
 	padding: 5%;					/*ボックス内の余白*/
 	margin-bottom: 30px;			/*ボックスの下に空けるスペース*/
 	border: 1px solid #fff;						/*線の幅、線種、色（古いブラウザ用）*/
