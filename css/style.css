@@ -38,6 +38,18 @@ img {
   vertical-align: middle;
 }
 
+th {
+  padding: 3px 7px;	/*上下、左右への余白*/
+  background-color: #0099cc;  /* 背景色 */
+  background-color: rgba(00,99,cc,0.1);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
+}
+
+td {
+  padding: 3px 7px;	/*上下、左右への余白*/
+  background-color: #000;	/*背景色（古いブラウザ用）*/
+  background-color: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
+}
+
 table {
   border-collapse:collapse;
   font-size: 100%;
@@ -984,6 +996,7 @@ ul.disc {
 	list-style: disc;
 	padding: 0 10px 20px 30px;
 }
+
 ol {
 	padding: 0 10px 20px 30px;
 }
