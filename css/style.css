@@ -451,6 +451,16 @@ header .icon_middle img {
 	font-size: 20px;		/*文字サイズ*/
 	color: #c1bc9e;			/*文字色*/
 }
+
+/*h5タグ*/
+#main h5 {
+	clear: both;
+	margin-bottom: 2px;	/*見出しの下に空けるスペース*/
+	font-size: 20px;		/*文字サイズ*/
+	color: #c1bc9e;			/*文字色*/
+	padding-left: 10px;
+}
+
 /*段落(p)タグ*/
 #main p {
 	padding: 0 20px 20px;	/*上、左右、下への余白*/
