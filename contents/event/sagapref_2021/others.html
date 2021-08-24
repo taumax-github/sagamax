@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary_large_image" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:title" content="【ロマサガRS】ロマンシング佐賀2021年 サガ風呂" /> <!--記事のタイトル-->
+    <meta property="og:description" content="2021年のロマサガＲＳと佐賀県のコラボイベント：サガ風呂を振り返る" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/event/sagapref_2021/twitter_card.jpg" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/print.css" media="print">
+    <script src="../../../js/openclose.js"></script>
+    <script src="../../../js/giffer.js"></script>
+  
+    <title>ロマ佐賀ＲＳ 2021</title>
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <style>
+      .menu1 a {background-position: -10px -10px;}
+      .menu2 a {background-position: -10px -130px;}
+      .menu3 a {background-position: -10px -250px;}
+      .menu4 a {background-position: -10px -370px;}
+      .menu5 a {background-position: -10px -490px;}
+    </style>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../images/icon_top.png" alt="TOP">
+      <br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="seiatsusen.html">はじめに</a></li>
+      <li><a href="hajimari.html">始まりの湯</a></li>
+      <li><a href="huruyu.html">古湯温泉</a></li>
+      <li><a href="ureshino.html">嬉野温泉</a></li>
+      <li><a href="takeo.html">武雄温泉</a></li>
+      <li><a href="others.html">その他</a></li>
+    </ul>
+  </nav>
+</header><!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul>
+        <li><a href="seiatsusen.html">はじめに</a></li>
+        <li><a href="hajimari.html">始まりの湯</a></li>
+        <li><a href="huruyu.html">古湯温泉</a></li>
+        <li><a href="ureshino.html">嬉野温泉</a></li>
+        <li><a href="takeo.html">武雄温泉</a></li>
+        <li><a href="others.html">その他</a></li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+    </ul>
+  </div><!--/#menubar-s-->
+</header><!--/.sh-->
+
+<body class="defaultbody" oncontextmenu="return false;">
+  <div id="container" style="background-image: url(img/background-min.jpg); background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+
+      <h2 class="title">その他どこに入れるか迷ったもの</h2>
+
+      <a href="../../../index.html">ホーム</a> > <a href="../../index_romasagars.html">ロマサガＲＳ</a> > <a href="seiatsusen.html">ロマサガＲＳ佐賀コラボ_2021年</a> > その他<br>
+
+      <br>
+      <span id="wrsb"></span>
+      <h3 class="title">8/1～8/4 ワラスボ</h3>
+      <p>
+        制圧戦の最後のボスはワラスボ。<br>
+        <img src="img/map_last.jpg" /><br>
+
+        <br>
+        去年も<a href="../sagapref_2020/seiatsusen.html#sagameguri" target="_blank">制圧戦の最後はワラスボ</a>でしたね。<br>
+        今年のワラスボは頭にタオルを乗せていますねw 湯上りでしょうか？ww<br>
+        このワラスボは、これまでのエリアのボスとして登場した四天王と将魔の技を使ってきました。中々強力なボスでしたが、運営にHPを減らされてしまったのが一番印象に残りましたね。<br>
+        本物のワラスボに関する話題はシュウザーの所で書いたのでここはさくっと次に行きます。<br>
+      </p>
+
+      <br><br>
+      <span id="others"></span>
+      <h3 class="title">その他</h3>
+      <p>
+        ここから先は、佐賀コラボでネタになってはいたもののこの記事内のどこで話題にすべきかわからなかったものを記載していきます。<br>
+      </p>
+
+      <h4 class="title">蒸気機関車</h4>
+
+      <p>
+        制圧戦マップの左上に蒸気機関車がありました。生放送時の画像では「高輪築堤」と書かれています。<br>
+        <img src="img/map_namahousou.jpg" width="800" /><br>
+        <br>
+        ・・・高輪築堤？？<br>
+      </p>
+
+      <br>
+      <h4 class="title">高輪築堤（たかなわちくてい）</h4>
+      <p>
+        以下、引用です。<br>
+        「高輪築堤は、明治５（1872）年にわが国初の鉄道が開業した際に、海上に線路を敷設するために築かれた鉄道構造物です。平成31（2019）年4月、品川駅改良工事の際に石垣の一部が発見されました。」<br>
+        引用元：<a href="https://www.city.minato.tokyo.jp/bunkazai/tikutei2.html" target="_blank">港区公式サイト　高輪築堤跡</a>
+
+        <br><br>
+        以下の記事を見ると、この高輪築堤を佐賀県に移築するという話があるみたいですね。<br>
+        <a href="https://response.jp/article/2021/07/19/347826.html" target="_blank">高輪築堤の一部を佐賀県へ移築か？鉄道創業の立役者・大隈重信にあやかる</a><br>
+        
+        <br>
+        なんか動画もあったので貼っておきます。<br>
+      </p>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZdNNmlY6Ses" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br>
+      <p>
+        で、何で佐賀県に移設？って思うんですけど、どうやら佐賀は蒸気機関車も結構有名みたいでして、、、日本で初めて蒸気機関車の模型を作ったのが佐賀藩らしいです。<br>
+        今でも佐賀では過去実際に走っていた、4つの蒸気機関車を街中で見ることができます。折角なので Google Map で見てみました。<br>
+      </p>
+
+      <br>
+      国鉄268号蒸気機関車<br>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1628004484770!6m8!1m7!1sCAoSLEFGMVFpcE9mbTlSUkc5eTg3QzBEb2R4eFppWHNrcEZUWC1sM3dGRXgtZkhG!2m2!1d33.3736506!2d130.5204645!3f317.0136154828981!4f5.354867149010616!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+      <br><br>
+      29611号<br>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1628005778798!6m8!1m7!1sJmMCcNEhO_-5ekAlYVzXsw!2m2!1d33.21283422606579!2d130.1065917336484!3f177.5979908232934!4f4.816935942230188!5f2.299968626952992" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+      <br><br>
+      C11259号<br>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1628005637078!6m8!1m7!1sClOhMDUxYGSOakyBrjBWng!2m2!1d33.19616941317139!2d130.0257659995947!3f317.2003433612017!4f2.3096010610557727!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+      <br><br>
+      D51206<br>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1628005955050!6m8!1m7!1ssjjrtCZMYeVYjCgUp0FNeA!2m2!1d33.26334545924098!2d130.3014331621504!3f211.17790985011064!4f1.9280395784690398!5f1.9587109090973311" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+      <br><br>
+      <ul>
+        <li><a href="https://news.mynavi.jp/article/trivia-225/" target="_blank">初の国産蒸気機関車は佐賀藩が作った…模型だけど</a></li>
+        <li><a href="http://yfuruya.html.xdomain.jp/page10-43.htm" target="_blank">保存蒸気機関車の所在地</a></li>
+        <li><a href="https://saga-otakara.jp/search/detail.html?cultureId=5277" target="_blank">さがの歴史・文化お宝帳お宝帳</a></li>
+        <li><a href="https://www.steamlocomotivejapan.com/saga" target="_blank">日本にある蒸気機関車</a></li>
+        <li><a href="http://sagamaga.jp/saga-lab/techan/entry-192.html" target="_blank">鉄ちゃんラボ</a></li>
+        <li><a href="https://bunka.nii.ac.jp/heritages/detail/199422" target="_blank">文化遺産オンライン</a></li>
+        <li><a href="https://www.tripadvisor.jp/Attraction_Review-g298227-d12657214-Reviews-D51_206_Steam_Locomotive-Saga_Saga_Prefecture_Kyushu.html" target="_blank">D51 206号蒸気機関車 静態保存</a></li>
+        <li><a href="https://saga.mypl.net/mp/odekake_saga/?sid=41566" target="_blank">【JR鳥栖駅】鉄道ファンにはたまらない駅！</a></li>
+      </ul>
+
+      <br><br>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br><br>
+
+      <div id="touban"></div>
+      <h4 class="title">陶版（とうばん）</h4>
+      <p>
+        2021年7月28日のロマサガRS公式生放送で、佐賀県に陶板を設置する予定であることが発表されました。<br>
+        以下動画の31分52秒あたりから<br>
+      </p>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/x2CLJRAmQyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br>
+      <p>
+        設置される予定の陶板は以下の3枚らしいです。<br>
+        嬉野温泉のアセルス、白薔薇の後ろにあるのはシーボルトの湯、<br>
+        武雄温泉のアルカイザー、レッドの後ろにあるのは武雄温泉橉門 、<br>
+        古湯温泉のジニー、ウィルの後ろにあるのは宮の淵橋です。<br>
+        <img src="img/陶板.jpg" width="800"/><br>
+
+        <br><br>
+        佐賀県に設置されている陶板の実物の写真は市川さんがツイートしていましたね。<br>
+      </p>
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これは佐賀県唐津市内の陶版なのですが、佐賀には街の至る所に陶版が設置されていてどれもとても美しいのです。<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/yK4QGWlQ6b">pic.twitter.com/yK4QGWlQ6b</a></p>&mdash; 市川雅統 Masanori Ichikawa (@saga_ichikawa) <a href="https://twitter.com/saga_ichikawa/status/1420678913882169346?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <br><br>
+      <div id="ryouhuumaru"></div>
+      <h4 class="title">凌風丸（りょうふうまる）</h4>
+      <p>
+        セルマは「発信！凌風丸」という技を持ってきましたね。<br>
+        <img src="img/styles/セルマ.jpg" width="300"/><br>
+      </p>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ロマンシング サガ リ・ユニバース】にて「セルマ」を描かせていただきました。<br>どうぞよろしくお願いいたします！<a href="https://t.co/j8tapuIA5y">https://t.co/j8tapuIA5y</a><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%ACRS?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガRS</a> <a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/uC1VTNp9u1">pic.twitter.com/uC1VTNp9u1</a></p>&mdash; 眠介 (@_nemusuke) <a href="https://twitter.com/_nemusuke/status/1425375163067994115?ref_src=twsrc%5Etfw">August 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <br>
+      <p>
+        凌風丸は幕末に佐賀藩が建造した蒸気船で、日本で建造された最初の実用蒸気船です。<br>
+        <img src="img/凌風丸の絵.jpg" /><br>
+        ※写真は<a href="https://ja.wikipedia.org/wiki/%E5%87%8C%E9%A2%A8%E4%B8%B8_(%E4%BD%90%E8%B3%80%E8%97%A9)" target="_blank">Wikipedia 凌風丸 (佐賀藩)</a>より抜粋。<br>
+      </p>
+
+      <br><br>
+      <div id="nijinomatsubara"></div>
+      <h4 class="title">虹の松原（にじのまつばら）</h4>
+      <p>
+        唐津市にある「虹の松原」は、三保の松原、気比の松原とともに日本三大松原のひとつに数えられる景勝地です。海岸線に沿って虹の弧を描くように広大な面積を有しています。<br>
+        <img src="img/虹の松原.jpg" />
+        <img src="img/虹の松原2.jpg" /><br>
+        ※写真は<a href="https://www.asobo-saga.jp/search/detail.html?id=87" target="_blank">あそぼーさが　虹の松原(唐津市)</a>より抜粋<br>
+
+        <br>
+        アンサガのヴェントとローラは虹の松原に関係する技を持っていました。<br>
+        <img src="img/styles/ヴェント詳細.jpg" width="300"/>
+        <img src="img/styles/ヴェント.jpg" width="300"/><br>
+        <img src="img/styles/ローラ詳細.jpg" width="300"/>
+        <img src="img/styles/ローラ.jpg" width="300"/><br>
+
+        <br>
+        参考<br>
+        <ul>
+          <li><a href="https://npokanne.com/%E8%99%B9%E3%81%AE%E6%9D%BE%E5%8E%9F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" target="_blank">KANNE 虹の松原について</a></li>
+          <li><a href="https://www.asobo-saga.jp/search/detail.html?id=87" target="_blank">あそぼーさが　虹の松原(唐津市)</a></li>
+          <li><a href="https://www.rinya.maff.go.jp/j/kokuyu_rinya/kokumin_mori/katuyo/reku/rekumori/niji.html" target="_blank">林野町　虹の松原風致探勝林</a></li>
+        </ul>
+      </p>
+
+      <br><br>
+      <div id="hyoutanjima"></div>
+      <h4 class="title">ひょうたん島公園のひまわり</h4>
+      アルカイザーの新技：サンアル・フェニックスはひょうたん島公園のひまわりからきていたんですねー。<br>
+      （技発動時、下からひまわりが生えてきている）<br>
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">佐賀ガチャでアルカイザーだけ佐賀が無関係と思わせて、サン・アルフェニックスは立派な佐賀技🌻ひまわりで有名なひょうたん島公園があります☺️<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/e42UfXua3n">pic.twitter.com/e42UfXua3n</a></p>&mdash; つぶら通 (@sagancingroma) <a href="https://twitter.com/sagancingroma/status/1421433983653400577?ref_src=twsrc%5Etfw">July 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/9_HqDt-GefY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br><br>
+      参考<br>
+      <ul>
+        <li><a href="https://www.sagabai.com/main/?cont=kanko&fid=506" target="_blank">Sagabai.com　ひょうたん島公園</a></li>
+        <li><a href="https://www.city.saga.lg.jp/main/4241.html" target="_blank">佐賀市　ひょうたん島公園へようこそ!</a></li>
+        <li><a href="https://www.city.saga.lg.jp/main/72054.html" target="_blank">佐賀市　令和3年度 ひょうたん島公園のひまわりについて</a></li>
+      </ul>
+
+
+      <br><br>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br><br>
+
+      <span id="omake"></span>
+      <h3 class="title">おまけ</h3>
+      <p>
+        ここまでで、私が把握している制圧戦関係の情報は書き切りました。あとは制圧戦に中に見た、面白かったツイートなどをご紹介してこの記事を締めようと思います。<br>
+
+        <br><br>
+        戦闘員が風呂上がり（笑）<br>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">何か違和感あると思ったら、<br>戦闘員たち風呂上がりやん・・・。<br><br>しっかり佐賀満喫してる！<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/yFG8XXEIIR">pic.twitter.com/yFG8XXEIIR</a></p>&mdash; コッペリア (@s204_555) <a href="https://twitter.com/s204_555/status/1420706993380028417?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+        <br><br>
+        雷竜が聖剣伝説のラスボスに似てる
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">君、聖剣伝説とかに出ていなかった？ <a href="https://t.co/XxKQWGWWcS">pic.twitter.com/XxKQWGWWcS</a></p>&mdash; やる夫茶 (@yaruocha) <a href="https://twitter.com/yaruocha/status/1420368938601357312?ref_src=twsrc%5Etfw">July 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+        <br><br><br>
+        そして<a href="../sagapref_2020/seiatsusen.html#others" target="_blank">去年同様</a>、牛に話しかける謎の遊びが流行る（笑）<br>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ごめん無理<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/wju06ns8EJ">pic.twitter.com/wju06ns8EJ</a></p>&mdash; にっくす (@rknixer) <a href="https://twitter.com/rknixer/status/1423947430895124484?ref_src=twsrc%5Etfw">August 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">お土産(牛) <a href="https://t.co/WQjFRw3RMN">pic.twitter.com/WQjFRw3RMN</a></p>&mdash; やしあ (@yashiaRS) <a href="https://twitter.com/yashiaRS/status/1420549525396090884?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今夜は焼き肉かな～<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%ACRS?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガRS</a><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/erISOOReTU">pic.twitter.com/erISOOReTU</a></p>&mdash; sagamax (@sagamax__) <a href="https://twitter.com/sagamax__/status/1421282974335569925?ref_src=twsrc%5Etfw">July 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">巷では推しで牛に話しかけるのが流行ってるそうですね、私もいざ！<br>(´；ω；｀)ﾌﾞﾜﾜｯ<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/wLL72q2AKE">pic.twitter.com/wLL72q2AKE</a></p>&mdash; cestus (@cestus777) <a href="https://twitter.com/cestus777/status/1421225244530905088?ref_src=twsrc%5Etfw">July 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">無理難題を言うアルカイザーと<br>恐らく佐賀牛が欲しいと<br>言っているジニーちゃん<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/okhU06HO9L">pic.twitter.com/okhU06HO9L</a></p>&mdash; ゆきんこ@気まぐれ浮上 (@yukinko_8211) <a href="https://twitter.com/yukinko_8211/status/1424129294809198597?ref_src=twsrc%5Etfw">August 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「佐賀牛極上A5ランクのサーロインステーキです」<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%ACRS?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガRS</a> <a href="https://t.co/enDMumQ00F">pic.twitter.com/enDMumQ00F</a></p>&mdash; はちみつ銀 (@silverd001) <a href="https://twitter.com/silverd001/status/1422215640438374403?ref_src=twsrc%5Etfw">August 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">牛の不安を煽る人々と<br>牛が心配なファティマちゃん。 <a href="https://t.co/LNVQJKiZ8L">pic.twitter.com/LNVQJKiZ8L</a></p>&mdash; やしあ🍥 (@yashiaRS) <a href="https://twitter.com/yashiaRS/status/1422042722832031753?ref_src=twsrc%5Etfw">August 2, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+
+      <br><br><br>
+      最後に公式サイトへのリンクを張って終わりにしたいと思います。<br>
+      <a href="https://romasaga.jp/2021/" target="_blank">Romancing 佐賀 2021</a><br>
+      <a href="https://www.saga-s.co.jp/articles/-/707611" target="_blank">今度は「サガ風呂」　ロマ佐賀企画、温泉地とコラボ　嬉野、武雄、古湯の魅力発信</a><br>
+
+      <br><br><br>
+      <font size="15">以上！</font>
+
+      <br><br>
+      その他のエリアへのリンク
+      <ul>
+        <li><a href="seiatsusen.html">2021佐賀コラボトップ</a></li>
+        <li><a href="hajimari.html">始まりの湯</a></li>
+        <li><a href="huruyu.html">古湯</a></li>
+        <li><a href="ureshino.html">嬉野</a></li>
+        <li><a href="takeo.html">武雄</a></li>
+      </ul>
+
+      <br><br><br>
+      <!-- DESTINY 8 - SaGa Band Arrangement Album Vol.2 (特典なし) -->
+      <a href="https://www.amazon.co.jp/DESTINY-SaGa-Arrangement-Album-Vol-2/dp/B095LFTN6W?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2WI8LSKAO12TG&dchild=1&keywords=destiny+8+-+saga+band+arrangement+album+vol.2&qid=1629216712&sprefix=destiny%2Caps%2C278&sr=8-1&linkCode=li3&tag=sagamax-22&linkId=984ee3b09a03f1848883b3ca5958e77e&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B095LFTN6W&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=sagamax-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&language=ja_JP&l=li3&o=9&a=B095LFTN6W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+      <!-- 【Amazon.co.jp限定】SQUARE ENIX JAZZ -SaGa- (メガジャケ付) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B08QZTZ8KN/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08QZTZ8KN&linkCode=as2&tag=sagamax-22&linkId=a0731e2b356f2f10526ff2cb917baf74"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B08QZTZ8KN&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- SaGa Frontier Series ACOUSTIC ARRANGEMENTS (特典なし) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B0938M5B3R/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B0938M5B3R&linkCode=as2&tag=sagamax-22&linkId=8091988dfc7e7d7fa1fc33d8296f61e7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B0938M5B3R&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- DESTINY 8 - SaGa Band Arrangement Album (特典なし) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B08P76C1LV/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08P76C1LV&linkCode=as2&tag=sagamax-22&linkId=0d8f2a891ae8ace7d49f961dfbf72ba7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B08P76C1LV&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- サガクロニクル増補版30th -->
+      <!-- 
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/475756919X/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=475756919X&linkCode=as2&tag=sagamax-22&linkId=1d54cfbd3d2fc5c5ab4bf3c19a8202ab"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=475756919X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+      -->
+
+      <!-- ロマサガRSサントラ -->
+      <!-- 
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B07NBCJG1R/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07NBCJG1R&linkCode=as2&tag=sagamax-22&linkId=3eaa72ffff47018242aa007e496776e7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B07NBCJG1R&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&l=am2&o=9&a=B07NBCJG1R" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      -->
+
+      <!-- ロマサガRS公式ビジュアルファンブック -->
+      <!--
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/4757564910/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4757564910&linkCode=as2&tag=sagamax-22&linkId=41750eb1d610e5081b7d3b863134a6ac"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4757564910&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&l=am2&o=9&a=4757564910" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      -->
+
+      <!-- サガオケ -->
+      <!-- 
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B01CTCWSU6/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B01CTCWSU6&linkCode=as2&tag=sagamax-22&linkId=71b6d392a525d8434daa6d4619d94051"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B01CTCWSU6&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&l=am2&o=9&a=B01CTCWSU6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      -->
+
+    </section><!-- section class="box" -->
+
+    <footer>
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+    
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>
