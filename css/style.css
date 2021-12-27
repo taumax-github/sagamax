@@ -77,8 +77,7 @@ caption {
 
 .embed_own {
   position: relative;
-  height: 0;
-  padding-bottom: 50%;
+  height: 80%;
 }
 
 .embed_own iframe {
