@@ -12,7 +12,7 @@
 /*全体の設定
 ---------------------------------------------------------------------------*/
 
-body,html {width: 100%;height: 100%;}
+body,html {width: 99%;height: 100%;}
 body {
 	margin: 0px;
 	padding: 0px;
@@ -23,57 +23,36 @@ body {
 	background: #fff;	/*背景色*/
 	-webkit-text-size-adjust: none;
 }
-
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {
-  margin: 0px;
-  padding: 0px;
-  font-size: 100%;
-  font-weight: normal;
-}
-
-img {
-  border: none;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
-th {
-  padding: 3px 7px;	/*上下、左右への余白*/
-  background-color: #0099cc;  /* 背景色 */
-  background-color: rgba(00,99,cc,0.1);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-}
-
-td {
-  padding: 3px 7px;	/*上下、左右への余白*/
-  background-color: #000;	/*背景色（古いブラウザ用）*/
-  background-color: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
 
 table {
-  border-collapse:collapse;
+  width: 100%;
   font-size: 100%;
-  border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 1;
 }
 
-caption {
-  text-align:left;
+table th,table td{
+  padding: 10px 0;
+  text-align: center;
 }
 
-.youtube {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
+/* ヘッダー行 */
+table th {
+  background-color: #00ffff
 }
 
-.youtube iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+/* 奇数行 */
+table tr:nth-child(odd) {
+  background-color: #000
 }
 
+/* 偶数行 */
+table tr:nth-child(even) {
+  background-color: #555
+}
 
 .embed_own {
   position: relative;
@@ -88,13 +67,20 @@ caption {
   height: 100%;
 }
 
-iframe {
-  width: 100%;
+iframe {width: 100%;}
+
+select{
+  font-size:20px;
+  border:1px;
 }
 
 /* スクロールバーの幅の設定 */
-::-webkit-scrollbar{
-  width: 12px;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height:10px;
 }
 
 /* スクロールバーの背景の設定 */
@@ -106,109 +92,36 @@ iframe {
 
 /* スクロールバーのつまみ部分の設定 */
 ::-webkit-scrollbar-thumb{
-  background: #1959A8;
+  background: #00bfff;
   border-radius: 10px;
   box-shadow: none;
 }
 
-ul.indent_no {
-  list-style: disc;
-  padding: 0px 0px 0px 20px;
-}
-
-
-/* === ソートボタンを表示するエリア ============== */
-.tsImgArea{
-  line-height: 1;
-}
-/* === ソートボタン ============================== */
-.tsImg{
-  display    : inline-block;
-  width      : 8px;
-  height     : 6px;
-  background : #eee;
-  border     : 1px solid #777;
-  margin     : 1px 3px;
-  padding    : 3px;
-  cursor     : pointer;
-}
-/* === ソートボタン（カーソルオーバー時）========= */
-.tsImg:hover{
-  background : #FFD700;
-}
-/* === ソートボタン内の三角の色（SVG）============ */
-.tsImg path{
-  fill       : #777;
-}
-
-/* --- ソート可能テーブルのスタイル指定 ------- */
-.sortableTable {
-  width          : 100%;
-  border-collapse: collapse;         /* 境界線結合 */
-  border-spacing : 0;                /* 罫線間余白 */
-  font-size      : 12px;              /* 文字サイズ */
-}
-
- /* --- ヘッダーのスタイル指定 ------------------- */
-.sortableTable th {
-  text-align    : center;            /* 文字位置   */
-  font-weight   : bold;              /* 太文字     */
-  padding       : 6px 0px;          /* 余白       */
-  border        : 1px #666666 solid; /* 罫線       */
-  background    : #99ccff;           /* 背景色     */
-}
-
-/* --- 明細のスタイル指定 ----------------------- */
-.sortableTable td {
-  text-align      : left;            /* 文字位置   */
-  padding         : 6px 0px;           /* 余白       */
-  border          : 1px #666666 solid; /* 罫線       */
-  background-color: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-}
-
-
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
-	color: #00bfff;		/*リンクテキストの色*/
-	transition: 0.4s;	/*マウスオン時の移り変わるまでの時間設定。0.4秒。*/
+    color: #0044CC;        /*リンクテキストの色*/
+    transition: 0.4s;   /*マウスオン時の移り変わるまでの時間設定。0.4秒。*/
 }
 a:hover {
-	color: #448db3;			/*マウスオン時の文字色*/
-	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+    color: #0044CC;         /*マウスオン時の文字色*/
+    text-decoration: none;  /*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
 }
 
 /*container。サイト全体を囲むブロック
 ---------------------------------------------------------------------------*/
 /*containerブロック共通*/
 #container {
-	/*position: fixed;*/
+	position: fixed;
 	width: 100%;
+	height: 100%;
 }
-
 /*defaultbodyの背景画像指定*/
 .defaultbody #container {
-	/*背景画像（※IE8以下の古いブラウザ用）*/
-	/*background: url(../images/background.png) no-repeat center center;*/
-	background-image: url(../images/background.png);
-	background-repeat: repeat;
-	background-attachment: fixed;
-	background-position: center bottom
-	/* no-repeat:center center / cover;*/	/*背景画像*/
+	background: url(../images/background.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
+	background: url(../images/background.jpg) no-repeat center center / cover;	/*背景画像*/
+	background-position: 0% 0%
 }
-
-/*works.htmlの背景画像指定*/
-.works #container {
-	background: url(../images/2.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
-	background: url(../images/2.jpg) no-repeat center center / cover;	/*背景画像*/
-}
-
-/*link.htmlの背景画像指定*/
-.link #container {
-	background: url(../images/3.jpg) no-repeat center center;	/*背景画像（※IE8以下の古いブラウザ用）*/
-	background: url(../images/3.jpg) no-repeat center center / cover;	/*背景画像*/
-}
-
 /*contact.htmlにも背景画像を指定したい場合は、以下にスタイルを追加して下さい。*/
 .contact #container {
 	background: #000;
@@ -233,13 +146,6 @@ a:hover {
   list-style-type: none;
   background: url(../images/right.png) no-repeat left center;
   padding-left: 40px;
-  background-position:0px 4px;
-}
-
-#contents li.none {
-  list-style-type: none;
-  background: none;
-  padding-left: 0px;
 }
 
 /*header（大きな端末用：左ブロック）
@@ -273,7 +179,7 @@ header.pc .logo {
 	height: 90px;	/*高さ*/
 }
 header.pc .logo img {
-	width: 90px;	/*画像の幅。マウスオン時に同じ大きさを保つ為。*/
+	width: 55px;	/*画像の幅。マウスオン時に同じ大きさを保つ為。*/
 }
 /*header内のp(段落)タグ*/
 header.pc p {
@@ -285,7 +191,6 @@ header.pc::-webkit-scrollbar{
   width: 6px;
 }
 
-
 /*メインメニュー
 ---------------------------------------------------------------------------*/
 /*メニュー１個あたりの設定*/
@@ -294,8 +199,7 @@ header.pc::-webkit-scrollbar{
 	position: relative;
 }
 #menubar li a {
-	display:  block;
-	text-decoration: none;
+	display:  block;text-decoration: none;
 	border-bottom: 1px solid #fff;	/*下線の幅、線種、色（古いブラウザ用）*/
 	border-bottom: 1px solid rgba(255,255,255,0.3);	/*下線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
 	width: auto;	/*幅*/
@@ -402,11 +306,10 @@ header .icon_middle img {
 	top: 0px;
 }
 }
-
 /*mainブロック*/
 #main {
 	overflow: auto;
-	padding: 2% 5% 0 15%;		/*上、右、下、左へのブロック内の余白*/
+	padding: 2% 2% 0 2%;		/*上、右、下、左へのブロック内の余白*/
 	height: 98%;				/*高さ*/
 	animation-duration: 0.5S;	/*アニメーションの実行時間。秒。*/
 	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを、完了後は最後のキーフレームを維持する*/
@@ -427,7 +330,6 @@ header .icon_middle img {
 	border-left: 3px solid #c1bc9e;	/*左の線の幅、線種、色*/
 	padding-left: 20px;				/*線と文字の間の余白*/
 }
-
 /*h2タグにclass="title"をつけたタイプ。大見出し。*/
 #main h2.title {
 	font-family: 'Poiret One';	/*冒頭のgoogle fontsの指定*/
@@ -435,12 +337,10 @@ header .icon_middle img {
 	margin-bottom: 40px;		/*見出しの下に空けるスペース*/
 	border-bottom: 1px solid #c1bc9e;	/*下線の幅、線種、色*/
 }
-
 #main h2.title::first-letter {
 	border-left: none;
 	padding-left: 0;
 }
-
 /*h2タグにclass="title"をつけたタイプ内にあるspanタグ*/
 #main h2.title span {
 	display: block;
@@ -448,7 +348,6 @@ header .icon_middle img {
 	float: right;		/*右に回り込み*/
 	margin-top: 60px;	/*上に空ける余白。上下のバランスをここでとります。*/
 }
-
 /*h3タグ*/
 #main h3 {
 	clear: both;
@@ -457,7 +356,6 @@ header .icon_middle img {
 	text-decoration: underline;
 	color: #c1bc9e;			/*文字色*/
 }
-
 /*h4タグ*/
 #main h4 {
 	clear: both;
@@ -465,16 +363,6 @@ header .icon_middle img {
 	font-size: 20px;		/*文字サイズ*/
 	color: #c1bc9e;			/*文字色*/
 }
-
-/*h5タグ*/
-#main h5 {
-	clear: both;
-	margin-bottom: 2px;	/*見出しの下に空けるスペース*/
-	font-size: 20px;		/*文字サイズ*/
-	color: #c1bc9e;			/*文字色*/
-	padding-left: 10px;
-}
-
 /*段落(p)タグ*/
 #main p {
 	padding: 0 20px 20px;	/*上、左右、下への余白*/
@@ -611,76 +499,8 @@ footer a {text-decoration: none;}
 	text-align: center;	/*センタリング*/
 }
 
-/* スクロール対象のテーブル */
-#sclTbl {
-  border-collapse:separate; /* 枠線の表示の仕方 */
-  font-size: 16px;/* 文字のサイズ */
-}
-
-/* 全体の枠。ここにヘッダを格納 */
-#out_Div {
-  position: relative; /* 相対位置 */
-  padding-top: 26px;  /*  #in_Div の開始位置 */
-  width: 705px; /* 列幅の合計＋セル間の幅(2px)の合計＋20px 程度 */
-}
-
-#in_Div {/* tbodyが入っている。ここがスクロール対象*/
-  overflow: auto; /* スクロールバー*/
-  height: 700px;      /* ポイント */
-}
-
-#sclTbl thead tr {/* ヘッダ 見出し行,位置を #out_Div の左上端に移動 */
-  position: absolute; /* 絶対位置 */
-  top: 0px; /* 上からの位置 */
-  left: 0px; /* 左からの位置 */
-  width: 690px; /* 列幅の合計＋セル間の幅(2px)の合計＋20px 程度 */
-}
-
-#sclTbl thead tr th{/* thead 'th'のスタイル */
-  color: #fff; /* 文字色 */
-  padding: 3px 0px;
-  background-color: #0099cc;  /* 背景色 */
-  background-color: rgba(00,99,cc,0.1);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-}
-
-#sclTbl tbody tr td{/* tbody 'td'のスタイル */
-  padding: 3px 6px;
-  background-color: #000;	/*背景色（古いブラウザ用）*/
-  background-color: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-}
-
-
-#horizontalTbl tr th{/* thead 'th'のスタイル */
-  color: #fff; /* 文字色 */
-  padding: 3px 0px;
-  background-color: #6699cc;  /* 背景色 */
-  background-color: rgba(00,99,cc,0.1);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-}
-
-#horizontalTbl td{/* tbody 'td'のスタイル */
-  padding: 3px 6px;
-  background-color: #000;	/*背景色（古いブラウザ用）*/
-  background-color: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-}
-
-
 /*フォーム関連
 ---------------------------------------------------------------------------*/
-/*ボタン（btn）*/
-input[type="submit"].btn,
-input[type="button"].btn,
-input[type="reset"].btn {
-	padding: 5px 20px;		/*上下、左右へのボックス内の余白*/
-	border-radius: 3px;		/*角丸のサイズ*/
-	background: #eee;	/*背景色*/
-	color: #333;
-}
-/*マウスオン時のボタン（btn）設定*/
-input[type="submit"].btn:hover,
-input[type="button"].btn:hover,
-input[type="reset"].btn:hover {
-	background: #fff;	/*背景色*/
-}
 /*input,textarea共通*/
 input,textarea {
 	outline: none;background: transparent;
@@ -710,11 +530,7 @@ p.check a {color: #fff;}
 }
 /*設定*/
 .nav-fix-pos-pagetop a {
-	display: block;
-	text-decoration: none;
-	text-align: center;
-	z-index: 100;
-	position: fixed;
+	display: block;text-decoration: none;text-align: center;z-index: 100;position: fixed;
 	width: 40px;		/*ボタンの幅*/
 	line-height: 40px;	/*ボタンの高さ*/
 	bottom: 20px;		/*ウィンドウの下から20pxの場所に配置*/
@@ -742,24 +558,26 @@ p.check a {color: #fff;}
 	vertical-align: text-top;
 }
 
+/*ul.disc,olタグ
+---------------------------------------------------------------------------*/
+ul.disc {
+	list-style: disc;
+	padding: 0 20px 20px 45px;
+}
+ol {
+	padding: 0 20px 20px 45px;
+}
+
 /*box
 ---------------------------------------------------------------------------*/
 .box {
 	background: #000;				/*背景色（古いブラウザ用）*/
 	background: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-	padding: 5%;					/*ボックス内の余白*/
+	padding: 1%;					/*ボックス内の余白*/
 	margin-bottom: 30px;			/*ボックスの下に空けるスペース*/
 	border: 1px solid #fff;						/*線の幅、線種、色（古いブラウザ用）*/
 	border: 1px solid rgba(255,255,255,0.3);	/*線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
-}
 
-.box_darker {
-	background: #000;				/*背景色（古いブラウザ用）*/
-	background: rgba(0,0,0,0.8);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
-	padding: 5%;					/*ボックス内の余白*/
-	margin-bottom: 30px;			/*ボックスの下に空けるスペース*/
-	border: 1px solid #fff;						/*線の幅、線種、色（古いブラウザ用）*/
-	border: 1px solid rgba(255,255,255,0.3);	/*線の幅、線種、色。255,255,255は白の事で0.3は色が30%出た状態の事。*/
 }
 
 /*その他
@@ -824,9 +642,7 @@ header.sh .logo {
 }
 /*メニュー１個あたりの設定*/
 #menubar-s nav li a {
-	display: block;
-	text-decoration: none;
-	width: 100%;
+	display: block;text-decoration: none;width: 100%;
 	border-bottom: 1px solid #fff;	/*下の線の幅、線種、色*/
 	font-size: 16px;	/*文字サイズ*/
 	height: 100px;		/*高さ*/
@@ -1028,7 +844,6 @@ ul.disc {
 	list-style: disc;
 	padding: 0 10px 20px 30px;
 }
-
 ol {
 	padding: 0 10px 20px 30px;
 }
