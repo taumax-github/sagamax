@@ -38,5 +38,6 @@ jobs:
           ls -l sagamax_web/src/main/webapp/WebContent/images/dots
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
           echo -sagamax_web_after-
+          ls -l sagamax_web/src/main/webapp/WebContent/images/dots
           cd sagamax_web
           git push
