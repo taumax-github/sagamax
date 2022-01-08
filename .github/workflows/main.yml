@@ -32,7 +32,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           git --version
-          git clone https://process.env.US:process.env.PWD@gitlab.com/taumax-github/sagamax_web.git
+          git clone https://${US}:${PWD}@gitlab.com/taumax-github/sagamax_web.git
           ls -l
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
           git push
