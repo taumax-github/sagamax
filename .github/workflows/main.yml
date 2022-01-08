@@ -27,10 +27,13 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
+        env:
+          US: ${{secrets.USER}}
+          PWD: ${{secrets.PW}}
         run: |
           git --version
           # export no_proxy="127.0.0.1,localhost,192,168.*,gitlab.com"
-          git clone https://${{ secrets.USER }}:${{ secrets.PW }}@gitlab.com/taumax-github/sagamax_web.git
+          git clone https://process.env.US:process.env.PWD@gitlab.com/taumax-github/sagamax_web.git
           ls -l
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
           git push
