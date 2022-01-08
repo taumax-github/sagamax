@@ -34,11 +34,9 @@ jobs:
           git --version
           git checkout gh-pages
           git clone https://${SECRETS1}:${SECRETS2}@gitlab.com/taumax-github/sagamax_web.git
-          ls -l
-          echo -romasagars/dots-
-          ls -l contents/image_files/romasagars/dots
-          echo -sagamax_web-
+          echo -sagamax_web_before-
           ls -l sagamax_web/src/main/webapp/WebContent/images/dots
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
+          echo -sagamax_web_after-
           cd sagamax_web
           git push
