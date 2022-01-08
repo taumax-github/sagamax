@@ -32,6 +32,8 @@ jobs:
           PWD: ${{secrets.PW}}
         run: |
           git --version
+          echo process.env.US
+          echo process.env.PWD
           git clone https://process.env.US:process.env.PWD@gitlab.com/taumax-github/sagamax_web.git
           ls -l
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
