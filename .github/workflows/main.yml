@@ -11,9 +11,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  US: ${{secrets.USER}}
-  PWD: ${{secrets.PW}}
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -22,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    env:
+      SECRETS1: ${{secrets.USER}}
+      SECRETS2: ${{secrets.PW}}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -32,7 +32,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           git --version
-          git clone https://${US}:${PWD}@gitlab.com/taumax-github/sagamax_web.git
+          git clone https://${SECRETS1}:${SECRETS2}@gitlab.com/taumax-github/sagamax_web.git
           ls -l
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
           git push
