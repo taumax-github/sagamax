@@ -33,4 +33,4 @@ jobs:
           git clone https://$USER:$PW@gitlab.com/taumax-github/sagamax_web.git
           ls -l
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
-          git push https://$USER:$PW@gitlab.com/taumax-github/sagamax_web.git
+          git push
