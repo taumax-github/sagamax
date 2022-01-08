@@ -28,11 +28,13 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         env:
-          SECRETS1: ${{secrets.USER}}
-          SECRETS2: ${{secrets.PW}}
+          SECRETS1: ${{ secrets.USER }}
+          SECRETS2: ${{ secrets.PW }}
         run: |
           git --version
+          git checkout gh-pages
           git clone https://${SECRETS1}:${SECRETS2}@gitlab.com/taumax-github/sagamax_web.git
           ls -l
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
+          cd sagamax_web
           git push
