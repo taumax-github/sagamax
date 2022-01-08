@@ -32,7 +32,6 @@ jobs:
           PWD: ${{secrets.PW}}
         run: |
           git --version
-          # export no_proxy="127.0.0.1,localhost,192,168.*,gitlab.com"
           git clone https://process.env.US:process.env.PWD@gitlab.com/taumax-github/sagamax_web.git
           ls -l
           cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
