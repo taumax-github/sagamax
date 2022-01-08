@@ -40,5 +40,5 @@ jobs:
           git config --global user.email ${SECRETS3}
           git config --global user.name ${SECRETS1}
           git add .
-          git commit -m"github‚Ægitlab‚Ì“¯Šú"
+          git commit -m"auto sync : github ->gitlab"
           git push https://${SECRETS1}:${SECRETS2}@gitlab.com/taumax-github/sagamax_web.git
