@@ -53,8 +53,6 @@ td {
 /* [table scroll start] */
 .slider {
 	overflow-y: auto;
-	height: 500px;
-	width: 500px;
 	margin: 0 auto;
 }
 .slider table {
@@ -88,9 +86,10 @@ td {
 	height: 100%;
 	border: 1px solid #999;
 }
-th.horizon {
+th.slider_hor {
 	padding: 3px 7px;	/*上下、左右への余白*/
 	background-color: #000;	/*背景色（古いブラウザ用）*/
+	text-align: left;
 }
 /* [table scroll end] */
 
