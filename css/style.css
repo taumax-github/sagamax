@@ -139,6 +139,7 @@ iframe {
 /* スクロールバーの幅の設定 */
 ::-webkit-scrollbar{
   width: 12px;
+  height: 15px;
 }
 
 /* スクロールバーの背景の設定 */
