@@ -71,6 +71,7 @@
       <li><a href="#fellow">仲間にしたい</a></li>
       <li><a href="#serif">セリフとか</a></li>
       <li><a href="#formation">陣形</a></li>
+      <li><a href="#status">能力値</a></li>
       <li><a href="#fatima">ﾌｧﾃｨﾏ</a></li>
       <li><a href="#besuma">ﾍﾞｽﾏ</a></li>
       <li><a href="#aria">ｱﾘｱ</a></li>
@@ -93,6 +94,7 @@
         <li><a href="#fellow">仲間にしたい</a></li>
         <li><a href="#serif">セリフとか</a></li>
         <li><a href="#formation">陣形</a></li>
+        <li><a href="#status">能力値</a></li>
         <li><a href="#fatima">ファティマ</a></li>
         <li><a href="#besuma">ベスマ</a></li>
         <li><a href="#aria">アリア</a></li>
@@ -121,8 +123,8 @@
 </header>
 <!--/.sh-->
 
-<body class="defaultbody" oncopy="return false;">
-  <div id="container" style="background: url(background.png) no-repeat center center / cover;">
+<body class="defaultbody" oncontextmenu="return false;">
+  <div id="container" style="background: url(background_0.5.png) ;background-attachment: fixed;" oncontextmenu="return false";>
   <div id="contents">
   <div id="main">
     <span id="pagetop"></span>
@@ -145,7 +147,7 @@
 
       <br><br>
       <span id="serif"></span>
-      <h3 class="title">皇帝にした時のセリフとか</h3>
+      <h3 class="title">皇帝にした時のセリフとか口調</h3>
       <p>
         <img src="img/nomad_woman/koutei/keisyou.jpg" width="300">
         <img src="img/nomad_woman/koutei/harasu.jpg" width="300"><br>
@@ -169,7 +171,8 @@
       </p>
 
       <br><br>
-      <h3 class="title">ノーマッド（女）の能力値</h3>
+      <span id="status"></span>
+      <h3 class="title">能力値</h3>
       <p>
         ノーマッド（女）は以下8名のキャラクタがいます。各キャラクタのステータス、閃き適正、初期技能（術、技）は以下表の通りです。<br>
         参考：<a href="http://romasaga2tebiki.seesaa.net/article/196134838.html" target="_blank">ロマンシングサガ２ （ロマサガ２・romasaga2） 攻略の手引き > ノーマッド♂</a>
@@ -205,8 +208,8 @@
             </tr>
           </table>
         </div>
-        ※1 理：理力（隠しパラメータ）<br>
-        ※2 術：術威力（魔力 + max((魔力−理力), 0) × 2）<br>
+        ※1 理：理力（隠しパラメータ）。冥術のペインのダメージに影響する。<br>
+        ※2 術：術威力（魔力 + max((魔力−理力), 0) × 2）。冥術以外の術、合成術のダメージに影響する。<br>
         ※3 魔＋理：魔力＋理力。冥合成術の威力に影響する<br>
         ※4 斬：剣・大剣、殴：斧・棍棒、射：弓、体：体術<br>
         ※5 閃：閃き適正。適正毎の閃き可能な技の一覧は<a href="../../skill/skill_list.html" target="_blank">こちら</a><br>
@@ -215,12 +218,24 @@
         殆どのキャラクタの器用さが高目に設定されており、弓の閃き適正を持つキャラクタが多いことがわかります（ロマサガ2全キャラのステータス一覧は<a href="../status_list.html" target="_blank">ステータス一覧</a>参照）。<br>
         また、全キャラ斧・棍棒・弓の技能に優れています。<br>
         しかし特徴的（というか、ノーマッド（女）の中では変異種的）なのは表の赤字部分。<br>
-        ファティマは理力の値がロマサガ2の中で最も高いキャラクターです。このため、ロマサガ2のリマスター版で登場する「陰陽師」を除けば、冥の合成術で最強の威力をたたき出すことができます。<br>
+        ファティマは魔力＋理力の値がロマサガ2の中で最も高いキャラクターです。このため、ロマサガ2のリマスター版で登場する「陰陽師」を除けば、冥の合成術で最強の威力をたたき出すことができます。<br>
+        いうて冥合成術は術威力がそんなに高くないのでそこまで威力が出るわけでもない。以下はファティマにサンドストーム（＋シャドウサーバント）を使わせてみた動画。<br>
+
+        <div class="youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0cN4tPMEod8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <br>
+        上記動画のファティマのステータスと装備はこんな感じです。<br>
+        <img src="img/nomad_woman/fatima_status_sandstorm.jpg" width="300">
+        <img src="img/nomad_woman/fatima_equip_sandstorm.jpg" width="300">
+
+        <br><br>
         また、アリアはノーマッド（女）の中では最高の術威力のため、下手な術士よりも高威力の術を放つことができます。この術威力40という値は、全キャラ中16位で、ホーリーオーダー（女）のアガタ、バルバラと同じ値です。<br>
         参考：<a href="http://romasaga2tebiki.seesaa.net/article/198002201.html" target="_blank">術威力ランキング</a><br>
 
         <br>
-        ノーマッド（女）キャラクター名の由来は「千夜一夜物語（アラビアン・ナイト）」です。キャラクタ毎の由来はそっち参照。<br>
+        ノーマッド（女）キャラクター名の由来は「千夜一夜物語（アラビアン・ナイト）」です。キャラクタ毎の由来は各キャラ参照。<br>
 
         <br>
         ここから先は、キャラクタごとにロマサガ2、エンペラーズサガ（エンサガ）、インペリアルサガ（旧インサガ）、インペリアルサガエクリプス（インサガEC）、ロマサガRSでの各キャラクタについて見ていきます。
@@ -286,6 +301,13 @@
             </tr>
           </table>
 
+          <br>
+          ロマサガ2のビーストスレイヤー、でたらめ矢、アローレイン、バラージシュートのエフェクトはこんな感じです。<br>
+          <div class="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RQVCXsfjAtk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <br><br>
+
           <a href="http://epsaga.sapp-db.com/zukan_det.php?no=210&tid=2" target="_blank">エンサガファティマ参考</a><br>
         </p>
 
@@ -298,7 +320,7 @@
 
         <h4 class="title">インサガEC</h4>
         <p>
-          未プレイなのでよく知りませんが、オリジナルイラストで実装された模様。<br>
+          未プレイなのでよく知りませんが、オリジナルイラストで実装された。<br>
           <img src="img/nomad_woman/fatima_insaga_ec.png" width="300" />
           <img src="img/nomad_woman/fatima_insaga_ec_intro.jpg" width="400" /><br>
           <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【キャラ紹介】★４ ファティマ [魔][弓][ロマサガ２]<br>ステップ地帯に生きる遊牧民「ノーマッド」の一人。ファティマをはじめとする一族の女性は、同族の男性たちと同じく大草原を守るためならば、弓や斧といった多彩な武器を駆使して立ち向かう覚悟を持っていた。 <a href="https://twitter.com/hashtag/%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#インサガ</a> <a href="https://twitter.com/hashtag/%E3%82%A4%E3%83%B3%E3%82%B5%E3%82%ACEC?src=hash&amp;ref_src=twsrc%5Etfw">#インサガEC</a> <a href="https://t.co/WETe4tpMWZ">pic.twitter.com/WETe4tpMWZ</a></p>&mdash; インペリアル サガ エクリプス公式 (@imsaga_ec) <a href="https://twitter.com/imsaga_ec/status/1236126927204818944?ref_src=twsrc%5Etfw">March 7, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -311,9 +333,11 @@
           <img src="img/7heropick_bokuon.jpg" width="500"><br>
  
           <br>
-          イラストはエンサガと同様のもの。ドットはロマサガRS用に新規に作られているが、ロマサガ2のドットを踏襲して作られている。<br>
+          イラストはエンサガと同様のもの。ドットはロマサガRS用に新規に作られており、ロマサガ2のドットを踏襲して作られている。<br>
           <img src="img/nomad_woman/fatima_sagars.jpg" width="300" /><br>
           <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【新スタイル紹介】<br>ファティマ（『ロマンシング サガ２』より）<br>ステップの遊牧民&quot;ノーマッド（女）&quot;の一人。<br>弓矢による遠距離攻撃を得意とする。<br><br>「思い切り走り回れる広い草原はないのか？」<a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%ACRS?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガRS</a> <a href="https://t.co/xqC3hnwcoa">pic.twitter.com/xqC3hnwcoa</a></p>&mdash; ロマンシング サガ リ・ユニバース公式 (@romasaga_rs) <a href="https://twitter.com/romasaga_rs/status/1108657921460592640?ref_src=twsrc%5Etfw">March 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+          <br><br>
           <table border="2">
             <tr>
               <th>使用可能技</th>
@@ -330,6 +354,12 @@
           </table>
         </p>
 
+        ロマサガ2でのビーストスレイヤーと瞬速の矢のエフェクト（狙い撃ちは原作ロマサガ2には存在しない）<br>
+        <div class="youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/mba01QUeQCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <br><br>
         <span id="besuma"></span>
         <h3 class="title">ベスマ</h3>
 
@@ -581,7 +611,14 @@
               <td>スカイドライブ</td>
             </tr>
           </table>
-          ドライブエッジはロマサガ2にはなかった技。エンサガ初登場？
+
+          <br>
+          次の動画はロマサガ2のヨーヨー、スカイドライブのエフェクトです。ドライブエッジはロマサガ2にはなかった技。エンサガ初登場？メガホークはロマサガ3の技。
+          <br>
+
+          <div class="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jFGQrG0zoyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </p>
 
         <br>
