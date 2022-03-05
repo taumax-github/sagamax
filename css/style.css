@@ -499,7 +499,7 @@ header .icon_middle img {
 	clear: both;
 	margin-bottom: 20px;	/*見出しの下に空けるスペース*/
 	font-size: 24px;		/*文字サイズ*/
-	text-decoration: underline;
+	/* text-decoration: underline; */
 	color: #c1bc9e;			/*文字色*/
 }
 
