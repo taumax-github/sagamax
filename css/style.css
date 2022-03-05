@@ -1035,7 +1035,7 @@ footer .pr {display: block;}
 	margin-top: 10px;	/*上に空ける余白。上下のバランスをここでとります。*/
 }
 /*h3タグ*/
-#main h3 {
+#main h3.title {
 	font-size: 14px;		/*文字サイズ*/
 }
 /*段落(p)タグ*/
