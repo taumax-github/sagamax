@@ -287,6 +287,14 @@ a:hover {
   padding-left: 0px;
 }
 
+#contents li.normal {
+	list-style-type: disc;
+	list-style: inside;
+	background: none;
+	padding-left: 40px;
+}
+
+
 /*header（大きな端末用：左ブロック）
 ---------------------------------------------------------------------------*/
 /*headerブロック*/
@@ -1047,8 +1055,7 @@ footer .pr {display: block;}
 	padding-top: 20px;
 }
 
-
-/* === フィルタボタン ============================ */
+/* [フィルタボタン start] */
 .tfArea{
   display    : inline-block;
   position   : relative;
@@ -1155,7 +1162,7 @@ footer .pr {display: block;}
   border        : 1px #666666 solid; /* 罫線       */
   white-space   : nowrap;
 }
-/* === フィルタボタン ============================ */
+/* [フィルタボタン end] */
 
 /*listブロック（works.htmlで使用）
 ---------------------------------------------------------------------------*/
