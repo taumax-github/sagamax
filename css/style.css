@@ -194,30 +194,39 @@ ul.indent_no {
   font-size      : 12px;              /* 文字サイズ */
 }
 
- /* --- ヘッダーのスタイル指定 ------------------- */
+/* --- ヘッダーのスタイル指定 ------------------- */
 .sortableTable th {
-  text-align    : center;            /* 文字位置   */
-  font-weight   : bold;              /* 太文字     */
-  padding       : 6px 0px;          /* 余白       */
-  border        : 1px #666666 solid; /* 罫線       */
-  background    : #99ccff;           /* 背景色     */
+  text-align    : center;              /* 文字位置 */
+  font-weight   : bold;                /* 太文字   */
+  padding       : 6px 0px;             /* 余白     */
+  border        : 1px #666666 solid; /* 罫線     */
+  background    : #0099cc;           /* 背景色   */
+}
+
+/* --- ヘッダーのスタイル指定 ------------------- */
+.sortableTable th.nowrap {
+  text-align    : center;              /* 文字位置 */
+  font-weight   : bold;                /* 太文字   */
+  padding       : 6px 0px;             /* 余白     */
+  border        : 1px #666666 solid; /* 罫線     */
+  background    : #0099cc;           /* 背景色   */
+  white-space   : nowrap;
 }
 
 /* --- 明細のスタイル指定 ----------------------- */
 .sortableTable td {
-  text-align      : left;            /* 文字位置   */
-  padding         : 6px 0px;           /* 余白       */
+  text-align      : left;                /* 文字位置   */
+  padding         : 6px 0px;             /* 余白       */
   border          : 1px #666666 solid; /* 罫線       */
   background-color: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒の事で0.7は色が70%出た状態の事。*/
 }
-
 
 /* [フィルタボタン start] */
 .tfArea{
 	display    : inline-block;
 	position   : relative;
-  }
-  .tfImg{
+}
+.tfImg{
 	display    : inline-block;
 	width      : 8px;
 	height     : 8px;
@@ -226,17 +235,17 @@ ul.indent_no {
 	margin     : 1px 3px;
 	padding    : 3px;
 	cursor     : pointer;
-  }
-  /* === フィルタボタン（カーソルオーバー時）======= */
-  .tfImg:hover{
+}
+/* === フィルタボタン（カーソルオーバー時）======= */
+.tfImg:hover{
 	background : #FFD700;
-  }
-  /* === フィルタボタン内の画像色（SVG）============ */
-  .tfImg path{
+}
+/* === フィルタボタン内の画像色（SVG）============ */
+.tfImg path{
 	fill       : #777;
-  }
-  /* === フィルタリスト ============================ */
-  .tfList{
+}
+/* === フィルタリスト ============================ */
+.tfList{
 	display    : inline-block;
 	position   : absolute;
 	max-width  : 250px;
@@ -248,81 +257,58 @@ ul.indent_no {
 	line-height: 1.1;
 	font-weight: normal;
 	color      : black;
-  }
-  /* === フィルタリスト内のform ==================== */
-  .tfList form{
+}
+/* === フィルタリスト内のform ==================== */
+.tfList form{
 	max-height : 150px;           /* 縦幅 */
 	overflow   : scroll;
 	overflow   : overflow-y;
 	overflow   : auto;
-  }
-  /* === フィルタリスト内のチェックボックス ======== */
-  .tfMeisai{
+}
+/* === フィルタリスト内のチェックボックス ======== */
+.tfMeisai{
 	text-align : left;
 	padding    : 2px;
-  }
-  /* === フィルタリスト内の文字位置合わせ ========== */
-  .tfMeisai label{
+}
+/* === フィルタリスト内の文字位置合わせ ========== */
+.tfMeisai label{
 	padding    : 0 10px 0 3px;
-  }
-  /* === OK/CANCELボタン =========================== */
-  .tfBtnArea{
+}
+/* === OK/CANCELボタン =========================== */
+.tfBtnArea{
 	text-align : center;
 	font-size  : 8pt;
 	padding    : 3px 5px;
-  }
-  .tfBtnArea input{
+}
+.tfBtnArea input{
 	display    : inline-block;
 	margin     : 0 5px;
 	color      : black;
-  }
-  /* === 含むボタンの入力エリア ==================== */
-  .tfInStr{
+}
+/* === 含むボタンの入力エリア ==================== */
+.tfInStr{
 	padding    : 5px 3px;
 	border-top : 1px solid #999;
 	border-bottom: 1px solid #999;
-  }
-  .tfInStr input{
+}
+.tfInStr input{
 	box-sizing : border-box;
 	width      : 100%;
 	padding    : 1px 3px;
 	font-weight: normal;
 	font-size  : 95%;
 	border     : 1px solid #ccc;
-  }
-  /* === フィルタ非表示 ============================ */
-  #sortableTable tr[cmanFilterNone]{
+}
+/* === フィルタ非表示 ============================ */
+#sortableTable tr[cmanFilterNone]{
 	display    : none;
-  }
-  /* === フィルタ非表示行と次行の間を二重線にする == */
-  #sortableTable tr[cmanFilterNone] + tr td{
+}
+/* === フィルタ非表示行と次行の間を二重線にする == */
+#sortableTable tr[cmanFilterNone] + tr td{
 	border-top : 3px double #777;
-  }
-  /* --- （参考）テーブル全体のスタイル指定 ------- */
-  #sortableTable {
-	width          : 100%;
-	border-collapse: collapse;         /* 境界線結合 */
-	border-spacing : 0;                /* 罫線間余白 */
-	font-size      : 9pt;              /* 文字サイズ */
-  }
-  /* --- ヘッダーのスタイル指定 ------------------- */
-  #sortableTable th {
-	text-align    : center;            /* 文字位置   */
-	font-weight   : bold;              /* 太文字     */
-	padding       : 3px 5px;          /* 余白       */
-	border        : 1px #666666 solid; /* 罫線       */
-	background    : #99ccff;           /* 背景色     */
-	white-space   : nowrap;
-  }
-  /* --- 明細のスタイル指定 ----------------------- */
-  #sortableTable td {
-	text-align    : center;            /* 文字位置   */
-	padding       : 3px 5px;           /* 余白       */
-	border        : 1px #666666 solid; /* 罫線       */
-	white-space   : nowrap;
-  }
-  /* [フィルタボタン end] */
-  
+}
+/* [フィルタボタン end] */
+
 
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
