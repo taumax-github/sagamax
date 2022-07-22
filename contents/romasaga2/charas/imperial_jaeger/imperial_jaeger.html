@@ -48,6 +48,12 @@
       gtag('config', 'UA-156501005-1');
     </script>
     <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      const dotImgPath = "img/jaeger/charas/"
+    </script>
+
+    <!-- ドット絵を動かすためのjs読み込み -->
+    <script src="../../../../js/pictControl.js"></script>
   </head>
 
 <!--PC用（801px以上端末）で表示させるブロック-->
@@ -199,17 +205,23 @@
         <div class="slider" style="margin-left:0px;">
           <table border="2" style="font-size: 12px;">
             <TR>	<TH>キャラ名</TH>	<TH>腕</TH>	<TH>器</TH>	<TH>魔</TH>	<TH>早</TH>	<TH>体</TH>	<TH>LP</TH>	<TH>理</TH>	<TH>術</TH>	<TH>魔+理</TH>	<TH>WH</TH>	<TH>JH</TH>	<TH>閃</TH>	<TH>術法</TH>	<TH>技能</TH>
-            <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>テレーズ</TH>	<TD>13</TD>	<TD>20</TD>	<TD>15</TD>	<TD>16</TD>	<TD>14</TD>	<TD>10</TD>	<TD>10</TD>	<TD>25</TD>	<TD>25</TD>	<TD>+2</TD>	<TD>-6</TD>	<TD>弓</TD>	<TD>水<img src="../../icon/tech_spell/water.jpg" /></TD>	<TD>突<img src="../../icon/tech_spell/spear.jpg" /><br>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
+            <TR>	<TH class="slider_hor" style="white-space: normal;"><img id="therese_walk" src="img/jaeger/charas/therese/dot/left1.png"     width="50"><br>テレーズ</TH>	<TD>13</TD>	<TD>20</TD>	<TD>15</TD>	<TD>16</TD>	<TD>14</TD>	<TD>10</TD>	<TD>10</TD>	<TD>25</TD>	<TD>25</TD>	<TD>+2</TD>	<TD>-6</TD>	<TD>弓</TD>	<TD>水<img src="../../icon/tech_spell/water.jpg" /></TD>	<TD>突<img src="../../icon/tech_spell/spear.jpg" /><br>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
             <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>メアリー</TH>	<TD>15</TD>	<TD>21</TD>	<TD>14</TD>	<TD>15</TD>	<TD>13</TD>	<TD>8</TD>	<TD>13</TD>	<TD>16</TD>	<TD>27</TD>	<TD>+2</TD>	<TD>-7</TD>	<TD>小剣</TD>	<TD>なし</TD>	<TD>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
-            <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>アグネス</TH>	<TD>14</TD>	<TD>20</TD>	<TD>17</TD>	<TD>16</TD>	<TD>12</TD>	<TD>6</TD>	<TD>12</TD>	<TD>27</TD>	<TD>29</TD>	<TD>+1</TD>	<TD>-5</TD>	<TD>弓</TD>	<TD>水<img src="../../icon/tech_spell/water.jpg" /><br>天<img src="../../icon/tech_spell/light.jpg" /></TD>	<TD>突<img src="../../icon/tech_spell/spear.jpg" /><br>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
+            <TR>	<TH class="slider_hor" style="white-space: normal;"><img id="agnes_walk" src="img/jaeger/charas/agnes/dot/left1.png"     width="50"><br>アグネス</TH>	<TD>14</TD>	<TD>20</TD>	<TD>17</TD>	<TD>16</TD>	<TD>12</TD>	<TD>6</TD>	<TD>12</TD>	<TD>27</TD>	<TD>29</TD>	<TD>+1</TD>	<TD>-5</TD>	<TD>弓</TD>	<TD>水<img src="../../icon/tech_spell/water.jpg" /><br>天<img src="../../icon/tech_spell/light.jpg" /></TD>	<TD>突<img src="../../icon/tech_spell/spear.jpg" /><br>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
             <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>キャサリン</TH>	<TD>13</TD>	<TD>22</TD>	<TD>15</TD>	<TD>15</TD>	<TD>14</TD>	<TD>7</TD>	<TD>11</TD>	<TD>23</TD>	<TD>26</TD>	<TD>+2</TD>	<TD>-7</TD>	<TD>弓</TD>	<TD>なし</TD>	<TD>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
-            <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>アン</TH>	<TD>16</TD>	<TD>20</TD>	<TD>14</TD>	<TD>15</TD>	<TD>13</TD>	<TD>9</TD>	<TD>12</TD>	<TD>18</TD>	<TD>26</TD>	<TD>+1</TD>	<TD>-4</TD>	<TD>弓</TD>	<TD>地<img src="../../icon/tech_spell/stone.jpg" /></TD>	<TD>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
+            <TR>	<TH class="slider_hor" style="white-space: normal;"><img id="ann_walk"  src="img/jaeger/charas/ann/dot/left1.png"     width="50"><br>アン</TH>	<TD>16</TD>	<TD>20</TD>	<TD>14</TD>	<TD>15</TD>	<TD>13</TD>	<TD>9</TD>	<TD>12</TD>	<TD>18</TD>	<TD>26</TD>	<TD>+1</TD>	<TD>-4</TD>	<TD>弓</TD>	<TD>地<img src="../../icon/tech_spell/stone.jpg" /></TD>	<TD>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
             <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>ユリアナ</TH>	<TD>12</TD>	<TD>23</TD>	<TD>14</TD>	<TD>13</TD>	<TD>15</TD>	<TD>11</TD>	<TD>12</TD>	<TD>18</TD>	<TD>26</TD>	<TD>+3</TD>	<TD>-7</TD>	<TD>弓</TD>	<TD>なし</TD>	<TD>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
-            <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>イザベラ</TH>	<TD>14</TD>	<TD>21</TD>	<TD>19</TD>	<TD>14</TD>	<TD>12</TD>	<TD>7</TD>	<TD>10</TD>	<TD>37</TD>	<TD>29</TD>	<TD>+1</TD>	<TD>-1</TD>	<TD>弓</TD>	<TD>地<img src="../../icon/tech_spell/stone.jpg" /></TD>	<TD>突<img src="../../icon/tech_spell/spear.jpg" /><br>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
+            <TR>	<TH class="slider_hor" style="white-space: normal;"><img id="isabella_walk"  src="img/jaeger/charas/isabella/dot/left1.png"     width="50"><br>イザベラ</TH>	<TD>14</TD>	<TD>21</TD>	<TD>19</TD>	<TD>14</TD>	<TD>12</TD>	<TD>7</TD>	<TD>10</TD>	<TD>37</TD>	<TD>29</TD>	<TD>+1</TD>	<TD>-1</TD>	<TD>弓</TD>	<TD>地<img src="../../icon/tech_spell/stone.jpg" /></TD>	<TD>突<img src="../../icon/tech_spell/spear.jpg" /><br>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
             <TR>	<TH class="slider_hor" style="white-space: normal;"><img src="img/nomad_woman/dot/fatima/left1.png"     width="50"><br>エリザベス</TH>	<TD>13</TD>	<TD>22</TD>	<TD>15</TD>	<TD>13</TD>	<TD>15</TD>	<TD>8</TD>	<TD>12</TD>	<TD>21</TD>	<TD>27</TD>	<TD>+2</TD>	<TD>-7</TD>	<TD>弓</TD>	<TD>なし</TD>	<TD>射<img src="../../icon/tech_spell/arrow.jpg" /></TD>
             <TR>	<TH>キャラ名</TH>	<TH>腕</TH>	<TH>器</TH>	<TH>魔</TH>	<TH>早</TH>	<TH>体</TH>	<TH>LP</TH>	<TH>理</TH>	<TH>術</TH>	<TH>魔+理</TH>	<TH>WH</TH>	<TH>JH</TH>	<TH>閃</TH>	<TH>術法</TH>	<TH>技能</TH>
           </table>
         </div>
+        <script>
+          walk("therese_walk",  dotImgPath + "therese/dot/",  0);
+          walk("agnes_walk",    dotImgPath + "agnes/dot/",    0);
+          walk("ann_walk",      dotImgPath + "ann/dot/",      0);
+          walk("isabella_walk", dotImgPath + "isabella/dot/", 0);
+        </script>
         ※1 理：理力（隠しパラメータ）。冥術のペインのダメージに影響する。<br>
         ※2 術：術威力（魔力 + max((魔力−理力), 0) × 2）。冥術以外の術、合成術のダメージに影響する。<br>
         ※3 魔＋理：魔力＋理力。冥合成術の威力に影響する<br>
@@ -247,21 +259,27 @@
         <br><br>
   
         <span id="therese"></span>
-        <h3 class="title">テレーズ</h3>
+        <h3 class="title">
+          <img id="theresedot" src="img/jaeger/charas/therese/dot/front1.png">
+          <script>
+            picChange("theresedot", dotImgPath + "therese/dot/");
+          </script>
+          アグネス
+        </h3>
 
-        <img src="img/nomad_woman/dot/fatima/front1.png">
-        <img src="img/nomad_woman/dot/fatima/front2.png">
-        <img src="img/nomad_woman/dot/fatima/left1.png">
-        <img src="img/nomad_woman/dot/fatima/left2.png">
-        <img src="img/nomad_woman/dot/fatima/back1.png">
-        <img src="img/nomad_woman/dot/fatima/back2.png">
+        <img src="img/jaeger/charas/therese/dot/front1.png">
+        <img src="img/jaeger/charas/therese/dot/front2.png">
+        <img src="img/jaeger/charas/therese/dot/left1.png">
+        <img src="img/jaeger/charas/therese/dot/left2.png">
+        <img src="img/jaeger/charas/therese/dot/back1.png">
+        <img src="img/jaeger/charas/therese/dot/back2.png">
         <br>
-        <img src="img/nomad_woman/dot/fatima/kick.png">
-        <img src="img/nomad_woman/dot/fatima/atack.png">
-        <img src="img/nomad_woman/dot/fatima/chant.png">
-        <img src="img/nomad_woman/dot/fatima/damaged.png">
-        <img src="img/nomad_woman/dot/fatima/danger.png">
-        <img src="img/nomad_woman/dot/fatima/fainted.png">
+        <img src="img/jaeger/charas/therese/dot/kick.png">
+        <img src="img/jaeger/charas/therese/dot/atack.png">
+        <img src="img/jaeger/charas/therese/dot/chant.png">
+        <img src="img/jaeger/charas/therese/dot/damaged.png">
+        <img src="img/jaeger/charas/therese/dot/danger.png">
+        <img src="img/jaeger/charas/therese/dot/fainted.png">
         <br><br>
 
         <img src="img/nomad_woman/goodat/fatima.jpg" width="300">
@@ -429,7 +447,13 @@
 
         <br><br>
         <span id="agnes"></span>
-        <h3 class="title">アグネス</h3>
+        <h3 class="title">
+          <img id="agnesdot" src="img/jaeger/charas/agnes/dot/front1.png">
+          <script>
+            picChange("agnesdot", dotImgPath + "agnes/dot/");
+          </script>
+          アグネス
+        </h3>
 
         <img src="img/jaeger/charas/agnes/dot/front1.png">
         <img src="img/jaeger/charas/agnes/dot/front2.png">
@@ -499,7 +523,13 @@
 
         <br><br>
         <span id="ann"></span>
-        <h3 class="title">アン</h3>
+        <h3 class="title">
+          <img id="anndot" src="img/jaeger/charas/ann/dot/front1.png">
+          <script>
+            picChange("anndot", dotImgPath + "ann/dot/");
+          </script>
+          アン
+        </h3>
 
         <img src="img/jaeger/charas/ann/dot/front1.png">
         <img src="img/jaeger/charas/ann/dot/front2.png">
@@ -581,8 +611,15 @@
 
         <br><br>
         <span id="isabella"></span>
-        <h3 class="title">イザベラ</h3>
+        <h3 class="title">
+          <img id="isabelladot" src="img/jaeger/charas/isabella/dot/front1.png">
+          <script>
+            picChange("isabelladot", dotImgPath + "isabella/dot/");
+          </script>
+          イザベラ
+        </h3>
 
+        <br>
         <img src="img/jaeger/charas/isabella/dot/front1.png">
         <img src="img/jaeger/charas/isabella/dot/front2.png">
         <img src="img/jaeger/charas/isabella/dot/left1.png">
