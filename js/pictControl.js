@@ -5,7 +5,7 @@ const dotImgFile = ["front1.png", "front2.png", "left1.png",
 
 const walkImg = ["left1.png", "left2.png"];
 
-function picChange(id, dotImgPath) {
+function picRandom(id, dotImgPath) {
   'use strict';
   // 乱数生成
   let randNum = Math.floor(Math.random() * dotImgFile.length)
@@ -13,15 +13,16 @@ function picChange(id, dotImgPath) {
   let elem = document.getElementById(id);
   elem.src = dotImgPath + dotImgFile[randNum];
   // 1秒ごとに実行
-  setTimeout(function(){picChange(id, dotImgPath)}, 1000);
+  setTimeout(function(){picRandom(id, dotImgPath)}, 1000);
 }
 
 function walk(id, dotImgPath, index) {
+  'use strict';
   // カウントが最大になれば初期値に戻す
-  index++
   if (index == walkImg.length) index = 0;
   let elem = document.getElementById(id);
   elem.src = dotImgPath + walkImg[index];
+  index++
   //1秒ごとに実行
   setTimeout(function(){walk(id, dotImgPath, index)}, 1000);
 }
