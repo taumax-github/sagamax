@@ -67,14 +67,16 @@ td {
 	white-space: nowrap;
 }
 .slider tr:first-child th,
-.slider tr th:first-child {
+/* .slider tr th:first-child { */
+.slider tr th {
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
 	left: 0;
 	z-index: 1;
 }
-.slider tr:first-child th:first-child {
+/* .slider tr:first-child th:first-child { */
+.slider tr th {
 	z-index: 10;
 }
 .slider tr:first-child th:before,
