@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:url" content="https://taumax-github.github.io/sagamax/contents/minsaga/public_info/kawazu_tweet.html" /> <!--記事のURL-->
+    <meta property="og:title" content="ミンサガの河津さんのツイート" /> <!--記事のタイトル-->
+    <meta property="og:description" content="ミンサガの河津さんのツイート" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/images/icon_twitter_card.png" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/print.css" media="print">
+    <script src="../../../js/openclose.js"></script>
+
+    <title>sagamaxのミンサガ</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../images/icon_top.png" alt="TOP">
+      <br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="#firstly">はじめに</a></li>
+      <li><a href="#history">年表</a></li>
+      <li><a href="#ancient">古代</a></li>
+      <li><a href="#after_saruin">ｻﾙｰｲﾝ誕生後</a></li>
+      <li><font color="lightgray">英雄ミルザ</font></li>
+      <li><a href="#saruin">オイゲン</a></li>
+      <li><a href="#ryukishi">竜騎士</a></li>
+      <li><a href="#merubil">メルビル</a></li>
+      <li><a href="#reria">レリア２世</a></li>
+      <li><a href="#roza">ローザ</a></li>
+      <li><a href="#yusuf">ユスフ</a></li>
+      <li><a href="#curl">カール１世</a></li>
+      <li><a href="#silver">海賊シルバー</a></li>
+      </ul>
+  </nav>
+</header>
+<!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul class="icon">
+        <li>
+          <li><a href="#firstly">はじめに</a></li>
+          <li><a href="#history">年表</a></li>
+          <li><a href="#ancient">古代</a></li>
+          <li><a href="#after_saruin">サルーイン誕生後</a></li>
+          <li><font color="lightgray">英雄ミルザ</font></li>
+          <li><a href="#saruin">サルーイン討伐後のオイゲン</a></li>
+          <li><a href="#ryukishi">竜騎士</a></li>
+          <li><a href="#merubil">メルビル</a></li>
+          <li><a href="#reria">レリア２世</a></li>
+          <li><a href="#roza">ローザ</a></li>
+          <li><a href="#yusuf">ユスフ</a></li>
+          <li><a href="#curl">カール１世</a></li>
+          <li><a href="#silver">海賊シルバー</a></li>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+    </ul>
+
+  </div>
+  <!--/#menubar-s-->
+</header>
+<!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container" style="background: url(../img/background_0.3.png) ;background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <h2 class="title">ミンサガ設定話</h2>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "sagamaxトップ",
+            "item": "https://taumax-github.github.io/sagamax/index.html"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ミンサガ index",
+            "item": "https://taumax-github.github.io/sagamax/contents/minsaga/minsaga_index.html"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ミンサガ設定話",
+            "item": "https://taumax-github.github.io/sagamax/contents/minsaga/public_info/minsaga_namahousou.html"
+          }]
+        }
+      </script>
+      <p style="color: #FFFFFF;"><a href="../../../index.html" style="color: #00bfff;">ホーム</a> > <a href="../minsaga_index.html">ミンサガ index</a> > ミンサガ設定話</p>
+
+      <br/>
+      <span id="miruza"><span>
+      <h3 class="title">伝説の英雄ミルザ</h3>
+      <p>
+        そこに現れたのが、伝説の英雄「銀の戦士」ことミルザです。彼は、サルーインのしもべたちとの戦いの中で成長し、マルディアスの人々から信頼を寄せられる戦士になっていました。エロールは彼にいくつかの試練を課し、彼も見事にそれを果たして神の戦士としての資格を示しました。<br/>
+        彼は、神の手になる武器と鎧を身に着につけ、サルーインと戦い、ついに結界に封じ込めたのです。サルーインは結界の力で地中深く沈んでいき、そこに縛りつけられました。<br/>
+        しかし、ミルザも深手を負って、息絶えます。エロールは彼を天界に引き上げ、正義の神として永遠の命を与えました。<br/>
+  
+        <br/>
+        この話は詩人がゲーム中、「悪しき三柱神との闘いの語り」と「英雄と神々の最終試練の語り」で語っている内容でもあります。<br/>
+      </p>
+
+      <br/>
+      悪しき三柱神との闘いの語り<br/>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kM52X-2WCkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <br/>
+      英雄と神々の最終試練の語り<br/>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EP5ZJUxDOTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <br/>
+      「悪しき三柱神との闘いの語り」は、SFC版のロマサガではオープニングで語られていました。<br/>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JJ67z_gc76Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/JJ67z_gc76Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <p>
+        <br/>
+        <img src="img/miruza.jpg" width="300"/><br/>
+        ミルザ（画像はエンサガのもの。<a href="http://epsaga.sapp-db.com/zukan_det.php?no=313&tid=1" target="_blank" rel="noreferrer">こちら</a>から抜粋）<br/>
+  
+        <br/>
+        <img src="img/oigen.jpg" width="300"/><br/>
+        オイゲン（画像はエンサガのもの。<a href="http://epsaga.sapp-db.com/zukan_det.php?no=303&tid=1" target="_blank" rel="noreferrer">こちら</a>から抜粋）<br/>
+      </p>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>騎士ミルザは孤児だったとも、比較的裕福な家の生まれだったとも言われています。どんな生まれであったにしろ、彼は自分を厳しく律する人間に育ちました。正義を他人に求めるのではなく、自分自身が正しい道を歩む事を求め続けました。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1591052540803977216?ref_src=twsrc%5Etfw">November 11, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>騎士ミルザは多くの人に愛されましたが、同じくらい多くの人に嫌われました。それは彼が正しい事を言うからです。しかし、彼を最も嫌っている人でさえ、最も信頼できる人間は騎士ミルザだと認めていました。ミルザの名声は少しずつ高まっていきます。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1591444113236561920?ref_src=twsrc%5Etfw">November 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>騎士オイゲンがミルザとの最初の出会いを語っています。「ミルザは真っ直ぐ過ぎて扱いづらい男だと聞いているが？」と言うとミルザは笑顔で答えた「私も騎士オイゲンは真っ直ぐ過ぎて扱いづらい男だと聞いているよ」。二人の絆はこうして結ばれたと。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1591797577414246401?ref_src=twsrc%5Etfw">November 13, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>騎士が生まれ正義と秩序を目指す人々が活動する一方で、貧富の差が生じ底辺の生活の中で生きる事に必死になるしか無い人々もいました。盗んで騙して奪って、そんな暮らしを続ける娘がいました。その名をアルドラといいます。火を操り恐れられるワルでした。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1592137982022389760?ref_src=twsrc%5Etfw">November 14, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>アルドラとミルザの出会いについては、過剰にロマンティックなものから、本当に素っ気ないものまで様々な話があり、どれが本当なのかは分かりません。オイゲンはアルドラが盗人だったと語っているだけで、細かい話は何も残していないのです。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1592505870281510913?ref_src=twsrc%5Etfw">November 15, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>アルドラとミルザの物語は、また別の形で語ることもあるでしょう。ミルザとその仲間達、ミルザの冒険そのものも一晩では語り尽くせません。彼らの事を語る機会が、いつの日か訪れる事を願っています。しかし今は、ミルザがサルーインを封じた後に進みましょう</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1592859572775292930?ref_src=twsrc%5Etfw">November 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <br><br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section><!-- section class="box" -->
+
+    <footer>
+      <p class="rights">
+        <!-- ミンサガの権利表記 -->
+        © 1992, 2005, 2022 SQUARE ENIX CO., LTD. All Rights Reserved.<br>
+        ILLUSTRATION: TOMOMI KOBAYASHI<br>
+        当該作品の転載・配布は禁止いたします。<br>
+      </p>
+
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:url" content="https://taumax-github.github.io/sagamax/contents/minsaga/public_info/kawazu_tweet.html" /> <!--記事のURL-->
+    <meta property="og:title" content="ミンサガの河津さんのツイート" /> <!--記事のタイトル-->
+    <meta property="og:description" content="ミンサガの河津さんのツイート" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/images/icon_twitter_card.png" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/print.css" media="print">
+    <script src="../../../js/openclose.js"></script>
+
+    <title>sagamaxのミンサガ</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../images/icon_top.png" alt="TOP">
+      <br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="#firstly">はじめに</a></li>
+      <li><a href="#history">年表</a></li>
+      <li><a href="#ancient">古代</a></li>
+      <li><a href="#after_saruin">ｻﾙｰｲﾝ誕生後</a></li>
+      <li><a href="#miruza">英雄ミルザ</a></li>
+      <li><a href="#oigen">オイゲン</a></li>
+      <li><font color="lightgray">竜騎士</font></li>
+      <li><a href="#merubil">メルビル</a></li>
+      <li><a href="#reria">レリア２世</a></li>
+      <li><a href="#roza">ローザ</a></li>
+      <li><a href="#yusuf">ユスフ</a></li>
+      <li><a href="#curl">カール１世</a></li>
+      <li><a href="#silver">海賊シルバー</a></li>
+      </ul>
+  </nav>
+</header>
+<!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul class="icon">
+        <li>
+          <li><a href="#firstly">はじめに</a></li>
+          <li><a href="#history">年表</a></li>
+          <li><a href="#ancient">古代</a></li>
+          <li><a href="#after_saruin">サルーイン誕生後</a></li>
+          <li><a href="#miruza">英雄ミルザ</a></li>
+          <li><a href="#oigen">サルーイン討伐後のオイゲン</a></li>
+          <li><font color="lightgray">竜騎士</font></li>
+          <li><a href="#merubil">メルビル</a></li>
+          <li><a href="#reria">レリア２世</a></li>
+          <li><a href="#roza">ローザ</a></li>
+          <li><a href="#yusuf">ユスフ</a></li>
+          <li><a href="#curl">カール１世</a></li>
+          <li><a href="#silver">海賊シルバー</a></li>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+    </ul>
+
+  </div>
+  <!--/#menubar-s-->
+</header>
+<!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container" style="background: url(../img/background_0.3.png) ;background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <h2 class="title">ミンサガ設定話</h2>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "sagamaxトップ",
+            "item": "https://taumax-github.github.io/sagamax/index.html"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ミンサガ index",
+            "item": "https://taumax-github.github.io/sagamax/contents/minsaga/minsaga_index.html"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "ミンサガ設定話",
+            "item": "https://taumax-github.github.io/sagamax/contents/minsaga/public_info/minsaga_namahousou.html"
+          }]
+        }
+      </script>
+      <p style="color: #FFFFFF;"><a href="../../../index.html" style="color: #00bfff;">ホーム</a> > <a href="../minsaga_index.html">ミンサガ index</a> > ミンサガ設定話</p>
+
+      <br/>
+      <span id="ryukishi"><span>
+      <h3 class="title">竜騎士</h3>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>竜はサルーインが封じられた事で自由を感じていた。人や神と争う事に意味を感じられなかった彼にとって、邪神からの圧力が無くなったのは幸せな出来事だった。やがて彼の住処の近くに人間がやってきた。人を殺すのに躊躇は無かったが、その連中は奇妙だった。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1594691200522805250?ref_src=twsrc%5Etfw">November 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>早朝の日課である居住地を囲む柵の見回りに出掛けたオイゲンの目の前に、その竜は降り立った。竜の放つオーラに撃たれ、オイゲンの供の若い騎士二人は体が動かなかった。オイゲンは一歩踏み出し両手を広げた。賢き者よ何用か。オイゲンは静かに尋ねた。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1595006608471658496?ref_src=twsrc%5Etfw">November 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>竜とオイゲンはしばらく立ち話を続けました。供の騎士二人も硬直が解けると騎士と竜の対話に引き込まれていきます。竜はどうしてもオイゲン達がこの地にやってきた目的が理解出来ませんでした。オイゲンは竜に騎士と一緒に生活する事を提案します。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1595399738383552513?ref_src=twsrc%5Etfw">November 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>翌朝、竜が騎士の砦にやって来ます。少し体を小さくし二本足で歩いている姿を見て、オイゲンは驚きます。竜はお前達に合わせただけだと言います。竜は騎士の修行を始めます。騎士の中には不満を漏らす者もいました。竜は敵ではないかと。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1595772364801085440?ref_src=twsrc%5Etfw">November 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>竜と共に暮らす事は良い修行になるとオイゲンは言いました。それでも何人かの騎士は彼の下を去っていきました。竜は料理や繕いが苦手でしたが、力仕事で騎士を助けました。しかし、オイゲンシュタットの城壁は竜が作ったものではありません。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1596128402221985796?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>竜が共にいる風景がすっかり当たり前になったある夜、オイゲンの寝所を竜が訪ねます。お前の命はもう尽きる、オイゲンはそう言われると苦笑いし、竜に皆を集めるように頼みます。そして、特に言い残す事は無い、とだけ言い残し永遠の眠りにつきました。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1596421408481251328?ref_src=twsrc%5Etfw">November 26, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <br/>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-xmBDL5kTHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <br/>
+      ゲーム中の詩人の語りに「オイゲン公と彼の盾の語り」というものがあります。オイゲンはミルザに言われた通り、サルーイン後の世界を再建に尽力し、その生涯を閉じました。<br/>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vX9qNE6H_hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <br/>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>オイゲンの死後、そこはオイゲンシュタットと呼ばれるようになります。竜はその後もしばらくその地に留まります。オイゲン亡き後の騎士団が変わっていく様を興味深く眺めていましたが、やがて自分に対する風当たりが強くなると、その地を去りました。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1596839174120034307?ref_src=twsrc%5Etfw">November 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ロマサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガ</a> <a href="https://twitter.com/hashtag/%E3%83%9F%E3%83%B3%E3%82%B5%E3%82%AC%E3%83%AA%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC?src=hash&amp;ref_src=twsrc%5Etfw">#ミンサガリマスター</a><br>竜が去ったように、我々も騎士団を離れましょう。向かうは暖かなサンゴ海。<br>海神ウコムの恩寵でサンゴ海の魔物は影を潜めました。大航海時代の始まりです。偉大な航海者や成功した貿易商が現れます。ワロン島出身のメルビルもその一人でした。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1597181656422809600?ref_src=twsrc%5Etfw">November 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <br><br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section><!-- section class="box" -->
+
+    <footer>
+      <p class="rights">
+        <!-- ミンサガの権利表記 -->
+        © 1992, 2005, 2022 SQUARE ENIX CO., LTD. All Rights Reserved.<br>
+        ILLUSTRATION: TOMOMI KOBAYASHI<br>
+        当該作品の転載・配布は禁止いたします。<br>
+      </p>
+
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>
