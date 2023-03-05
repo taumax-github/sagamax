@@ -18,7 +18,7 @@ function tFilterInit() {
   var wTABLE  = document.getElementById(filterableTabldID);
   var wTR     = wTABLE.rows;
   var wAddBtn = '';
-  
+
   // テーブル内をフィルタボタンを付ける
   for (var i=0; i < wTR.length; i++) {
     var wTD     = wTABLE.rows[i].cells;
@@ -27,7 +27,7 @@ function tFilterInit() {
       if (wTD[j].getAttribute('cmanFilterBtn') !== null) {
         // フィルタ対象はボタンの次の行から
         gTfStartRow = i + 1;
-  
+
         // ボタンを追加（画像はsvgを使用）
         wAddBtn  = '<div class="tfArea">';
         wAddBtn += '<svg class="tfImg" id="tsBtn_'+j+'" onclick="tFilterCloseOpen('+j+')"><path d="M0 0 L9 0 L6 4 L6 8 L3 8 L3 4Z"></path></svg>';
@@ -41,7 +41,7 @@ function tFilterInit() {
         gTfColList.push(j);
       }
     }
-  
+
     // ボタンを付けたら以降の行は無視する
     if (wAddBtn != '') {
       gSortBtnRow = i;
@@ -64,9 +64,9 @@ function tFilterCreate(argCol) {
   // クリックされた列の値を取得する
   for (var i=gTfStartRow; i < wTR.length; i++) {
     var j = i - gTfStartRow;
-  
+
     wItem[j] = wTR[i].cells[argCol].innerText.toString();
-  
+
     if (wItem[j].match(/^[-]?[0-9,\.]+$/)) {
     } else {
       wNotNum = 1;
