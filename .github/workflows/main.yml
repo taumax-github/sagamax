@@ -1,0 +1,47 @@
+# This is a basic workflow to help you get started with Actions
+
+name: sync-gitlab
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [gh-pages]
+    paths:
+      - 'contents/image_files/romasagars/dots/*'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        env:
+          SECRETS1: ${{ secrets.USER }}
+          SECRETS2: ${{ secrets.PW }}
+          SECRETS3: ${{ secrets.MAIL }}
+        run: |
+          git --version
+          git checkout gh-pages
+          git clone https://${SECRETS1}:${SECRETS2}@gitlab.com/taumax-github/sagamax_web.git
+          rm sagamax_web/src/main/webapp/WebContent/images/dots/*
+          cp contents/image_files/romasagars/dots/* sagamax_web/src/main/webapp/WebContent/images/dots
+          cd sagamax_web
+          git config --global user.email ${SECRETS3}
+          git config --global user.name ${SECRETS1}
+          git add .
+          git commit -m"auto sync : github ->gitlab"
+          git push https://${SECRETS1}:${SECRETS2}@gitlab.com/taumax-github/sagamax_web.git

@@ -21,12 +21,12 @@
     <meta property="og:image" content="https://taumax-github.github.io/sagamax/images/icon_twitter_card.png" /> <!--画像のURL-->
 
     <link rel="icon"       href="../../../images/favicon.ico">
-    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css?date=210515">
     <link rel="stylesheet" href="../../../css/print.css" media="print">
     <script src="../../../js/openclose.js"></script>
 
-    <title>ロマサガＲＳの手動技ランク99自慢</title>
-    
+    <title>ロマサガＲＳの手動技（補助技）ランク99自慢</title>
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -46,15 +46,14 @@
       gtag('js', new Date());
       gtag('config', 'UA-156501005-1');
     </script>
-    <script data-ad-client="ca-pub-6668125234301483" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
 
 <!--PC用（801px以上端末）で表示させるブロック-->
-<header class="pc" oncopy="return false;">
+<header class="pc">
   <h1 class="logo">
     <a href="https://taumax-github.github.io/sagamax/">
-      <img src="../../../images/icon_top.png" alt="TOP">
-      <br>
+      <img src="../../../images/icon_top.png" alt="TOP"><br>
       <font size="3px">TOP</font>
     </a>
   </h1>
@@ -62,45 +61,52 @@
   <!--PC用（801px以上端末）メニュー-->
   <ul class="icon">
     <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
   </ul>
   <nav>
-    <ul>
+    <ul class="no_indent">
       <li><a href="#parii">パリイ</a></span></li>
       <li><a href="#counter">カウンター</a></span></li>
-      <li><a href="#bahu">バフ</a></span></li>
+      <li><a href="#bahu_debahu">バフ／デバフ</a></span></li>
       <li><a href="#bprecover">BP回復</a></span></li>
       <li><a href="#jamer">状態異常付与</a></span></li>
       <li><a href="#ijoukaihuku">状態異常回復</a></span></li>
+      <li><a href="#selfrecover">自己回復</a></span></li>
+      <li><a href="#delay">ディレイ</a></span></li>
+      <li><a href="#others">その他</a></span></li>
     </ul>
   </nav>
 </header>
 <!--/.pc-->
 
 <!--小さな端末用（800px以下端末）で表示させるブロック-->
-<header class="sh" oncopy="return false;">
+<header class="sh">
   <!--小さな端末用（800px以下端末）メニュー-->
   <div id="menubar-s" align="center">
     <nav>
       <ul class="icon">
-        <li>
-          <li><a href="#parii">パリイ</a></span></li>
-          <li><a href="#counter">カウンター</a></span></li>
-          <li><a href="#bahu">バフ</a></span></li>
-          <li><a href="#bprecover">BP回復</a></span></li>
-          <li><a href="#jamer">状態異常付与</a></span></li>
-          <li><a href="#ijoukaihuku">状態異常回復</a></span></li>
-        </li>
+        <li><a href="#parii">パリイ</a></span></li>
+        <li><a href="#counter">カウンター</a></span></li>
+        <li><a href="#bahu_debahu">バフ／デバフ</a></span></li>
+        <li><a href="#bprecover">BP回復</a></span></li>
+        <li><a href="#jamer">状態異常付与</a></span></li>
+        <li><a href="#ijoukaihuku">状態異常回復</a></span></li>
+        <li><a href="#selfrecover">自己回復</a></span></li>
+        <li><a href="#delay">ディレイ</a></span></li>
+        <li><a href="#others">その他</a></span></li>
       </ul>
     </nav>
     <h1 class="logo">
       <a href="https://taumax-github.github.io/sagamax/">
-        <img src="../../../images/icon_top.png" alt="TOP">
-        <br>
+        <img src="../../../images/icon_top.png" alt="TOP"><br>
         <font size="3px">TOP</font>
       </a>
     </h1>
     <ul class="icon">
       <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
     </ul>
 
   </div>
@@ -108,7 +114,7 @@
 </header>
 <!--/.sh-->
 
-<body class="defaultbody" oncopy="return false;">
+<body class="defaultbody">
   <div id="container">
   <div id="contents">
   <div id="main">
@@ -117,150 +123,569 @@
 
       <!-- tweetボタン -->
       <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <h2 class="title">ロマサガＲＳの手動技のランク自慢</h2>
+      <h2 class="title">ロマサガＲＳの手動技（補助技）のランク自慢</h2>
 
-      ロマサガRSで、手動でしか使われない技をせっせとランク上げしていました。多くの技がランク99になったのでその自慢をしたいだけの記事です。<br>
-      パリイとカウンタ―技についてはどうやってランクを上げたのかを動画付きで解説しています。<br>
-      基本的には修業者の間と、毎朝の日課（魔物たっぷりの洞窟修練、ザクザク財宝収集、深奥の密林調査）でランクを上げました。<br>
       <br>
+      <a href="https://taumax-github.github.io/sagamax/" style="color: #00bfff;">ホーム</a> > <a href="https://taumax-github.github.io/sagamax/contents/index_romasagars.html">ロマサガＲＳ</a> > ロマサガＲＳの手動技（補助技）のランク自慢
+
+      <br><br>
+      ロマサガRSで、手動でしか使われない技（補助技）をせっせとランク上げしていました。多くの技がランク99になったのでその自慢をしたいだけの記事です。<br>
+      一部、どうやってランクを上げたのかを動画付きで解説しています。<br>
+      基本的には修業者の間と、毎朝の日課（魔物たっぷりの洞窟修練、ザクザク財宝収集、深奥の密林調査）でランクを上げました。<br>
+      <a href="https://docs.google.com/spreadsheets/d/1SlUKZzPddtEFIuewJcRgBIrLb5L9DR6_Rz6q2kds1R4/edit#gid=0" target="_blank">手動技一覧はこちら</a><br>
+
+      <br><br>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br><br>
 
       <span id="parii"></span>
       <h3 class="title">パリイ</h3>
-        <h4>パリイ</h4>
-        <img src="img/any_a.jpg" width="280">
-        <img src="img/bea_a.jpg" width="280">
-        <img src="img/sefiras.jpg" width="280">
-        <img src="img/aruberto_pra.jpg" width="280">
-        <img src="img/poruka_shogatu.jpg" width="280">
-        <br><br>
-        パリイはこんな感じで修業者の間でランク上げすると気持ちいいですよ！
-        最初のターンだけ手動でパリイを選択して、２ターン目以降は右下のAll Repeatボタンを押すと早いです。
-        <iframe width="560" height="600" src="https://www.youtube.com/embed/RmJggNrbvCs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <h4>パリイ</h4>
+      <img src="img/any_a.jpg" width="300">
+      <img src="img/bea_a.jpg" width="300">
+      <img src="img/sefiras.jpg" width="300">
+      <img src="img/aruberto_pra.jpg" width="300">
+      <img src="img/poruka_shogatu.jpg" width="300">
+      <br><br>
+      パリイはこんな感じで修業者の間でランク上げすると気持ちいいですよ！
+      最初のターンだけ手動でパリイを選択して、２ターン目以降は右下のAll Repeatボタンを押すと早いです。
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/hlHFN8zF_Uo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <br><br>
 
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+
+      <br><br>
       <span id="counter"></span>
       <h3 class="title">カウンター</h3>
-        <h4>マタドール</h4>
-        <img src="img/robin_ss.jpg" width="280">
-        <img src="img/mikaer_s.jpg" width="280">
-        <br><br>
 
-        <h4>かすみ青眼</h4>
-        <img src="img/kinshishi.jpg" width="280">
-        <br><br>
-
-        <h4>カモンベイビー</h4>
-        <img src="img/black.jpg" width="280">
-        <br><br>
-
-        <h4>風車</h4>
-        <img src="img/sharu_rasen.jpg" width="280">
-        <img src="img/rora.jpg" width="280">
-        <br><br>
-
-        <h4>ジョルトカウンター</h4>
-        <img src="img/azami_mizugi.jpg" width="280">
-        <br><br>
-
-        <h4>クロスドリルドライバ</h4>
-        <img src="img/varudo.jpg" width="280">
-        <br><br>
-
-        <h4>セルフバーニング</h4>
-        <img src="img/barterumi.jpg" width="280">
-        <img src="img/emerarudo.jpg" width="280">
-        <img src="img/wagunasu.jpg" width="280">
-        <br><br>
-
-        <h4>フリーズスパイク</h4>
-        <img src="img/garahado.jpg" width="280">
-
-        <br><br>SSノーラ未所持なのでジャストミートは対象外
-
-        <br><br>カウンタ―技は以下の動画のようなやり方でランクを上げました。<br>
-        ※アザミのジョルトカウンターは既にランク99になっているため、この動画内ではランクアップはしていません。
-        <iframe width="560" height="600" src="https://www.youtube.com/embed/0VrS06snBm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        鳳天舞の陣の真ん中にカウンタ―技を使用するキャラを配置。対象の技を選択した後、右下のAll Repeatを押下。直後に全力AUTOを押下。<br>
-        すると対象キャラはカウンタ―技を使用。カウンタ―技は敵の直接攻撃が来るたびにランクが上がる可能性があるため、運が良ければ１ターンで２回以上ランクが上がることもある。<br>
-        対象キャラ以外は、１ターン目は通常攻撃。２ターン目はBP13以上の技を使用するため、大技のランク上げも兼ねることができる。<br>
-        <br>※セルフバーニングは術なので、ランクが上がるのは戦闘終了時の１回のみ。また、フリーズスパイクは技使用時のみランクが上がるので１ターンでランクアップする回数は１回のみ<br>
+      <h4>マタドール</h4>
+      <img src="img/robin_ss.jpg" width="300">
+      <img src="img/mikaer_s.jpg" width="300">
       <br><br>
 
-      <span id="bahu"></span>
-      <h3 class="title">バフ</h3>
-        <h4>ハードファイア</h4>
-        <img src="img/borukano_a.jpg" width="280">
-        <img src="img/rich_a.jpg" width="280">
-        <img src="img/emerarudo.jpg" width="280">
-        <br><br>
+      <h4>カモンベイビー</h4>
+      <img src="img/black.jpg" width="300">
+      <br><br>
 
-        <h4>ヒロイズム</h4>
-        <img src="img/miriam_haloween.jpg" width="280">
-        <img src="img/shigen.jpg" width="280">
-        <br><br>クリウィルは未所持なので対象外
-        <br><br>
+      <h4>風車</h4>
+      <img src="img/sharu_rasen.jpg" width="300">
+      <img src="img/rora.jpg" width="300">
+      <br><br>
 
-        <h4>妖精光</h4>
-        <img src="img/aruberut_kuri.jpg" width="280">
-        <br><br>
+      <h4>ジョルトカウンター</h4>
+      <img src="img/azami_mizugi.jpg" width="300">
+      <br><br>
 
-        <h4>水舞い</h4>
-        <img src="img/titis.jpg" width="280">
-        <br><br>
+      <h4>クロスドリルドライバ</h4>
+      <img src="img/varudo.jpg" width="300">
+      <br><br>
 
-        <h4>エアスクリーン</h4>
-        <img src="img/robin_a.jpg" width="280">
-        <img src="img/windy_kuri.jpg" width="280">
-        <br><br>
+      <h4>セルフバーニング</h4>
+      <img src="img/barterumi.jpg" width="300">
+      <img src="img/emerarudo.jpg" width="300">
+      <img src="img/wagunasu.jpg" width="300">
+      <img src="img/borukano_A_mizugi.jpg" width="300">
+      <br><br>
 
-        <h4>気合い</h4>
-        <img src="img/aserus.jpg" width="280">
-        <br><br>
+      <h4>フリーズスパイク</h4>
+      <img src="img/garahado.jpg" width="300">
+      <br><br>
 
-        <h4>フラメンコに誘われて</h4>
-        <img src="img/barbara_ss.jpg" width="280">
+      <h4>ジャストミート</h4>
+      <img src="img/nora_ss_pra.jpg" width="300">
+      <br><br>
 
-        <br><br>聖王の勝利の詩は5/30現在ランク上げ中
-        <br>SS海の主の娘は未所持なので水祭りは対象外
+      <h4>かすみ青眼</h4>
+      <img src="img/kinshishi.jpg" width="300">
+      <br><br>
+
+      <h4>荒獅子</h4>
+      <img src="img/kinshishi_kyuusyougatsu.jpg" width="300">
+      <br><br>
+
+      <h4>虹写し</h4>
+      <img src="img/rora_ss_rainbow.jpg" width="300">
+      <br><br>
+
+      <h4>ヘッジホグシステム</h4>
+      <img src="img/nakajima_ss_hejihog.jpg" width="300">
+      <br><br>
+
+      <h4>喪神無想</h4>
+      <img src="img/gen_soushin.jpg" width="300">
+      <br><br>
+
+      <br><br>
+      最近（2022年1月現在）、定期的に術・技ランクが上がりやすいイベントが開催されるので、以下の動画のようにしてカウンター技のランク上げるのもいいかもしれないですね。<br>
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/pLFQpIEcNtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br><br>
+      術・技ランクが上がりやすいイベントの開催期間外の場合、カウンタ―技は以下のようなやり方でランクを上げました。<br><br>
+
+      <strong>【方法①：秘密特訓 斬・猛（又は秘密特訓 打・激）】</strong><br>
+      おそらく一番効率がいいのは秘密特訓 打・激です。<br>
+      悪鬼は殆どの攻撃が直接攻撃（地裂撃以外）なので、カウンターを発動させやすいです。<br>
+      参考に、ローラの虹写しのランクを上げている動画を貼っておきます。<br>
+
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/GDd2Wq8MKyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      動画内で5回ランクアップしています。<br>
+      01:11 ランクアップ1回目<br>
+      01:55 ランクアップ2回目<br>
+      03:25 ランクアップ3回目<br>
+      03:45 ランクアップ4回目<br>
+      04:56 ランクアップ5回目<br>
+
+      <br>
+      【やり方の解説】<br>
+      デザートランス・改でローラを先頭に置き、武器を外しています。ローラ以外のキャラは打耐性の低いキャラを武器・防具共に装備なしで配置しています。<br>
+      虹写しを使えないターンは悪鬼の攻撃を回避させるために素早さの上がる陣形を採用しています。ラピッドストリームだとローラ以外のキャラも素早さが上がってしまうため、デザートランス・改にしました（ローラ以外のキャラは素早さが下がる）。<br>
+      悪鬼は1ターン目はぶちかまし固定なので、ローラ以外はここで倒れてもらいます。ターンが進むにつれて敵の手数が増えるため、最初は通常攻撃でBPを貯め、4ターン目から攻撃を開始しています。場合によっては1ターンで複数回ランクが上がることがあります。<br>
+      <br><br>
+
+      <strong>【方法②：秘密特訓 斬・猛（又は秘密特訓 打・激）】</strong><br>
+      秘密特訓 斬・猛もお勧めです。<br>
+      秘密特訓 打・激よりは敵の手数は減りますが、秘密特訓 打・激と同様に敵の攻撃が殆ど物理攻撃なので、カウンターを発動させやすいです。<br>
+      カウンタ―技と一緒に他のキャラの大技を上げたい場合におすすめです。<br>
+
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/3syDv06iMxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      【やり方の解説】<br>
+      タイガーシャークの先頭にカウンターキャラを置いて、残りの4人は静寂持ちキャラを配置。<br>
+      1ターン目でランクが上がらなければ再戦を押すことで効率よくランクを上げることができます。<br>
+      <br><br>
+
+      <strong>【方法③：修業者の間】</strong><br>
+      ※アザミのジョルトカウンターは既にランク99になっているため、この動画内ではランクアップはしていません。
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/rQnRVFl0H9I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      【やり方の解説】<br>
+      鳳天舞の陣やタイガーシャークの真ん中にカウンタ―技を使用するキャラを配置。対象の技を選択した後、右下のAll Repeatを押下。直後に全力AUTOを押下。<br>
+      すると対象キャラはカウンタ―技を使用。カウンタ―技は敵の直接攻撃が来るたびにランクが上がる可能性があるため、運が良ければ１ターンで２回以上ランクが上がることもある。<br>
+      対象キャラ以外は、１ターン目は通常攻撃。２ターン目はBP13以上の技を使用するため、大技のランク上げも兼ねることができる。<br>
+      <br>※セルフバーニングは術なので、ランクが上がるのは戦闘終了時の１回のみ。また、フリーズスパイクは技使用時のみランクが上がるので１ターンでランクアップする回数は１回のみ<br>
+      <br><br>
+
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br><br>
+      <span id="bahu_debahu"></span>
+      <h3 class="title">バフ／デバフ</h3>
+
+      <h4>ハードファイア</h4>
+      <img src="img/borukano_a.jpg" width="300">
+      <img src="img/rich_a.jpg" width="300">
+      <img src="img/emerarudo.jpg" width="300">
+      <br><br>
+
+      <h4>ヒロイズム</h4>
+      <img src="img/miriam_haloween.jpg" width="300">
+      <img src="img/shigen.jpg" width="300">
+      <br><br>クリウィルは未所持なので対象外
+      <br><br>
+
+      <h4>妖精光</h4>
+      <img src="img/aruberut_kuri.jpg" width="300">
+      <br><br>
+
+      <h4>水舞い</h4>
+      <img src="img/titis.jpg" width="300">
+      <br><br>
+
+      <h4>エアスクリーン</h4>
+      <img src="img/robin_a.jpg" width="300">
+      <img src="img/windy_kuri.jpg" width="300">
+      <br><br>
+
+      <h4>ダンシングリーフ</h4>
+      <img src="img/byunei_ss_30shunen.jpg" width="300">
+      <img src="img/dahao_s.jpg" width="300">
+      <br><br>
+
+      <h4>気合い</h4>
+      <img src="img/aserus.jpg" width="300">
+      <img src="img/black_ss_30shunen.jpg" width="300">
+      <img src="img/harido_ss_kiai.jpg" width="300">
+      <br><br>
+
+      <h4>フラメンコに誘われて</h4>
+      <img src="img/barbara_ss.jpg" width="300">
+      <br><br>
+
+      <h4>武装弦楽祭</h4>
+      <img src="img/shijin_ss.jpg" width="300">
+      <br><br>
+
+      <h4>勝利の詩</h4>
+      <img src="img/seiou_shori.jpg" width="300">
+      <br><br>
+
+      <h4>静謐の詩</h4>
+      <img src="img/seiou_seihitsu.jpg" width="300">
+      <br><br>
+
+      <h4>息吹</h4>
+      <img src="img/silver_mizugi_ss.jpg" width="300">
+      <br><br>
+
+      <h4>呼水</h4>
+      <img src="img/foruneusu_ss_shin.jpg" width="300">
+      <br><br>
+
+      <h4>水祭</h4>
+      <img src="img/uminonusinomusume_ss.jpg" width="300">
+      <br><br>
+
+      <h4>獅子の構え・纏</h4>
+      <img src="img/kinnshishi_ss.jpg" width="300">
+      <br><br>
+
+      <h4>オンザビーチ</h4>
+      <img src="img/eren_mizugi.jpg" width="300">
+      <br><br>
+
+      <h4>百華</h4>
+      <img src="img/rockbuke_ss_sagasute.jpg" width="300">
+      <br><br>
+
+      <h4>ベルセルク</h4>
+      <img src="img/tomas_ss_gumiuti.jpg" width="300">
+      <br><br>
+
+      <h4>守勢の舞、愛の歌</h4>
+      <img src="img/oaibu_ss.jpg" width="300">
+      <br><br>
+
+      <h4>ネコダンス</h4>
+      <img src="img/cat_ss_pra.jpg" width="300">
+      <br><br>
+
+      <h4>ディレイオーダー</h4>
+      <img src="img/tokinokimi_ss_delayorder.jpg" width="300">
+
+      <br><br>
+      ディレイオーダーは以下の動画のような感じでランクを上げました。<br>
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/7YMhyratXTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      メイン1部2章 12-1-3で気絶周回しながら時の君のディレイオーダーのランク上げをしています。<br>
+      カラフルレンジャーの素早さ枠に時の君、知力枠にアルベルト（パワベルト）を置き、ディレイオーダー⇒王者の剣の順に行動させることで、ディレイオーダーのランクを上げながら気絶周回しています。<br>
+
+      <br>
+      手順としては↓こんな感じです。<br>
+      ・1ラウンド目<br>
+      通常攻撃⇒通常攻撃⇒ディレイオーダー⇒王者の剣⇒通常攻撃<br>
+      ・2, 3ラウンド目<br>
+      All Repeat<br>
+
+      <br>
+      このやり方であれば、私の場合、1時間で15～20ぐらいランクを上げることができました。ご参考にどうぞ。<br>
+      <br><br>
+
+      <h4>ハッピースーベニア</h4>
+      <img src="img/jiny_ss_souvenir.jpg" width="300">
+      <br><br>
+
+      <h4>ピュアバリア</h4>
+      <img src="img/maraia_ss_baria.jpg" width="300">
+      <br><br>
+
+      <h4>マジックゲイン</h4>
+      <img src="img/ruju_ss_gain.jpg" width="300">
+      <br><br>
+
+      <h4>スポイルウェイヴ</h4>
+      <img src="img/sirumaru_ss_spoil.jpg" width="300">
+      <br><br>
+
+      <h4>プレゼントプレジャー</h4>
+      <img src="img/monika_present.jpg" width="300">
+      <br><br>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
       <br><br>
 
       <span id="bprecover"></span>
       <h3 class="title">BP回復</h3>
-        <h4>二刀の構え</h4>
-        <img src="img/urupina_new.jpg" width="280">
 
-        <br><br>グスタフは未所持なので対象外
+      <h4>二刀の構え</h4>
+      <img src="img/urupina_new.jpg" width="300">
+      <img src="img/otoman_ss_nitou.jpg" width="300">
+
+      <br><br>グスタフは未所持なので対象外
       <br><br>
 
+      二刀の構えや獅子の構え・纏、勝利の詩のように消費BPが少ない技は、最初に技を選択してその後、下記動画のようにAll Repeatを押し続けることで技ランクを上げることが可能。
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/QBQJbVkD3jE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br><br>
+
+      最近（2022年1月現在）、定期的に技ランクが上がりやすいイベントが開催されるので、そこで以下の動画のようにAll Repeatを駆使してランクを上げるのもいいかもしれないですね。<br>
+      <iframe width="560" height="600" src="https://www.youtube.com/embed/qiFnHZGQDfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br><br>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br><br>
       <span id="jamer"></span>
       <h3 class="title">状態異常付与</h3>
-        <h4>足がらめ</h4>
-        <img src="img/shiero_a.jpg" width="280">
-        <img src="img/aisha_s.jpg" width="280">
-        <img src="img/tohmas_a.jpg" width="280">
-        <br><br>
 
-        <h4>ナップ</h4>
-        <img src="img/baineinyan.jpg" width="280">
-        <img src="img/robin_s.jpg" width="280">
-        <img src="img/sindu.jpg" width="280">
-        <br><br>
+      <h4>足がらめ</h4>
+      <img src="img/shiero_a.jpg" width="300">
+      <img src="img/aisha_s.jpg" width="300">
+      <img src="img/tohmas_a.jpg" width="300">
+      <br><br>
 
-        <h4>風と樹のうた</h4>
-        <img src="img/raberu_pura.jpg" width="280">
-        <img src="img/robert.jpg" width="280">
+      <h4>ナップ</h4>
+      <img src="img/baineinyan.jpg" width="300">
+      <img src="img/robin_s.jpg" width="300">
+      <img src="img/sindu.jpg" width="300">
+      <br><br>
 
-        <br><br>SSファティーマ未所持なので睡魔剣は対象外
+      <h4>風と樹のうた</h4>
+      <img src="img/raberu_pura.jpg" width="300">
+      <img src="img/robert.jpg" width="300">
+      <br><br>
+
+      <h4>ホラー</h4>
+      <img src="img/reoni-do_1.5ss.jpg" width="300">
+      <img src="img/ivrin_s.jpg" width="300">
+      <br><br>
+
+      <h4>睡魔剣</h4>
+      <img src="img/fatei-ma.jpg" width="300">
+      <br><br>
+
+      <h4>ミステリータップ</h4>
+      <img src="img/nusakan_mistery.jpg" width="300">
       <br><br>
 
       <span id="ijoukaihuku"></span>
-        <h3 class="title">状態異常回復</h3>
+      <h3 class="title">状態異常回復</h3>
 
-        <h4>やさしいうた</h4>
-        <img src="img/raberu_kuri.jpg" width="280">
-        <img src="img/ryuto.jpg" width="280">
+      <h4>やさしいうた</h4>
+      <img src="img/raberu_kuri.jpg" width="300">
+      <img src="img/ryuto.jpg" width="300">
       <br><br>
 
+      <h4>浄化の水</h4>
+      <img src="img/genryu_hyosetsu_joka.jpg" width="300">
+      <br><br>
+      <br><br>
+
+      <br><br>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br><br>
+
+      <span id="selfrecover"></span>
+      <h3 class="title">自己回復</h3>
+
+      <h4>町長の舞</h4>
+      <img src="img/tyoutyou_mai.jpg" width="300">
+      <br><br>
+
+      <h4>ゴールデンシロップ</h4>
+      <img src="img/goldenbaum_shirop.jpg" width="300">
+      <br><br>
+
+      <h4>活心</h4>
+      <img src="img/hyuz_katsushin.jpg" width="300">
+      <br><br>
+
+      <h4>マギオーラ</h4>
+      <img src="img/aporon_magiora.jpg" width="300">
+      <br><br>
+
+      <h4>しゅうふく</h4>
+      <img src="img/haniwa_shuhuk.jpg" width="300">
+      <br><br>
+
+      <h4>集気法</h4>
+      <img src="img/yousei_shukiho.jpg" width="300">
+      <br><br>
+
+      <h4>祝福の矢</h4>
+      <img src="img/sukaia_shukuhuku.jpg" width="300">
+      <br><br>
+      <br><br>
+
+      <span id="delay"></span>
+      <h3 class="title">ディレイ</h3>
+
+      <h4>不動剣</h4>
+      <img src="img/aruberut_ss_hudoken.jpg" width="300">
+      <img src="img/jeraru_ss_hudoken.jpg" width="300">
+      <img src="img/bea_ss_hudoken.jpg" width="300">
+      <img src="img/reon_ss_hudoken.jpg" width="300">
+      <img src="img/poruka_ss_hudoken.jpg" width="300">
+      <br><br>
+
+      <h4>不動剣・光</h4>
+      <img src="img/miruza_ss_hudokenhikari.jpg" width="300">
+      <img src="img/jeraru_ss_hudokenhikari.jpg" width="300">
+      <br><br>
+
+      <h4>焔返し</h4>
+      <img src="img/aunas_ss_homuragaeshi.jpg" width="300">
+      <br><br>
+
+      <h4>ツイストスキュア</h4>
+      <img src="img/foruneusu_ss_tuist.jpg" width="300">
+      <br><br>
+
+      <h4>冷凍剣</h4>
+      <img src="img/garahad_ss_huyuarashi.jpg" width="300">
+      <br><br>
+
+      <h4>氷河の太刀</h4>
+      <img src="img/katarina_s_hyouga.jpg" width="300">
+      <br><br>
+
+      <h4>影の太刀</h4>
+      <img src="img/noeru_ss_kagetati.jpg" width="300">
+      <br><br>
+
+      <h4>大地爆砕</h4>
+      <img src="img/nora_ss_bakusai.jpg" width="300">
+      <br><br>
+
+      <h4>羅刹掌</h4>
+      <img src="img/red_s_rasetsu.jpg" width="300">
+      <br><br>
+
+      <h4>ライズスタッブ</h4>
+      <img src="img/vant_ss_risestub.jpg" width="300">
+      <br><br>
+
+      <h4>刻み巡り</h4>
+      <img src="img/storu_kizami.jpg" width="300">
+      <br><br>
+
+      <h4>スターストライク</h4>
+      <img src="img/yurian_starstrike.jpg" width="300">
+      <br><br>
+
+      <span id="others"></span>
+      <h3 class="title">その他</h3>
+
+      <h4>強化キャンセラー</h4>
+      <img src="img/saishubouei_s_canceler.jpg" width="300">
+      <br><br>
+
+      <h4>アイスリボルブ</h4>
+      <img src="img/riamu_s_ice.jpg" width="300">
+      <br><br>
+
+      <h4>ウィンドリボルブ</h4>
+      <img src="img/riamu_ss_wind.jpg" width="300">
+      <br><br>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br><br>
+
+      <br><br>
+
+      <!-- DESTINY 8 - SaGa Band Arrangement Album (特典なし) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B08P76C1LV/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08P76C1LV&linkCode=as2&tag=sagamax-22&linkId=0d8f2a891ae8ace7d49f961dfbf72ba7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B08P76C1LV&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- 【Amazon.co.jp限定】SQUARE ENIX JAZZ -SaGa- (メガジャケ付) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B08QZTZ8KN/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08QZTZ8KN&linkCode=as2&tag=sagamax-22&linkId=a0731e2b356f2f10526ff2cb917baf74"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B08QZTZ8KN&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- サガクロニクル増補版30th -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/475756919X/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=475756919X&linkCode=as2&tag=sagamax-22&linkId=1d54cfbd3d2fc5c5ab4bf3c19a8202ab"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=475756919X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- ロマサガRSサントラ -->
+      <!-- 
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B07NBCJG1R/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07NBCJG1R&linkCode=as2&tag=sagamax-22&linkId=3eaa72ffff47018242aa007e496776e7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B07NBCJG1R&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&l=am2&o=9&a=B07NBCJG1R" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      -->
+
+      <!-- ロマサガRS公式ビジュアルファンブック -->
+      <!--
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/4757564910/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4757564910&linkCode=as2&tag=sagamax-22&linkId=41750eb1d610e5081b7d3b863134a6ac"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4757564910&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&l=am2&o=9&a=4757564910" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      -->
+
+      <!-- サガオケ -->
+      <!-- 
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B01CTCWSU6/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B01CTCWSU6&linkCode=as2&tag=sagamax-22&linkId=71b6d392a525d8434daa6d4619d94051"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B01CTCWSU6&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&l=am2&o=9&a=B01CTCWSU6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+      -->
     </section><!-- section class="box" -->
 
     <footer>

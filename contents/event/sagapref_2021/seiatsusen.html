@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary_large_image" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:title" content="【ロマサガRS】ロマンシング佐賀2021年 サガ風呂" /> <!--記事のタイトル-->
+    <meta property="og:description" content="2021年のロマサガＲＳと佐賀県のコラボイベント：サガ風呂を振り返る" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/event/sagapref_2021/twitter_card.jpg" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/print.css" media="print">
+    <script src="../../../js/openclose.js"></script>
+    <script src="../../../js/giffer.js"></script>
+  
+    <title>ロマ佐賀ＲＳ 2021</title>
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <style>
+      .menu1 a {background-position: -10px -10px;}
+      .menu2 a {background-position: -10px -130px;}
+      .menu3 a {background-position: -10px -250px;}
+      .menu4 a {background-position: -10px -370px;}
+      .menu5 a {background-position: -10px -490px;}
+    </style>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../images/icon_top.png" alt="TOP">
+      <br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="#firstly">はじめに</a></li>
+      <li><a href="#whole_map">全体マップ</a></li>
+    </ul>
+    <hr>
+    他エリアへ
+    <ul class="indent_no">
+      <li style="color:lightgray">2021年佐賀ｺﾗﾎﾞﾄｯﾌﾟ（今ここ）</li>
+      <li><a href="hajimari.html">始まりの湯</a></li>
+      <li><a href="huruyu.html">古湯温泉</a></li>
+      <li><a href="ureshino.html">嬉野温泉</a></li>
+      <li><a href="takeo.html">武雄温泉</a></li>
+      <li><a href="others.html">その他</a></li>
+    </ul>
+  </nav>
+</header><!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul>
+        <li><a href="#firstly">はじめに</a></li>
+        <li><a href="#whole_map">全体マップ</a></li>
+      </ul>
+      <hr>
+      他エリアへ
+      <ul>
+        <li style="color:lightgray">2021年佐賀ｺﾗﾎﾞﾄｯﾌﾟ（今ここ）</li>
+        <hr>
+        <li><a href="hajimari.html">始まりの湯</a></li>
+        <li><a href="huruyu.html">古湯温泉</a></li>
+        <li><a href="ureshino.html">嬉野温泉</a></li>
+        <li><a href="takeo.html">武雄温泉</a></li>
+        <li><a href="others.html">その他</a></li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+    </ul>
+  </div><!--/#menubar-s-->
+</header><!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container" style="background-image: url(img/background-min.jpg); background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+
+      <h2 class="title">2021年のロマサガＲＳ佐賀県コラボを振り返る</h2>
+
+      <a href="../../../index.html">ホーム</a> > <a href="../../index_romasagars.html">ロマサガＲＳ</a> > ロマサガＲＳ佐賀コラボ_2021年<br>
+
+      <br>
+      <div id="firstly"></div>
+      <h3 class="title">はじめに</h3>
+      <p>
+        2021年の7月～8月にかけて、ロマサガＲＳのコラボイベント「ロマンシング佐賀 2021 サガ風呂」が開催されました。昨年同様、ずいぶんと凝ったコラボイベントでしたね。<br>
+        佐賀県に関する情報満載なイベントでしたが、出来る限りの情報を昨年同様まとめてみたので是非見てみて下さい。<br>
+        昨年の記事は<a href="../sagapref_2020/seiatsusen.html" target="_blank">こちら</a><br>
+
+        <br>
+        今回のコラボの情報は、ロマサガRSだけではなく、佐賀県の広報部からもtwitterで情報発信されていました。<br>
+        佐賀県の方からもこのように発信されるとなんだかうれしくなりますね。<br>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【お知らせ】<br>『ロマンシング佐賀2021』と『ロマンシング サガ リ・ユニバース』のゲーム内コラボ第１弾開始✨<br>「みんなでいくばい！SaGa風呂制圧戦」を開催♨️<br>詳しくはこちら▼<a href="https://t.co/05XN0156pi">https://t.co/05XN0156pi</a><a href="https://twitter.com/hashtag/%E3%83%AD%E3%83%9E%E4%BD%90%E8%B3%80?src=hash&amp;ref_src=twsrc%5Etfw">#ロマ佐賀</a> <a href="https://t.co/n2u91VpRPv">pic.twitter.com/n2u91VpRPv</a></p>&mdash; 佐賀県広報広聴課 (@saga_kouhou) <a href="https://twitter.com/saga_kouhou/status/1420595873407332353?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+
+      <br>
+      <div id="whole_map"></div>
+      <h3 class="title">制圧戦全体マップ</h3>
+      <p>
+        昨年同様、制圧戦に力が入っていたのでまた制圧戦を中心にまとめていきたいと思います。<br>
+        制圧戦の全体マップは下図のようになっていました。始まりの湯、古湯温泉、嬉野温泉、武雄温泉の4つのエリアにわかれ、各エリアにサガフロの4天王とサガフロ2の将魔が1体ずつの合計2体のボスが配置されていました。<br>
+        <img src="img/map_withoutname.png" /><br>
+
+        <br><br>
+        制圧戦では佐賀県に関するネタが満載でしたね。ゲーム内のネタと実際の佐賀県を紐づける形で出来る限り情報を整理してみました。ちょっと情報量が多くなってしまったので、各エリアごとにページを分けました。以下のリンクで各ページに飛べるようにしているので是非見てみて下さい。
+        <ul>
+          <li><font color="lightgray">2021年佐賀コラボトップ（今ここ）</font></li>
+          <li><a href="hajimari.html">始まりの湯エリア</a></li>
+          <li><a href="huruyu.html">古湯温泉エリア</a></li>
+          <li><a href="ureshino.html">嬉野温泉エリア</a></li>
+          <li><a href="takeo.html">武雄温泉エリア</a></li>
+          <li><a href="others.html">その他</a></li>
+        </ul>
+      </p>
+
+      <br><br>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br><br>
+
+      <br><br><br>
+      <!-- DESTINY 8 - SaGa Band Arrangement Album Vol.2 (特典なし) -->
+      <a href="https://www.amazon.co.jp/DESTINY-SaGa-Arrangement-Album-Vol-2/dp/B095LFTN6W?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2WI8LSKAO12TG&dchild=1&keywords=destiny+8+-+saga+band+arrangement+album+vol.2&qid=1629216712&sprefix=destiny%2Caps%2C278&sr=8-1&linkCode=li3&tag=sagamax-22&linkId=984ee3b09a03f1848883b3ca5958e77e&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B095LFTN6W&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=sagamax-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=sagamax-22&language=ja_JP&l=li3&o=9&a=B095LFTN6W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+      <!-- 【Amazon.co.jp限定】SQUARE ENIX JAZZ -SaGa- (メガジャケ付) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B08QZTZ8KN/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08QZTZ8KN&linkCode=as2&tag=sagamax-22&linkId=a0731e2b356f2f10526ff2cb917baf74"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B08QZTZ8KN&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- SaGa Frontier Series ACOUSTIC ARRANGEMENTS (特典なし) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B0938M5B3R/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B0938M5B3R&linkCode=as2&tag=sagamax-22&linkId=8091988dfc7e7d7fa1fc33d8296f61e7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B0938M5B3R&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+
+      <!-- DESTINY 8 - SaGa Band Arrangement Album (特典なし) -->
+      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B08P76C1LV/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B08P76C1LV&linkCode=as2&tag=sagamax-22&linkId=0d8f2a891ae8ace7d49f961dfbf72ba7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B08P76C1LV&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sagamax-22" ></a>
+    </section><!-- section class="box" -->
+
+    <footer>
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+    
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>

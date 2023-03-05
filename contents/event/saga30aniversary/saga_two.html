@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:title" content="ロマサガRSのサガ30周年記念" /> <!--記事のタイトル-->
+    <meta property="og:description" content="ロマサガRSのサガ30周年記念イベントとGBを紐づける～Sa・Ga2 秘宝伝説編～" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/event/saga30aniversary/img/thumbnail.png" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/print.css" media="print">
+    <script src="../../../js/openclose.js"></script>
+    <script src="../../../js/giffer.js"></script>
+
+    <title>Sa・Ga2 秘宝伝説</title>
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <style>
+      .menu1 a {background-position: -10px -10px;}
+      .menu2 a {background-position: -10px -130px;}
+      .menu3 a {background-position: -10px -250px;}
+      .menu4 a {background-position: -10px -370px;}
+      .menu5 a {background-position: -10px -490px;}
+    </style>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../images/icon_top.png" alt="TOP">
+      <br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+  </ul>
+  <nav>
+    <ul>
+      <li>・<a href="#world">世界観</a></li>
+      <li>・<a href="#dai1sekai">第一世界</a></li>
+      <li>・<a href="#dai2sekai">第二世界</a></li>
+      <li>・<a href="#dai3sekai">第三世界</a></li>
+      <li>・<a href="#dai4sekai">第四世界</a></li>
+      <li>・<a href="#dai5sekai">第五世界</a></li>
+      <li>・<a href="#dai6sekai">第六世界</a></li>
+      <li>・<a href="#dai7sekai">第七世界</a></li>
+      <li>・<a href="#dai8sekai">第八世界</a></li>
+      <li>・<a href="#dai9sekai">第九世界</a></li>
+      <li>・<a href="#haniwa">はにわ</a></li>
+      <li>・<a href="#ending">エンディング</a></li>
+    </ul>
+    <hr size="5" color="green">
+    以下、別ページ
+    <ul>
+      <li>・<a href="saga_one.html">SaGa1</a></li>
+      <li>・<a href="saga30aniversary_index.html">30周年TOP</a></li>
+    </ul>
+  </nav>
+</header><!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul>
+        <li><a href="#world">世界観</a></li>
+        <li><a href="#dai1sekai">第一世界</a></li>
+        <li><a href="#dai2sekai">第二世界</a></li>
+        <li><a href="#dai3sekai">第三世界</a></li>
+        <li><a href="#dai4sekai">第四世界</a></li>
+        <li><a href="#dai5sekai">第五世界</a></li>
+        <li><a href="#dai6sekai">第六世界</a></li>
+        <li><a href="#dai7sekai">第七世界</a></li>
+        <li><a href="#dai8sekai">第八世界</a></li>
+        <li><a href="#dai9sekai">第九世界</a></li>
+        <li><a href="#haniwa">はにわ</a></li>
+        <li><a href="#ending">エンディング</a></li>
+      </ul>
+      <hr size="5" color="green">
+      以下、別ページ
+      <ul>
+        <li><a href="saga_one.html">SaGa1</a></li>
+        <li><a href="saga30aniversary_index.html">30周年TOP</a></li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+    </ul>
+  </div><!--/#menubar-s-->
+</header><!--/.sh-->
+
+<body class="defaultbody">
+  <!--
+  <div id="container" style="background: url(img/background-min.png) no-repeat center center / cover;">
+  -->
+  <div id="container" style="background-image: url(img/background-min.png); background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+
+    <h2 class="title">Sa・Ga2 秘宝伝説</h2>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "sagamaxトップ",
+          "item": "https://taumax-github.github.io/sagamax/index.html"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "GBサガ",
+          "item": "https://taumax-github.github.io/sagamax/contents/saga_gameboy/index_saga_gameboy.html"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "サガ30周年記念イベント",
+          "item": "https://taumax-github.github.io/sagamax/contents/event/saga30aniversary/saga30aniversary_index.html"
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Sa・Ga2 秘宝伝説編",
+          "item": "https://taumax-github.github.io/sagamax/contents/event/saga30aniversary/saga_two.html"
+        }]
+      }
+    </script>
+    <p style="color: #FFFFFF;"><a href="../../../index.html" style="color: #00bfff;">ホーム</a> > <a href="../../saga_gameboy/index_saga_gameboy.html">ＧＢサガ</a> > <a href="saga30aniversary_index.html">サガ30周年記念イベント</a> > Sa・Ga2 秘宝伝説編</p>
+
+    <br>
+    <p>
+      ここではゲームボーイ（以下GB）版のSa・Ga2 秘宝伝説と、ロマサガRSで出てきたネタを紐づけていきたいと思います。<br>
+      Sa・Ga2 秘宝伝説の大まかな話の流れを追いかけつつ、ロマサガRSでもこんな感じで扱われてたよねー、という形で紹介していきます。<br>
+      <font color="yellow"><strong>
+        Sa・Ga2 秘宝伝説のネタバレを多分に含むため、ネタバレを見たくない方はここから先を見る前にブラウザの戻るボタンで戻るか、✖ボタンでブラウザを閉じてください。<br>
+      </strong></font>
+    </p>
+
+    <span id="world"></span>
+    <h3 class="title">Sa・Ga2 秘宝伝説の世界観</h3>
+    <p>
+      GBでSa・Ga2 秘宝伝説を起動して「はじめから」を選択すると冒険開始。<br>
+      最初に出てくる画面がこれです。<br>
+      <img src="img/saga2/gb/first_world/opening1.png" width="300">
+      <img src="img/saga2/gb/first_world/opening2.png" width="300">
+      <img src="img/saga2/gb/first_world/opening3.png" width="300"><br><br>
+      「秘宝」というアイテムを廻った物語ってことです。<br>
+
+      キャラクタ選択画面。魔界塔士 Sa・Gaと似てます。エスパーギャルがガールになったのが一番の違いかな。時代を感じます（笑）。<br>
+      <img src="img/saga2/gb/first_world/select_charas.png" width="300"><br><br>
+
+      にんげん、エスパー、メカ、モンスターの中からまずは主人公を選択します。<br>
+      魔界塔士Sa・Gaにあった、モンスターが肉を食べて変身するシステムも健在です。<br>
+      <img src="img/saga2/gb/eat_the_meat1.png" width="300">
+      <img src="img/saga2/gb/eat_the_meat2.png" width="300">
+      <img src="img/saga2/gb/eat_the_meat3.png" width="300"><br><br>
+
+      ロマサガRSの30周年イベントで実装されたせんせいの技の一つが「イートザミート」という技です。<br>
+      肉が降ってきて、せんせいが別のモンスターに変身して攻撃するという技なのですが、これはこのシステムを元ネタにした技です。<br>
+      変身するモンスターは三種類いて、あくま、ラムフォリンクス、ぼくじんです。<br>
+      イートザミート→Eat the meat. 肉を食えってことですね。<br>
+      ※すいません。動画編集技術がいまいちで、動画のサイズ調整が全体的にうまくいきません。スマホで見ている方は特にきついと思いますが、全画面表示ならなんとか見れると思います。<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/KX0ESMZA4Os" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      変身するモンスターの画像です（制圧戦で出てきた敵）。<br>
+      <img src="img/saga2/gb/eatthemeat/akuma.jpg" width="300">
+      <img src="img/saga2/gb/eatthemeat/ramuforinkusu.jpg" width="300">
+      <img src="img/saga2/gb/eatthemeat/bokujin.jpg" width="300"><br><br>
+    </p>
+
+    <span id="dai1sekai"></span>
+    <h3 class="title">第一世界</h3>
+    <p>
+      主人公を選択するとちちおやとのやり取りから始まります。<br>
+      <img src="img/saga2/gb/first_world/titioya03.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya07.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya08.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya09.png" width="300"><br><br>
+
+      なぜか窓から出ていくちちおや。<br>
+      <img src="img/saga2/gb/first_world/titioya10.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya11.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya13.png" width="300"><br><br>
+
+      これはちちおやのホーム画面でのセリフであり、ガチャ演出の場面でもあります。<br>
+      <img src="img/saga2/sagars/chara_serihu/titioya_serihu_onpu.jpg" width="300">
+      <img src="img/saga2/sagars/gatya/father.jpg" width="300"><br><br>
+
+      月日は流れ、旅から帰ってこないちちおやを捜しに行くと、ははおやに相談する主人公。ちちおやと一緒に帰ると約束して旅立ちます。<br>
+      <img src="img/saga2/gb/first_world/hahaoya01.png" width="300">
+      <img src="img/saga2/gb/first_world/hahaoya02.png" width="300">
+      <img src="img/saga2/gb/first_world/hahaoya03.png" width="300">
+      <img src="img/saga2/gb/first_world/hahaoya04.png" width="300"><br><br>
+
+      せんせいとの会話。これ大事なのですが、<font color="yellow">秘宝は77個です。</font><br>
+      <img src="img/saga2/gb/first_world/sensei01.png" width="300">
+      <img src="img/saga2/gb/first_world/sensei02.png" width="300">
+      <img src="img/saga2/gb/first_world/sensei03.png" width="300">
+      <img src="img/saga2/gb/first_world/sensei04.png" width="300">
+      <img src="img/saga2/gb/first_world/sensei05.png" width="300">
+      <img src="img/saga2/gb/first_world/sensei06.png" width="300"><br><br>
+
+      これはせんせいのガチャ演出になった場面ですね。<br>
+      <img src="img/saga2/sagars/gatya/sennsei.jpg" width="300"><br><br>
+
+      町から出ようとするとせんせいが仲間になります。<br>
+      <img src="img/saga2/gb/first_world/sensei07.png" width="300">
+      <img src="img/saga2/gb/first_world/sensei08.png" width="300"><br><br>
+
+      最初の洞窟に行きます。<br>
+      <img src="img/saga2/gb/first_world/first_cave.png" width="300"><br><br>
+
+      洞窟の出口には敵が待ち構えています。ラムフォリンクスという敵です。<br>
+      <img src="img/saga2/gb/first_world/ramuforinkusu1.png" width="300">
+      <img src="img/saga2/gb/first_world/ramuforinkusu2.png" width="300"><br><br>
+
+      これはローディング画面にもなっていました。制圧戦でもこの敵は出てきましたね。<br>
+      <img src="img/saga2/sagars/loading/ramuforinkusu.jpg" width="300">
+      <img src="img/saga2/sagars/enemy/ramuforinkusu.jpg" width="300"><br><br>
+
+      洞窟を出るとせんせいと別れます。そのまま近くにある町に行くと、ちちおやらしき人がいるので追いかけますが、、、、人違いでした。。<br>
+      <img src="img/saga2/gb/first_world/sensei_bye.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya_nisemono02.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya_nisemono03.png" width="300">
+      <img src="img/saga2/gb/first_world/titioya_nisemono05.png" width="300"><br><br>
+
+      これはローディング画面にもなっていました。<br>
+      ・・・これ、特に重要な場面でも何でもないんですけど、何でこの場面を選んだんでしょうね？ｗ結構謎です。笑<br>
+      <img src="img/saga2/sagars/loading/hitochigai.jpg" width="300"><br><br>
+
+      第一世界はこんなもんです。<br>
+    </p>
+      
+    <span id="dai2sekai"></span>
+    <h3 class="title">第二世界</h3>
+    <p>
+      第二世界は小さい世界です。この世界では、魔界塔士Sa・Gaでは後半のボスだったアシュラがもう出てきます。<br>
+      魔界塔士Sa・Gaで使ってきた６ぽんのうでは健在です。逆にそれ以外の技（ヒーリング、３つのあたま、フレア）は使わなくなりました。<br>
+      ここでのアシュラとの会話はローディング画面でも使われていました。<br>
+      <img src="img/saga2/gb/second_world/ashura02.png" width="300">
+      <img src="img/saga2/gb/second_world/ashura10.png" width="300"><br><br>
+      <img src="img/saga2/sagars/loading/ashura.jpg" width="300"><br><br>
+    </p>
+
+    <span id="dai3sekai"></span>
+    <h3 class="title">第三世界</h3>
+    <p>
+      第三世界の最初のまちでちちおやと再会しますが、ここでは会話だけで終わります。<br>
+      <img src="img/saga2/gb/third_world/titioya02.png" width="300">
+      <img src="img/saga2/gb/third_world/titioya03.png" width="300">
+      <img src="img/saga2/gb/third_world/titioya04.png" width="300">
+      <img src="img/saga2/gb/third_world/titioya05.png" width="300">
+      <img src="img/saga2/gb/third_world/titioya06.png" width="300">
+      <img src="img/saga2/gb/third_world/titioya14.png" width="300">
+      <img src="img/saga2/gb/third_world/titioya15.png" width="300">
+      <img src="img/saga2/gb/third_world/titioya17.png" width="300"><br><br>
+      
+      この世界は特にネタもないのでそのまま次の世界に行きます。<br>
+    </p>
+
+    <span id="dai4sekai"></span>
+    <h3 class="title">第四世界</h3>
+    <p>
+      第四世界にはアポロンの神殿があり、中に入るとこの人、アポロンがいます。<br>
+      アポロンとのファーストコンタクトはこの程度で終わります。<br>
+      <img src="img/saga2/gb/forth_world/aporon03.png" width="300">
+      <img src="img/saga2/gb/forth_world/aporon06.png" width="300"><br><br>
+
+      これはガチャ演出の場面であり、ホーム画面にいるアポロン（♪付きアポロン）をタップする時のセリフでもあります。<br>
+      <img src="img/saga2/sagars/gatya/aporon.jpg" width="300">
+      <img src="img/saga2/sagars/chara_serihu/aporon_serihu_onpu.jpg" width="300"><br><br>
+
+      この世界で再度、ちちおやを見かけますが、リンという子に「おとうさん！」と呼ばれています。<br>
+      ・・・え、まさかふリン！？この後、主人公たちはちちおやとは直接会話せず、「秘宝を集めて父親を見返す！」と言って先の世界に進みます。<br>
+      <img src="img/saga2/gb/forth_world/hurin01.png" width="300">
+      <img src="img/saga2/gb/forth_world/hurin02.png" width="300">
+      <img src="img/saga2/gb/forth_world/hurin03.png" width="300">
+      <img src="img/saga2/gb/forth_world/hurin04.png" width="300">
+      <img src="img/saga2/gb/forth_world/hurin05.png" width="300"><br><br>
+    </p>
+
+    <span id="dai5sekai"></span>
+    <h3 class="title">第五世界</h3>
+    <p>
+      第五世界はガーディアンという組織の秘密基地があります。<br>
+      ジュークボックスを使え！というヒントをもらえるので使ってみます。<br>
+      ゆうしゃのテーマを選ぶと、ガーディアンの秘密基地につながり、中からガーディアンが出てきます。<br>
+      <img src="img/saga2/gb/fifth_world/yushano_thema03.png" width="300">
+      <img src="img/saga2/gb/fifth_world/yushano_thema05.png" width="300"><br><br>
+
+      というわけでホーム画面でちちおやが言っていたテーマ曲というのは「ゆうしゃのテーマ」という曲です。<br>
+      <img src="img/saga2/sagars/chara_serihu/titioya_serihu1.jpg" width="300"><br><br>
+      ゆうしゃのテーマはこんな曲です。<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/YxmDd2-h0fQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      牢屋に入れられますが、ちちおやに助けられます。<br>
+      <img src="img/saga2/gb/fifth_world/in_prison01.png" width="300">
+      <img src="img/saga2/gb/fifth_world/in_prison02.png" width="300">
+      <img src="img/saga2/gb/fifth_world/in_prison03.png" width="300"><br><br>
+
+      ちちおやはガーディアンという組織の幹部で、大佐と呼ばれているらしい。<br>
+      <img src="img/saga2/gb/fifth_world/guardian01.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian02.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian03.png" width="300"><br><br>
+
+      父親に言われて休んでいると、ガーディアンの秘密基地が襲われます。<br>
+      <img src="img/saga2/gb/fifth_world/guardian04.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian05.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian06.png" width="300"><br><br>
+
+      脱出しようとするとちちおやがいます。その時の会話。前の世界のふリン疑惑で、主人公はちちおやに不信感を持っていますが、ちちおやの反応は・・・？<br>
+      <img src="img/saga2/gb/fifth_world/guardian07.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian08.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian09.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian10.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian11.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian12.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian13.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian14.png" width="300">
+      <img src="img/saga2/gb/fifth_world/guardian15.png" width="300"><br><br>
+
+      逃げた先では敵が待ち構えていて、そこでの敵との会話。どうやらリンが人質に捉えられてしまった模様。<br>
+      <img src="img/saga2/gb/fifth_world/guardian16.png" width="300"><br><br>
+
+      <br><br>
+      追いかけた先での会話。ふリンはどうやら誤解だったらしい。<br>
+      <img src="img/saga2/gb/sixth_world/help_rin01.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin02.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin03.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin04.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin05.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin06.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin07.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin08.png" width="300"><br><br>
+
+      誤解だったのか、良かった・・・って思ってたら、え？え？？<br>
+      （突然自爆するちちおや）<br>
+      <!--
+      <img src="img/saga2/gb/sixth_world/help_rin09.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin10.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin11.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin12.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin13.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin14.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin15.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin16.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin17.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin18.png" width="300">
+      <img src="img/saga2/gb/sixth_world/help_rin19.png" width="300"><br><br>
+      -->
+      このシーンは、サガシリーズでお馴染みの「涙を拭いて」のSa・Ga2 秘宝伝説版が流れるシーンなので動画でどうぞ。<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/Z_PRSuAy1eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      このあと戦闘になりますがさして強くもない。<br>
+      ちちおやがいなくなってショックを受けるが、秘宝を探す旅を続けると決める主人公達。<br>
+      この世界の秘宝が集め終わったので、次の世界に進みます。<br>
+      <img src="img/saga2/gb/fifth_world/after_guardian.png" width="300"><br><br>
+    </p>
+
+    <span id="dai6sekai"></span>
+    <h3 class="title">第六世界</h3>
+    <p>
+      次はビーナスの世界。美しいものに目がないご様子。。<br>
+      <img src="img/saga2/gb/seventh_world/venus01.png" width="300">
+      <img src="img/saga2/gb/seventh_world/venus02.png" width="300"><br><br>
+
+      ビーナスは結構やりたい放題。<br>
+      <img src="img/saga2/gb/seventh_world/orivia01.png" width="300">
+      <img src="img/saga2/gb/seventh_world/orivia02.png" width="300">
+      <img src="img/saga2/gb/seventh_world/orivia03.png" width="300">
+      <img src="img/saga2/gb/seventh_world/orivia04.png" width="300"><br><br>
+
+      オリビアの結婚相手。<br>
+      <img src="img/saga2/gb/seventh_world/yurius01.png" width="300">
+      <img src="img/saga2/gb/seventh_world/yurius02.png" width="300"><br><br>
+
+      ビーナスの町の外にある小さい町にアントニーがいます。アントニー、服着てますか？？ｗ<br>
+      <img src="img/saga2/gb/seventh_world/antony02.png" width="300">
+      <img src="img/saga2/gb/seventh_world/antony03.png" width="300"><br><br>
+
+      秘宝を集めていると、ひとつアントニーに奪われてしまう。<br>
+      <img src="img/saga2/gb/seventh_world/antony04.png" width="300">
+      <img src="img/saga2/gb/seventh_world/antony05.png" width="300">
+      <img src="img/saga2/gb/seventh_world/antony06.png" width="300"><br><br>
+
+      ビーナスの町に戻ると結婚式が始まります。ここのやり取りは好きです。印象に残ってる人多いんじゃないかな？<br>
+      <img src="img/saga2/gb/seventh_world/wedding02.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding03.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding05.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding06.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding07.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding08.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding12.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding13.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding14.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding15.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding16.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding17.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding18.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding19.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding20.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding21.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding22.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding23.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding29.png" width="300">
+      <img src="img/saga2/gb/seventh_world/wedding30.png" width="300"><br><br>
+
+      今のあんたが一番醜いぜ！<br>
+      これはローディング画面にもなっていました。<br>
+      <img src="img/saga2/sagars/loading/minikui.jpg" width="300"><br><br>
+
+      この後ビーナスと戦闘して勝てばこの世界は終わりです。<br>
+      <img src="img/saga2/gb/seventh_world/venus_battle.png" width="300"><br><br>
+
+      <br><br>
+      続いて、レースの世界。ここはアポロンが再登場するぐらいしかネタがない。<br>
+      アポロンとの会話もこの程度しかないです。<br>
+      <img src="img/saga2/gb/eighth_world/re_aporon01.png" width="300">
+      <img src="img/saga2/gb/eighth_world/re_aporon02.png" width="300">
+      <img src="img/saga2/gb/eighth_world/re_aporon03.png" width="300"><br><br>
+
+      秘宝を集めたら次の世界に行きます。<br><br>
+    </p>
+
+    <span id="dai7sekai"></span>
+    <h3 class="title">第七世界</h3>
+    <p>
+      江戸の世界<br>
+      江戸というだけあって、出てくるキャラクターはそれっぽい名前の人が多いです。<br>
+      このおたまというキャラクターは、えちごやの悪事を暴くために活動している様子。<br>
+      <img src="img/saga2/gb/eighth_world/otama04.png" width="300">
+      <img src="img/saga2/gb/eighth_world/otama05.png" width="300">
+      <img src="img/saga2/gb/eighth_world/otama06.png" width="300"><br><br>
+
+      こいつがえちごやです。密貿易の証拠を押さえるために脅迫めいたことをしだす主人公ｗ<br>
+      <img src="img/saga2/gb/eighth_world/echigoya02.png" width="300">
+      <img src="img/saga2/gb/eighth_world/echigoya03.png" width="300"><br><br>
+
+      しかしその甲斐あって、密貿易の証拠を押さえることに成功。<br>
+      <img src="img/saga2/gb/eighth_world/ahen01.png" width="300">
+      <img src="img/saga2/gb/eighth_world/ahen02.png" width="300"><br><br>
+
+      奉行所に報告。えちごやをひっとらえるが、隠蔽されてしまいます。<br>
+      <img src="img/saga2/gb/eighth_world/bugyou01.png" width="300">
+      <img src="img/saga2/gb/eighth_world/bugyou04.png" width="300">
+      <img src="img/saga2/gb/eighth_world/bugyou05.png" width="300">
+      <img src="img/saga2/gb/eighth_world/bugyou06.png" width="300">
+      <img src="img/saga2/gb/eighth_world/bugyou07.png" width="300"><br><br>
+
+      えちごやに直接乗り込もうと提案する主人公達。<br>
+      <img src="img/saga2/gb/eighth_world/norikomi01.png" width="300">
+      <img src="img/saga2/gb/eighth_world/norikomi02.png" width="300">
+      <img src="img/saga2/gb/eighth_world/norikomi03.png" width="300"><br><br>
+
+      えちごやのお店に行くが不在。奥に行けるようになっているので行ってみると・・・。<br>
+      <img src="img/saga2/gb/eighth_world/onushimowaru01.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru02.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru03.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru04.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru05.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru06.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru07.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru08.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru09.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru10.png" width="300">
+      <img src="img/saga2/gb/eighth_world/onushimowaru11.png" width="300"><br><br>
+
+      これはローディング画面にもなっていました。<br>
+      <img src="img/saga2/sagars/loading/juubunnwaru.jpg" width="300"><br><br>
+      個人的には「なんだ！　このおんがくは！」の方が印象深いです。<br>
+      ちなみにこの場面で流れていた音楽は「Never give up!」という曲です。えちごやのセリフと音楽のかっこよさが相まって印象に残っています。<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/EmZ5Lw1CrHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      この後、戦闘になります。<br>
+      <img src="img/saga2/gb/eighth_world/onushimowaru14.png" width="300"><br><br>
+      江戸の世界でネタになっていたのはこれぐらいです。<br>
+
+      <br><br>
+      続いて、意地悪なダンジョンという場所に行きます。ここは秘宝が一つあるだけです。<br>
+      おビーズ好きなフォロワーさんがいますね。おビーズの細かいところに対する拘りとか、色合いとか、好きです。<br>
+      <img src="img/saga2/gb/tenth_world/ijiwaru_yousei01.png" width="300">
+      <img src="img/saga2/gb/tenth_world/ijiwaru_yousei02.png" width="300">
+      <img src="img/saga2/gb/tenth_world/ijiwaru_yousei03.png" width="300"><br><br>
+    </p>
+
+    <span id="dai8sekai"></span>
+    <h3 class="title">第八世界</h3>
+    <p>
+      オーディンの世界。<br>
+      ロマサガRSでは特にネタにはなっていないのでそのお姿だけ紹介して終わります。<br>
+      <img src="img/saga2/gb/eleventh_world/ordyn01.png" width="300">
+      <img src="img/saga2/gb/eleventh_world/ordyn02.png" width="300"><br><br>
+    </p>
+
+    <span id="dai9sekai"></span>
+    <h3 class="title">第九世界</h3>
+    <p>
+      再びアポロン。ついに本性を表します。<br>
+      <img src="img/saga2/gb/twelveth_world/rere_aporon01.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon02.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon03.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon04.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon05.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon06.png" width="300"><br><br>
+
+      アポロンのしもべと戦います。<br>
+      <img src="img/saga2/gb/twelveth_world/rere_aporon_shimobe.png" width="300"><br><br>
+
+      戦いに勝つと、これまで出会った人たちを人質に取られます。<br>
+      <img src="img/saga2/gb/twelveth_world/rere_aporon07.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon08.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon09.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon10.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/rere_aporon16.png" width="300"><br><br>
+
+      絶望感漂う中・・・・<br>
+      <img src="img/saga2/gb/twelveth_world/re_titioya01.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/re_titioya03.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/re_titioya04.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/re_titioya05.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/re_titioya06.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/re_titioya07.png" width="300"><br><br>
+      <font color="yellow">秘宝は77個あるといったな。あれは嘘だ。</font><br>
+      最後の秘宝を求めてさいごのダンジョンに向かいます。<br>
+
+      最後の町<br>
+      <img src="img/saga2/gb/twelveth_world/last_danjon_boss01.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/last_danjon_boss02.png" width="300"><br><br>
+
+      これはローディング画面にもなっていました。<br>
+      <img src="img/saga2/sagars/loading/machine_weak_point.jpg" width="300"><br><br>
+
+      最後のダンジョンで秘宝を守っているボスと戦います。<br>
+      <img src="img/saga2/gb/twelveth_world/machine01.png" width="300">
+      <img src="img/saga2/gb/machine.png" width="300"><br><br>
+
+      これはローディング画面にもなっていました。また、ここで戦う敵は制圧戦でも出てきた敵です。<br>
+      <img src="img/saga2/sagars/loading/machine.jpg" width="300">
+      <img src="img/saga2/sagars/enemy/machine.jpg" width="300"><br><br>
+
+      戦いに勝つと、最後の秘宝を手に入れることができます。<br>
+      <img src="img/saga2/gb/twelveth_world/last_hihou.png" width="300"><br><br>
+
+      最後の秘宝を手に、アポロンとの戦い。<br>
+      ロマサガRSでもこの戦いは再現されていたので動画で見てください。<br><br>
+
+      GB版アポロンとの戦い（変身前～変身するまで）<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/iD-u001Vvtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      GB版アポロンとの戦い（戦闘中～爆発するまで）<br>
+      <font color="yellow">※1分15秒あたりから爆発が始まります。</font><br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/Rl8Mp0y6wPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      これをロマサガRSで再現したのがこれです。<br>
+      ロマサガRS版アポロンとの戦い（変身前～変身するまで）<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/GIshcKuJxbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      ロマサガRS版アポロンとの戦い（戦闘中～爆発するまで）<br>
+      原作では、アポロンが爆破するとちちおやが庇ってくれますが、ロマサガRSでは庇ってくれません。<br>
+      （下の動画のちちおやは倒れていますが、起きていたとしても庇ってくれないらしいです。）<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/5bYzmk8KX-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <!--
+      <br><br>
+      アポロンとの戦いの画像です。ココリコの田中じゃないよ。<br>
+      <img src="img/saga2/gb/twelveth_world/aporon_battle01.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle02.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle03.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle04.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle05.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle06.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle07.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle08.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle09.png" width="300"><br><br>
+
+      ある程度ダメージを与えると爆発します。ちちおやが身を挺して守ってくれます。リユニにはなかった演出です。<br>
+      <img src="img/saga2/gb/twelveth_world/aporon_battle10.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle11.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle12.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle13.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle14.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle15.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle16.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle17.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle18.png" width="300">
+      <img src="img/saga2/gb/twelveth_world/aporon_battle19.png" width="300"><br><br>
+      -->
+
+      <br><br>
+      アポロンはこれで終わりです。アポロンはラスボスではないので、Sa・Ga2 秘宝伝説としてはまだ続きがあります。しかし、ロマサガRSではネタにはなっていないので、ラスボスについてはこの記事では書きません。<br>
+    </p>
+
+    <span id="haniwa"></span>
+    <h3 class="title">はにわ</h3>
+    <p>
+      2020/08/30(日)は突然はにわが裏道場に現れ、twitterのTLがはにわだらけでしたね（笑）。
+      これは本当に良いサプライズだと思いました！<br>
+      <img src="img/saga2/sagars/enemy/haniwa/haniwa.jpg" width="300">
+      <img src="img/saga2/sagars/enemy/haniwa/haniwa_tokuiwaza.jpg" width="300"><br><br>
+
+      技<br>
+      <img src="img/saga2/sagars/enemy/haniwa/haniwa_waza1.jpg" width="300">
+      <img src="img/saga2/sagars/enemy/haniwa/haniwa_waza2.jpg" width="300"><br><br>
+
+      アビリティ<br>
+      <img src="img/saga2/sagars/enemy/haniwa/haniwa_abi1.jpg" width="300">
+      <img src="img/saga2/sagars/enemy/haniwa/haniwa_abi2.jpg" width="300"><br><br>
+
+      当時のはにわとの戦闘風景。最後普通に負けます（笑）。
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/BdtorZGWuv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      これがSa・Ga2 秘宝伝説のはにわ。ラスボスがいるフロアで雑魚敵として出てきます。この見た目でラスボスより強いです。<br>
+      <img src="img/saga2/gb/haniwa/haniwa.png" width="300"><br><br>
+
+      使ってくる技<br>
+      じしん（全体攻撃）。結構痛いが、イージスのたてで無効化できる。<br>
+      <img src="img/saga2/gb/haniwa/jishin.png" width="300"><br><br>
+
+      フレア（全体攻撃）。ダメージはじしんと変わらないが、イージスのたてでも防げません・・・<br>
+      <img src="img/saga2/gb/haniwa/flare1.png" width="300">
+      <img src="img/saga2/gb/haniwa/flare2.png" width="300"><br><br>
+
+      再生（ターン終了時）。<br>
+      <img src="img/saga2/gb/haniwa/saisei.png" width="300"><br><br>
+
+      たいあたり。これだけはやさしい。<br>
+      <img src="img/saga2/gb/haniwa/taiatari.png" width="300"><br><br>
+
+      しちしとう（単体攻撃）。一応言っておきますけど、こっちのHPの最大値は基本的には999ですよ（笑）<br>
+      <img src="img/saga2/gb/haniwa/shitishitou.png" width="300"><br><br>
+      このしちしとう、たまに、はにわがレアアイテムでドロップします。こっちが使っても頑張れば10,000以上のダメージをたたき出すことができます。<br>
+      Sa・Ga2 って、1,000ダメージ出れば相当強いんですけどね・・・。<br>
+      ちなみに、ラスボスのHPは10,000なので、やろうと思えばしちしとうの一発で片付けることが可能らしいです。<br>
+      参考：<a href="http://www.interq.or.jp/www-user/tsubo2/saga/last.htm" target="_blank">All About 防衛システム！</a><br><br>
+
+      原作でこれだけ強かったはにわ。裏道場で登場したはにわが強かったのがなぜか嬉しかったです（笑）
+    </p>
+
+    <span id="ending"></span>
+    <h3 class="title">エンディング</h3>
+    <p>
+      魔界塔士Sa・Ga同様、この記事をどうやって締めればいいのかよくわからないのでエンディングの動画を乗せておきます。<br>
+      <iframe width="560" height="500" src="https://www.youtube.com/embed/UeLH_aFj4sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <br><br>
+      Sa・Ga2 秘宝伝説は以上です。<br>
+      もしまだ見ていなければ<a href="saga_one.html">魔界塔士Sa・Gaの記事</a>もよろしくお願いします。
+    </p>
+
+    <br>
+    Sa・Ga2 秘宝伝説<br>
+    <!-- Sa・Ga2 秘宝伝説 -->
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=sagamax-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B08JNYK7DR&linkId=dbed27aee39852212a03db4ccb5698f8&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    </iframe>
+
+    <!-- Sa・Ga2 秘宝伝説 オリジナルサントラ -->
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=sagamax-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B082DRPQQT&linkId=546a9ce4d8693d8fc6aa7a9cd98f5e7f&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    </iframe>
+
+    <!--
+    Sa・Ga2 秘宝伝説
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=sagamax-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B000069SX3&linkId=c99db7bb1255793628c8c1299cdd8e7a&bc1=000000&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    </iframe>
+
+    Sa・Ga2 秘宝伝説GODDES OF...
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=sagamax-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B001QCY0MU&linkId=2f5e63f756e3e1fe6220692de870c80f&bc1=000000&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    </iframe>
+
+    Sa・Ga2 秘宝伝説GODDES OF...
+    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=sagamax-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B082DRWK4L&linkId=09d26202c34a6ff5ca170851848532c4&bc1=000000&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    </iframe>
+    -->
+
+    </section><!-- section class="box" -->
+
+    <footer>
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>
