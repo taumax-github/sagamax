@@ -61,8 +61,15 @@ img {
 	cursor: pointer;
 }
 
-/* modal */
+.rights {
+    background: rgba(110, 106, 106, 0.5);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
 
+/* modal */
 .modal-wrapper {
 	width: 100%;
 	height: 100%;
