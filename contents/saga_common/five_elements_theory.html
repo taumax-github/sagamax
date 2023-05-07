@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:url" content="https://taumax-github.github.io/sagamax/contents/saga_common/five_elements_theory.html" /> <!--記事のURL-->
+    <meta property="og:title" content="サガと陰陽五行説" /> <!--記事のタイトル-->
+    <meta property="og:description" content="サガと陰陽五行説" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/images/icon_twitter_card.png" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/print.css" media="print">
+    <script src="../../js/openclose.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="../../js/imgViewer2.js"></script>
+
+    <script type="text/javascript">
+      ;(function($) {
+           $(window).on("load", function() {
+               //imgのIDやクラスを指定
+               var $img = $("#zoomImg").imgViewer2(
+                       {
+                       //画像の揺れの改善
+                       onReady: function() {
+                           this.setZoom(2);
+                           this.setZoom(1);
+                       }
+                   }
+               );
+           });
+      })(jQuery);
+    </script> 
+
+    <title>ｓａｇａｍａｘのページ</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../images/icon_top.png" alt="TOP"><br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../images/icon_twitch.webp" alt="twitch"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="#firstly">はじめに</a></li>
+      <li><a href="#gogyo">陰陽五行説</a></li>
+      <li><a href="#sagaseries">サガと五行</a></li>
+      <li><a href="#makai">魔界塔士</a></li>
+      <li><a href="#hihou">秘宝伝説</a></li>
+      <li><a href="#minsaga">ミンサガ</a></li>
+      <li><a href="#roma3">ロマサガ3</a></li>
+      <li><a href="#sagafro">サガフロ</a></li>
+      <li><a href="#unsaga">アンサガ</a></li>
+      <li><a href="#sagasuka">サガスカ</a></li>
+      <li><a href="#sagars">ロマサガRS</a></li>
+    </ul>
+  </nav>
+</header>
+<!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul class="icon">
+        <li><a href="#firstly">はじめに</a></li>
+        <li><a href="#gogyo">陰陽五行説</a></li>
+        <li><a href="#sagaseries">サガと五行</a></li>
+        <li><a href="#makai">魔界塔士と五行</a></li>
+        <li><a href="#hihou">秘宝伝説と五行</a></li>
+        <li><a href="#minsaga">ミンサガと五行</a></li>
+        <li><a href="#roma3">ロマサガ3と五行</a></li>
+        <li><a href="#sagafro">サガフロと五行</a></li>
+        <li><a href="#unsaga">アンサガと五行</a></li>
+        <li><a href="#sagasuka">サガスカと五行</a></li>
+        <li><a href="#sagars">ロマサガRSと五行</a></li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../images/icon_twitch.webp" alt="twitch"></a></li>
+    </ul>
+  </div><!--/#menubar-s-->
+</header><!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+
+      <h2 class="title">サガシリーズと陰陽五行説</h2>
+
+      <p style="color: #FFFFFF;"><a href="../../index.html" style="color: #00bfff;">ホーム</a> > サガと陰陽五行説</p>
+
+      <span id="firstly"></span>
+      <h3 class="title">はじめに</h3>
+      <p>
+        twitterのフォロワーさんのツイートを見ていて、五行説の観点でサガを考察している方を数名見かけるのですが、五行説というものを私がよくわかっていなかったので調べてみました。で、わかったのですが、サガシリーズって五行説に関連するものが結構頻繁に出て来ていたんですね。（今更）認識しました。<br/>
+        というわけでこの記事は、（陰陽）五行説についてと、歴代サガシリーズで五行説がどのような形で登場しているのかをまとめてみた記事です。<br/>
+      </p>
+
+      <br/>
+      <span id="gogyo"></span>
+      <h3 class="title">陰陽五行説</h3>
+      <p>
+        中国の思想に「五行思想（ごぎょうしそう）」というものがあります。五行説ともいいます。<br/>
+        五行思想とは、古代中国に端を発する自然哲学の思想。万物は火・水・木・金・土の5種類の元素からなるという説です。肉眼で見える惑星（火星・水星・木星・金星・土星）を五行と対応させたものです。5種類の元素は「互いに影響を与え合い、その生滅盛衰によって天地万物が変化し、循環する」という考えが根底に存在します。<br/>
+        <img src="img/five_elements_theory/five_elements_theory.jpg" width="300"/><br/>
+        ※画像は<a href="https://ja.wikipedia.org/wiki/%E4%BA%94%E8%A1%8C%E6%80%9D%E6%83%B3" target="_blank" rel="noreferrer">こちら</a>から引用<br/>
+        ※相生（そうしょう）：順送りに相手を生み出して行く、陽の関係。<br/>
+        ※相剋（そうこく）：相手を打ち滅ぼして行く、陰の関係。<br/>
+  
+        <br/>
+        五行説は陰陽説よりも後から出来たので、当初から陰陽説と一体であり、陰陽五行説とも言われます。五行それぞれの意味合いは以下の通り。<br/>
+        <table border="1">
+          <tr><th>五行</th><th>説明</th></tr>
+          <tr><td>木（もく）</td><td>「春」の象徴。木の花や葉が幹の上を覆っている立木が元となっていて、樹木の成長・発育する様子を表す。</td></tr>
+          <tr><td>火（か）</td><td>「夏」の象徴。光り煇く炎が元となっていて、火のような灼熱の性質を表す。</td></tr>
+          <tr><td>土（ど）</td><td>季節の変わり目、「土用」の象徴。植物の芽が地中から発芽する様子が元となっていて、万物を育成・保護する性質を表す。</td></tr>
+          <tr><td>金（ごん/こん）</td><td>「秋」の象徴。土中に光り煇く鉱物・金属が元となっていて、金属のように冷徹・堅固・確実な性質を表す。</td></tr>
+          <tr><td>水（すい）</td><td>「冬」の象徴。泉から涌き出て流れる水が元となっていて、これを命の泉と考え、胎内と霊性を兼ね備える性質を表す。</td></tr>
+        </table>
+  
+        <br/>
+      </p>
+      <p>
+        五行にはそれぞれ対応する季節や方角、色、霊獣が存在します。方角の観点では、「五」は四方に中央を加えたものであるとされています。<br/>
+        四方に対応する霊獣は青龍、朱雀、白虎、玄武で、四神と呼ばれます。中央を司るのは麒麟（または黄竜（こうりゅう、おうりゅう））です。四神と麒麟（黄竜）を合わせて五神あるいは五獣と呼ばれます。<br/>
+        麒麟は四神ではありませんが、瑞獣（ずいじゅう）の一体です。瑞獣は瑞兆（ずいちょう、良い事が起こる前兆のこと）として姿を現すとされる、何らかの特異な特徴を持つ動物のことです。瑞獣の中にはこの世の動物達の長だと考えられた特別な4体の霊獣（四霊）もいて、麒麟はその一体でもあります。<br/>
+        ちょっとややこしくなってきたので、四神と瑞獣、及びその周辺を図で整理するとこうなります。麒麟は五神であり四霊であり瑞獣でもあるというなんか忙しそうな獣です。<br/>
+        <img id="zoomImg" src="img/five_elements_theory/beasts.png" alt="" style="max-width: 800px;width:100%"><br>
+        <br/>
+      </p>
+      <p>
+        黄龍（麒麟）は四神の中心的存在であり、四神の長とも呼ばれています。四神が東西南北の守護獣なのに対し、黄龍（麒麟）は中央を守るとされています。五行説で黄は土行であり、土行に割り当てられた方角は中央です。季節の観点で言うと、四神は春夏秋冬を表すものでもあり、黄龍はそれぞれの土用（※）を表すとされています。黄竜は皇帝の権威を象徴する竜とされたが、後に麒麟と置き換えられたり、同一視されるようになりました。<br/>
+        ※土用は立夏、立秋、立冬、立春それぞれの直前にくる約18日間の期間。<br/>
+        <table border="1" style="text-align: center">
+          <tr><th>要素</th><th>木</th><th>火</th><th>土</th><th>金</th><th>水</th></tr>
+          <tr><th>季節</th><td>春</td><td>夏</td><td>土用</td><td>秋</td><td>冬</td></tr>
+          <tr><th>方角</th><td>東</td><td>南</td><td>中央</td><td>西</td><td>北</td></tr>
+          <tr><th>色</th><td>青</td><td>赤</td><td>黄</td><td>白</td><td>黒</td></tr>
+          <tr><th>霊獣</th><td>青龍</td><td>朱雀</td><td>黄龍<br/>（麒麟）</td><td>白虎</td><td>玄武</td></tr>
+        </table>
+      </p>
+
+      <br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br>
+
+      <span id="sagaseries"></span>
+      <h3 class="title">サガシリーズと陰陽五行説</h3>
+      <p>
+        以上が陰陽五行説の概要なのですが、この思想はサガシリーズで頻繁に登場します（河津さんが五行説好きなのかな・・・？）。以降、シリーズ毎にどのような形で登場しているのかを見てみます。<br/>
+      </p>
+
+      <br/>
+      <span id="makai"></span>
+      <h4 class="title">魔界塔士サガと五行説</h4>
+      <p>
+        まずは魔界塔士サガ。四神の青龍、朱雀、白虎、玄武は魔界塔士サガのボスですね。魔界塔士の世界では、アシュラ（阿修羅）が四神を生み出したとされていますが、阿修羅は仏教の神様で四神とは全然関連性はありません。まあ魔界塔士サガはいろんな世界がごっちゃになった世界なのでなんでもありなのでしょう。<br/>
+        <img src="img/five_elements_theory/toushi/toushi_genb.png" width="300">
+        <img src="img/five_elements_theory/toushi/toushi_seiryu.png" width="300">
+        <img src="img/five_elements_theory/toushi/toushi_byako.png" width="300">
+        <img src="img/five_elements_theory/toushi/toushi_suzak.png" width="300"><br/>
+
+        <br/>
+        一方、黄竜はこうりゅうという名で真の塔で通常モンスターとして登場します。麒麟はきりんで味方のみが変身できる最高レベルのモンスターとして登場します。五行説が取り入れられていることがわかりますね。中心的存在である麒麟が味方限定モンスターというのもなんだか面白いところです。「アシュラでも生み出すことができなかった」ということなのでしょうか？<br/>
+        <img src="img/five_elements_theory/toushi/toushi_kouryu.png" width="300"><br/>
+        <img src="img/five_elements_theory/toushi/toushi_kirin.png" width="300">
+        <img src="img/five_elements_theory/toushi/toushi_kirinab.png" width="300"><br/>
+      </p>
+
+      <br/>
+      <span id="hihou"></span>
+      <h4 class="title">秘宝伝説と五行説</h4>
+      <p>
+        次はサガ2秘宝伝説。こちらでもモンスターとして五神が登場します。亀系の最高レベルモンスターとしてげんぶ、虎はびゃっこ、鳥はすざく、ドラゴンはせいりゅう、キメラ系できりんが登場します。秘宝伝説では全員、味方モンスターとしてのみ登場します。<br/>
+        <img src="img/five_elements_theory/hihou/hihou_genbu.png" width="300">
+        <img src="img/five_elements_theory/hihou/hihou_byako.png" width="300">
+        <img src="img/five_elements_theory/hihou/hihou_suzak.png" width="300">
+        <img src="img/five_elements_theory/hihou/hihou_seiryu.png" width="300">
+        <img src="img/five_elements_theory/hihou/hihou_kirin.png" width="300"><br/>
+      </p>
+
+      <br/>
+      <span id="minsaga"></span>
+      <h4 class="title">ミンサガと五行説</h4>
+      <p>
+        ミンサガでは火、水、土、木、金の精霊珠を集めて妖精王に会うというイベントがあります。精霊珠は五行を意識したものですね。
+        <img src="img/five_elements_theory/minsaga/seireiju_hi.jpg" width="500"/>
+        <img src="img/five_elements_theory/minsaga/seireiju_mizu.jpg" width="500"/>
+        <img src="img/five_elements_theory/minsaga/seireiju_tuchi.jpg" width="500"/>
+        <img src="img/five_elements_theory/minsaga/seireiju_ki.jpg" width="500"/>
+        <img src="img/five_elements_theory/minsaga/seireiju_kin.jpg" width="500"/><br/>
+
+        <br/>
+        集めた精霊珠を捧げると妖精王が登場し、妖精王の冠を手に入れることができます。<br/>
+        <img src="img/five_elements_theory/minsaga/youseiou.jpg" width="500"/>
+        <img src="img/five_elements_theory/minsaga/youseiou_kanmr.jpg" width="500"/><br/>
+
+        <br/>
+        また、ミンサガには「陣」という連携の強化版みたいなシステムがあります。その陣の中の一つである「聖獣陣」は、ゲーム内では明記されてはいないですが、エフェクトはおそらく五行を意識したもの。<br/>
+        （以下画像参照。5つの球体があり、五行を意識したかのような配色をしている）<br/>
+        <img src="img/five_elements_theory/minsaga/seijujin.jpg" width="500"/><br/>
+
+        <br/>
+        聖獣陣の動画はこちら。<br/>
+        <div class="youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/cHngpv8jyxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </p>
+
+      <br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br>
+
+      <span id="roma3"></span>
+      <h4 class="title">ロマサガ3と陰陽五行説</h4>
+      <p>
+        次はロマサガ3。術の体系が蒼龍、朱鳥、白虎、玄武と太陽、月となっています。青龍は蒼龍、朱雀は朱鳥とも呼ばれるため、四神＋陰（月）陽（太陽）です。<br/>
+        <img src="img/five_elements_theory/romasaga3/shishin.jpg" width="300"/>
+        <img src="img/five_elements_theory/romasaga3/inyo.jpg" width="300"/><br/>
+
+        <br/>
+        また、黄竜は黄竜剣という技で登場します。術と黄龍剣で陰陽五行説に則っていることがわかります。以下はロマサガ3の黄龍剣。<br/>
+        <img src="img/five_elements_theory/romasaga3/ouryuken_rs3.png" width="300"/><br/>
+
+        <br/>
+        河津さんは以下のツイートで「四魔貴族の四属性を五行で迎え撃つという構造になってます。」とおっしゃっていることから、意図的にこういう構成にしていることがわかります。<br/>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">土属性。ロマサガではアディリス。黒い龍として描かれてます。ミンサガでは、よりアースワームっぽい姿に変わりました。五行だと土徳の色は黄。黄龍は中国清朝のシンボルですが、ロマサガ３では黄龍剣として最強技の一つになってます。四魔貴族の四属性を五行で迎え撃つという構造になってます。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/460039106223808512?ref_src=twsrc%5Etfw">April 26, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+
+      <br/>
+      <span id="sagafro"></span>
+      <h4 class="title">サガフロと五行説</h4>
+      <p>
+        次はサガフロ。サガフロでは五行は出てきませんが、空術の資質を持つ麒麟というキャラクターが存在します。<br/>
+        中国の神話の麒麟は「普段の性質は非常に穏やかで優しく、足元の虫や植物を踏むことさえ恐れるほど殺生を嫌う。」とされています。<br/>
+        サガフロの麒麟は口調が穏やかであったり、虐待されていた子供を麒麟の空間にかくまっているという設定があったりするのでイメージにぴったりですね。<br/>
+        以下はサガフロの麒麟の画像。<br/>
+        <img src="img/five_elements_theory/sagafro/giraffe_sf.jpg" width="300"/>
+        <img src="img/five_elements_theory/sagafro/giraffe_sf_serif.jpg" width="290"/><br/>
+      </p>
+
+      <br/>
+      <span id="unsaga"></span>
+      <h4 class="title">アンサガと五行説</h4>
+      <p>
+        アンサガは術の体系が火行術、土行術、金行術、水行術、木行術と禁呪です。五行＋禁呪という形になっていることがわかります。<br/>
+      </p>
+
+      <br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br>
+
+      <span id="sagasuka"></span>
+      <h4 class="title">サガスカと五行説</h4>
+      <p>
+        次はサガスカ。サガスカはアンサガと同様に火行術、土行術、金行術、水行術、木行術の５つの術があり、五行がそのまま術の体系になっていることがわかります。<br/>
+        また、サガスカには「五行武器」という強力な武器があります。火、土、金、水、木の武器があり、名前の通り五行と同じ属性になっています。<br/>
+
+        <br/>
+        火の五行武器<br/>
+        <img src="img/five_elements_theory/sagasuka/wepon_hi.jpg" width="500"/><br/>
+
+        <br/>
+        土の五行武器<br/>
+        <img src="img/five_elements_theory/sagasuka/wepon_tsuchi.jpg" width="500"/><br/>
+
+        <br/>
+        金の五行武器<br/>
+        <img src="img/five_elements_theory/sagasuka/wepon_kin.jpg" width="500"/><br/>
+
+        <br/>
+        水の五行武器<br/>
+        <img src="img/five_elements_theory/sagasuka/wepon_mizu.jpg" width="500"/><br/>
+
+        <br/>
+        木の五行武器<br/>
+        <img src="img/five_elements_theory/sagasuka/wepon_ki.jpg" width="500"/><br/>
+
+        <br/>
+        さらに、サガスカでは、北東界外という地域でこの五行になぞらえた場所があります（下図参照）。<br/>
+        <img src="img/five_elements_theory/sagasuka/ssg_hokutou.png" width="500"/><br/>
+
+        <br/>
+        これは配置もちゃんと五行の思想を反映した形になっていますね。<br/>
+        <img src="img/five_elements_theory/five_elements_theory.jpg" width="300"/><br/>
+        ※画像は<a href="https://ja.wikipedia.org/wiki/%E4%BA%94%E8%A1%8C%E6%80%9D%E6%83%B3" target="_blank" rel="noreferrer">こちら</a>から引用<br/>
+      </p>
+
+      <br/>
+      <span id="sagars"></span>
+      <h4 class="title">ロマサガRSと陰陽五行説</h4>
+      <p>
+        最後にロマサガRS。以下のNZさんのツイートからわかるように、リアム編で敵として登場した五神獣は五行と対応させた敵だったみたいですね。<br/>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">スクウェア・エニックス様の[ロマンシング サガ リ・ユニバース]の背景を担当しております。<br>五神獣 戦闘背景画面を描かせて頂きました。<br>五行の要素がある専用背景という発注で制作しました。 <a href="https://t.co/C06b5s6tGx">pic.twitter.com/C06b5s6tGx</a></p>&mdash; NZ (@KN01971084) <a href="https://twitter.com/KN01971084/status/1640529607119233024?ref_src=twsrc%5Etfw">March 28, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <br/>
+        各敵キャラと五行との対応は以下のような感じでしょうか（武器種の横に記載されている属性から判断）。<br/>
+        ロマサガRSで扱う属性は五行ではないので、メロトセロイとラゼムの属性が五行と対応していなかったり、五行的には土を司る黄龍が四神の中心的存在なのに対して、五神獣のリーダーはラゼム（金？）だったりでちょっと強引な感じはします。しかしこれは長い間運営し続けるソシャゲなので仕方のないことなのでしょうね。<br/>
+
+        <br/>
+        イヴェリス＝水<br/>
+        <img src="img/five_elements_theory/sagars/everis.jpg" width="300"/><br/>
+
+        <br/>
+        ハーディ＝土<br/>
+        <img src="img/five_elements_theory/sagars/hardy.jpg" width="300"/><br/>
+
+        <br/>
+        オルレット＝火<br/>
+        <img src="img/five_elements_theory/sagars/orulet.jpg" width="300"/><br/>
+
+        <br/>
+        メロトセロイ＝木（風）<br/>
+        <img src="img/five_elements_theory/sagars/merotseroy.jpg" width="300"/><br/>
+
+        <br/>
+        ラゼム＝金（陽）<br/>
+        <img src="img/five_elements_theory/sagars/razem.jpg" width="300"/><br/>
+      </p>
+
+      <br/>
+      以上です。陰陽五行説はサガシリーズで結構頻繁に出てくる概念だということがわかりますね。<br/>
+      サガシリーズ以外でも五行ってよく出てくるのでしょうか？FFⅥの幻獣にキリンっていたなー、というぐらいしか私は思いつきませんが、調べればきっといっぱいあるんでしょうね。<br/>
+      おまけ。FFⅥの幻獣キリン。<br/>
+      <Image src="img/five_elements_theory/giraffe_ff6.png" width="300"/><br/>
+  
+      <br/>
+      <font size="30">おしまい。</font><br/>
+
+      <br/>
+      参考<br/>
+      <ul>
+        <li><a href="https://ja.wikipedia.org/wiki/%E4%BA%94%E8%A1%8C%E6%80%9D%E6%83%B3" target="_blank" rel="noreferrer">wikipedia 五行思想</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%99%B0%E9%99%BD%E4%BA%94%E8%A1%8C%E6%80%9D%E6%83%B3" target="_blank" rel="noreferrer">wikipedia 陰陽五行思想</a></li>
+        <li><a href="https://hiruma-iin.com/column/%E9%99%B0%E9%99%BD%E4%BA%94%E8%A1%8C%E8%AA%AC%EF%BC%88%E7%89%B9%E3%81%AB%E4%BA%94%E8%A1%8C%E8%AA%AC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%89" target="_blank" rel="noreferrer">陰陽五行説（特に五行説について）</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E4%B8%83%E6%9B%9C" target="_blank" rel="noreferrer">wikipedia 七曜</a></li>
+        <li><a href="https://app.famitsu.com/20200722_1672796/" target="_blank" rel="noreferrer">青龍、朱雀、白虎、玄武、そして麒麟！中国由来の霊獣5選【しゃれこうべが語る元ネタの世界 第40回】</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%99%B0%E9%99%BD" target="_blank" rel="noreferrer">wikipedia 陰陽</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%BB%84%E7%AB%9C" target="_blank" rel="noreferrer">wikipedia 黄竜</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%9D%92%E7%AB%9C" target="_blank" rel="noreferrer">wikipedia 青竜</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E6%9C%B1%E9%9B%80" target="_blank" rel="noreferrer">wikipedia 朱雀</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E7%99%BD%E8%99%8E" target="_blank" rel="noreferrer">wikipedia 白虎</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E7%8E%84%E6%AD%A6" target="_blank" rel="noreferrer">wikipedia 玄武</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E5%9B%9B%E7%A5%9E" target="_blank" rel="noreferrer">wikipedia 四神</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%BA%92%E9%BA%9F" target="_blank" rel="noreferrer">wikipedia 麒麟</a></li>
+        <li><a href="https://dic.pixiv.net/a/%E9%BB%84%E9%BE%8D" target="_blank" rel="noreferrer">ピクシブ百科事典 黄竜</a></li>
+        <li><a href="https://dic.pixiv.net/a/%E9%BA%92%E9%BA%9F" target="_blank" rel="noreferrer">ピクシブ百科事典 麒麟</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E5%9B%9B%E9%9C%8A" target="_blank" rel="noreferrer">wikipedia 四霊</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E5%BF%9C%E7%AB%9C" target="_blank" rel="noreferrer">wikipedia 応竜</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%B3%B3%E5%87%B0" target="_blank" rel="noreferrer">wikipedia 鳳凰</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E7%91%9E%E7%8D%A3" target="_blank" rel="noreferrer">wikipedia 瑞獣</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E7%8D%AC%E8%B1%B8" target="_blank" rel="noreferrer">wikipedia 獬豸</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E7%91%9E%E5%85%86" target="_blank" rel="noreferrer">wikipedia 瑞兆</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E3%81%AE%E7%AB%9C" target="_blank" rel="noreferrer">wikipedia 中国の竜</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%98%BF%E4%BF%AE%E7%BE%85" target="_blank" rel="noreferrer">wikipedia 阿修羅</a></li>
+        <li><a href="https://wikiwiki.jp/unsaga/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E8%A9%B3%E7%B4%B0%E7%B7%A8/%E8%A1%93%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/%E5%85%A8%E8%A1%93%E4%B8%80%E8%A6%A7" target="_blank" rel="noreferrer">UNLIMITED:SaGa Wiki 全術一覧</a></li>
+        <li><a href="https://seesaawiki.jp/w/unsaga/d/%BD%D1%A4%CB%A4%C4%A4%A4%A4%C6" target="_blank" rel="noreferrer">UNLIMITED:SaGa Wiki 術について</a></li>
+        <li><a href="https://w.atwiki.jp/aniwotawiki/pages/52618.html" target="_blank" rel="noreferrer">アニヲタWiki(仮) 術(アンリミテッド・サガ)</a></li>
+      </ul>
+      <br><br>
+
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+    </section><!-- section class="box" -->
+
+    <footer>
+      <p class="rights">
+        <!-- サガコレの権利表記 -->
+        ©1989,1990,1991,1993,2020 SQUARE ENIX CO., LTD. All Rights Reserved.<br>
+        当該作品の転載・配布は禁止いたします。<br>
+        注：本サイトは上記権利者の協力・要請のもとに作成されたものではありません。<br>
+      </p>
+
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:url" content="https://taumax-github.github.io/sagamax/contents/saga_gameboy/saga1/details/worldview.html" /> <!--記事のURL-->
+    <meta property="og:title" content="魔界塔士Sa・Gaの世界観" /> <!--記事のタイトル-->
+    <meta property="og:description" content="魔界塔士Sa・Gaとはどういう世界観のゲームなのか" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/saga_gameboy/img/saga1_logo.png" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/print.css" media="print">
+    <script src="../../../../js/openclose.js"></script>
+
+    <title>魔界塔士Sa・Gaの世界観</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../../images/icon_top.png" alt="TOP"><br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../../images/icon_twitch.webp" alt="twitch"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="#firstly">はじめに</a></li>
+      <li><a href="#makaitoushi">魔界塔士サガ</a></li>
+      <li><a href="#worldview">世界観</a></li>
+      <li><a href="#continents">大陸世界</a></li>
+      <li><a href="#paradise">楽園</a></li>
+      <li><a href="#hell">地獄</a></li>
+      <li><a href="#ocean">海洋世界</a></li>
+      <li><a href="#stone_statue">石像</a></li>
+      <li><a href="#hospital">病院</a></li>
+      <li><a href="#sky">空中世界</a></li>
+      <li><a href="#13f14f">13, 14階</a></li>
+      <li><a href="#city">都市世界</a></li>
+      <li><a href="#company">建築世界</a></li>
+      <li><a href="#shelter">シェルター</a></li>
+      <li><a href="#record">記録室</a></li>
+      <li><a href="#hanabatake">花畑</a></li>
+      <li><a href="#ashura">アシュラ</a></li>
+      <li><a href="#true_tower">真の塔</a></li>
+      <li><a href="#last_floor">最上階</a></li>
+    </ul>
+  </nav>
+</header>
+<!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul class="icon">
+        <li>
+          <li><a href="#firstly">はじめに</a></li>
+          <li><a href="#makaitoushi">魔界塔士サガ</a></li>
+          <li><a href="#worldview">世界観</a></li>
+          <li><a href="#continents">大陸世界</a></li>
+          <li><a href="#paradise">楽園</a></li>
+          <li><a href="#hell">地獄</a></li>
+          <li><a href="#ocean">海洋世界</a></li>
+          <li><a href="#stone_statue">石像</a></li>
+          <li><a href="#hospital">病院</a></li>
+          <li><a href="#sky">空中世界</a></li>
+          <li><a href="#13f14f">13, 14階</a></li>
+          <li><a href="#city">都市世界</a></li>
+          <li><a href="#company">建築世界</a></li>
+          <li><a href="#shelter">シェルター</a></li>
+          <li><a href="#record">記録室</a></li>
+          <li><a href="#hanabatake">花畑</a></li>
+          <li><a href="#ashura">アシュラ</a></li>
+          <li><a href="#true_tower">真の塔</a></li>
+          <li><a href="#last_floor">最上階</a></li>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../../images/icon_twitch.webp" alt="twitch"></a></li>
+    </ul>
+  </div><!--/#menubar-s-->
+</header><!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container" style="background: url(background_0.4.png) ;background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+
+      <h2 class="title">魔界塔士Sa・Gaの世界観</h2>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "sagamaxトップ",
+            "item": "https://taumax-github.github.io/sagamax/index.html"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "GBサガ",
+            "item": "https://taumax-github.github.io/sagamax/contents/saga_gameboy/index_saga_gameboy.html"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "魔界塔士Sa・Ga",
+            "item": "https://taumax-github.github.io/sagamax/contents/saga_gameboy/saga1/saga1_index.html"
+          },{
+            "@type": "ListItem",
+            "position": 4,
+            "name": "世界観",
+            "item": "https://taumax-github.github.io/sagamax/contents/saga_gameboy/saga1/details/worldview.html"
+          }]
+        }
+      </script>
+      <p style="color: #FFFFFF;"><a href="../../../../index.html" style="color: #00bfff;">ホーム</a> > <a href="../../index_saga_gameboy.html">ＧＢサガ</a> > <a href="../saga1_index.html">魔界塔士Sa・Ga</a> > 世界観</p>
+
+      <br>
+      <span id="firstly"></span>
+      <h3 class="title">はじめに</h3>
+      <p>
+        この記事は、サガ好きの管理人が河津さんのツイートやゲーム内の情報などをもとに魔界塔士サガの世界観を整理してみたものです。<br>
+        世界観以外にも、食肉後に何のモンスターに変身するかを算出するツールやモンスター変身の仕組みの解説、変身可能モンスターの一覧なども作ったりもしています。<a href="../saga1_index.html">こちら</a>にまとめているので是非使ってみてください。<br>
+      </p>
+
+      <br>
+      <span id="makaitoushi"></span>
+      <h3 class="title">魔界塔士サガってどんなゲーム？</h3>
+      <p>
+        魔界塔士サガは1989年12月15日に発売されたゲームボーイ(GB)のソフトで、携帯ゲーム機向けソフトとしては初めてのRPGです。<br>
+        当時のGBのカートリッジ容量は2メガビット（＝256キロバイト）で、現在ではスマホで写真1枚でも取れば余裕で超えてしまうほどのごく小容量。こんな小さい容量のGBでRPGなんて不可能だと言われている中で開発されたソフトでした。しかしながらこの魔界塔士サガは、結果的にはスクウェア初のミリオンヒット作品で、シリーズ化されるほどの人気となりました。<br>
+        ゲームのシステムも当時としてはかなり斬新で、RPGなのにレベルの概念が無かったり、モンスターを仲間にして、敵がたまに落とす肉を食べることで違うモンスターに進化するなど、独特なシステムを採用しています。<br>
+        30年以上も前（2023年5月7日現在）のゲームですが、今では Switch や iOS, Adnroid, Steam で <a href="https://www.jp.square-enix.com/saga_collection/" target="_blank" rel="noreferrer">SaGa COLLECTION</a> という形で手軽にプレイできます。未プレイの方も子供の頃プレイしたという方もプレイしてみてはいかがでしょうか。<br>
+      </p>
+
+      <br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br>
+
+      <span id="worldview"></span>
+      <h3 class="title">世界観</h3>
+      <p>
+        魔界塔士Sa・Gaの世界では、世界の中心に『塔』があります。以下のオープニングの画像にあるように、この塔は楽園に通じていると伝えられています。この塔の秘密に挑み、楽園を目指す者がゲームのタイトルになっている『魔界塔士』と呼ばれている者たちです。<br>
+        <img src="img/opening.png" width="300">
+        <img src="img/tower.png" width="300"/><br/>
+
+        <br>
+        この塔の中は時間が一定して流れておらず、時代の違う世界が多元軸に構成されているという設定があります。これはゲーム中の以下のセリフでも示唆されています。<br>
+        （画像は塔の7階の石像の台詞）<br>
+        <img src="7f_stone_statue/img/multi-dimension.png" width="300"><br>
+
+        <br>
+        実際、このゲームのシナリオを担当した河津さんは以下のようにおっしゃっており、魔界塔士サガは『多元世界を表現したゲーム』であり、その多元世界の中心にあるのが塔だということがわかります。<br>
+      </p>
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">多元世界を目に見える形で表現したかったんですね。世界を繋ぐものが塔だったり柱だったりしたのです。 <a href="https://t.co/1ddM8Lif3f">https://t.co/1ddM8Lif3f</a></p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1337678105314410496?ref_src=twsrc%5Etfw">December 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <p>
+        <br>
+        多元的に様々な世界につながっている塔を通じて、魔界塔士である主人公たちは様々な世界を目にします。大陸世界、海洋世界、空中世界、都市世界の4つの大きな世界と、いくつかの小さい世界です。<br/>
+        1階が大陸世界なのに5階は海洋世界。10階は空中世界なのに16階は都市世界。上に登っているにもかかわらず大陸の上が海だったり、空中の上が都市だったりと、地形を無視したつくりになっていますが、違う世界なんだから何でもありです。<br>
+        何でもありなのは地形だけではありません。4つの大きな世界に待ち構えるボスキャラは中国の四神（玄武、青龍、白虎、朱雀）で、それを生み出したのは仏教のアシュラ（阿修羅）だったり、ボス以外のモンスターでは、北欧神話に登場するフェンリルや炎の巨人やヨルムンガンドル、メソポタミア神話のティアマット、旧約聖書のベヒーモスやリヴァイアサン、日本のおばけやブルブル、挙句の果てには「ぶとうか」とか「すもうレスラー」何て言う、もはや普通の人間なのでは！？と思う敵も登場します。<br/>
+        <img src="img/sumou_wrestler.png" width="300"/><br/>
+
+        <br/>
+        敵として登場するこれらのモンスターにこちらも変身できたり（残念ながらすもうレスラーにはなれませんが）、なんかもうはちゃめちゃです。<br/>
+        でも、それがいいんです。このはちゃめちゃでいろんな世界観ごった煮のこの世界観こそが魔界塔士サガの魅力なのだと個人的には思っていますし、ゲームを作った側としてもたぶん狙ってそういう作りにしていると思います。なぜなら、<font color="yellow">塔を登りながら多様な世界を目にして『楽園』に辿り着いた主人公は何を思うのか？がこのゲームのテーマ</font>だと私は考えているからです。<br/>
+        以降、実際にどんな世界があるのかを見ていこうと思います。各世界のリンク先に地図を張っているので、プレイしていて迷子になった時などに使ってみてください。<br>
+      </p>
+
+        <br>
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 横長広告 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5924490903263360"
+             data-ad-slot="6254596512"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <br>
+  
+        <span id="continents"></span>
+        <h3 class="title">大陸世界（1階）</h3>
+        <ul>
+          <li><a href="1f_continent/continent.html">大陸世界（1階）</a>←地図</li>
+          <p>
+            この世界では3人の王が戦争をしています。鎧の王と剣の王と盾の王の3人です。<br>
+            <img src="1f_continent/img/hero_town/war1.jpg" width="300"/>
+            <img src="1f_continent/img/hero_town/war2.jpg" width="300"/><br/>
+
+            <br/>
+            恋煩いの鎧の王と南の村で一番の美人。鎧の王は通りすがりの魔界塔士に突然恋の相談をしてしまう（笑）<br/>
+            <img src="1f_continent/img/yoroinoou.jpg" width="300"/>
+            <img src="1f_continent/img/no1bijin.jpg" width="300"/><br/>
+
+            <br/>
+            なんかやばそうな盾の王・・・。<br/>
+            <img src="1f_continent/img/tatenoou.jpg" width="300"/><br/>
+
+            <br/>
+            血の気の多い剣の王。<br/>
+            <img src="1f_continent/img/tsuruginoou.jpg" width="300"/><br/>
+
+            <br/>
+            剣の王からキングの剣、鎧の王からキングの鎧、盾の王からキングの盾を手に入れ、英雄の町の英雄の像に捧げることで、塔を登るのに必要な「クリスタル」を手に入れることができます。<br>
+            <img src="1f_continent/img/basic_town/jogen1.jpg" width="300"/>
+            <img src="1f_continent/img/hero_town/jiyuunihaireta.jpg" width="300"/>
+            <img src="1f_continent/img/hero_town/tarinai_zou.jpg" width="300"/>
+            <img src="1f_continent/img/hero_town/crystal.jpg" width="300"/>
+            <img src="1f_continent/img/hero_town/item_atsumeta.jpg" width="300"/>
+          </p>
+
+        <br>
+        <span id="paradise"></span>
+        <h3 class="title">楽園（3階）</h3>
+        <li><a href="3f_paradise/paradise.html">楽園（3階）</a>←地図</li>
+          <p>
+            何もしなくても暮らすことができる世界。生きがいややりがいというものが恐らく存在しないこの世界は到底楽園とは言い難いでしょう。<br>
+            <img src="3f_paradise/img/do_nothing.jpg" width="300"/>
+            <img src="3f_paradise/img/eat_speel.jpg" width="300"/>
+          </p>
+
+        <br>
+        <span id="hell"></span>
+        <h3 class="title">地獄（4階）</h3>
+        <li><a href="4f_hell/hell.html">地獄（4階）</a>←地図</li>
+          <p>
+            辺り一面が針の山になっている苦行に満ちた世界。悪魔が支配している世界で、この世界の住民は「苦しみに耐えれば楽園に連れて行ってもらえる」と信じて、苦痛に耐えながら生きている。<br>
+            「4匹の悪魔」に関する情報が得られる。4匹の内1匹は大陸世界で戦った玄武のこと。<br>
+            <img src="4f_hell/img/4deamon.jpg" width="300"/>
+            <img src="4f_hell/img/beyond_this_suffer.jpg" width="300"/>
+            <img src="4f_hell/img/painful.jpg" width="300"/>
+          </p>
+
+          <br/>
+          <p>
+            楽園の上が地獄という構成になっていますが、ゲームを作る際のアイディア出しの段階でいろいろ意見を出した結果こういう構成になっているみたいです。
+          </p>
+          <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">この辺はアイデア出しの段階で、みんなでいろいろ意見をだして構成を決めましたね。 <a href="https://t.co/aKAquLqRIM">https://t.co/aKAquLqRIM</a></p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1337768975875198977?ref_src=twsrc%5Etfw">December 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <br>
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 横長広告 -->
+        <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5924490903263360"
+              data-ad-slot="6254596512"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+        <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <br>
+
+        <span id="ocean"></span>
+        <h3 class="title">海洋世界（5階）</h3>
+        <li><a href="5f_ocean/ocean.html">海洋世界（5階）</a>←地図</li>
+          <p>
+            海上はもちろん海底にも人が生きている場所があります。<br>
+            この世界は四天王の一人、青龍が支配する世界。竜王を追い出した青龍が支配している。<br>
+            青龍の赤玉と竜王の青玉を手に入れ、アイテム欄から使用するとクリスタルが手に入り、次の世界に行けるようになる。<br>
+            <img src="5f_ocean/img/seiryu_ryuou.jpg" width="300"/>
+            <img src="5f_ocean/img/whereis.jpg" width="300"/>
+            <img src="5f_ocean/img/in_ryugujo.jpg" width="300"/>
+            <img src="5f_ocean/img/seiryu_aka.jpg" width="300"/>
+            <img src="5f_ocean/img/ryuou_inkyo.jpg" width="300"/>
+            <img src="5f_ocean/img/ryuou_ao.jpg" width="300"/>
+            <img src="5f_ocean/img/seiryu.jpg" width="300"/>
+            <img src="5f_ocean/img/akadama.jpg" width="300"/>
+            <img src="5f_ocean/img/aodama.jpg" width="300"/>
+            <img src="5f_ocean/img/crystal.jpg" width="300"/><br/>
+
+            <br/>
+            竜王が出題するなぞなぞと答え。<br/>
+            <table border="1">
+              <tr><th>竜王の問題</th><th>答え</th><th>購入場所</th></tr>
+              <tr><td>元気な人は痛くて、疲れた人は気持ちいいもの なんだ？</td><td>金の針</td><td>港町</td></tr>
+              <tr><td>ロングソード2本と ゴールドかぶと3つと ポーション４個で何が買える？</td><td>青龍刀</td><td>港町、東の島の村</td></tr>
+              <tr><td>海に近いと小さくて　山に近いと大きいもの　なんだ？</td><td>岩</td><td>東の島の村</td></tr>
+            </table>
+          </p>
+
+        <br>
+        <span id="stone_statue"></span>
+        <h3 class="title">石像（7階）</h3>
+        <li><a href="7f_stone_statue/stone_statue.html">石像（7階）</a>←地図</li>
+          <p>
+            世界が多次元であることを示唆する謎の石像。<br>
+            <img src="7f_stone_statue/img/nazo_sekizo.jpg" width="300">
+            <img src="7f_stone_statue/img/multi-dimension.png" width="300"><br>
+          </p>
+
+        <br>
+        <span id="hospital"></span>
+        <h3 class="title">病院（9階）</h3>
+        <li><a href="9f_hospital/hospital.html">病院（9階）</a>←地図</li>
+          <p>
+            病院。復活の館や宿屋があります。<br>
+            入院？している人が、4匹の悪魔を支配している大悪魔のことを教えてくれます。<br>
+            <img src="9f_hospital/img/daiakuma.jpg" width="300">
+          </p>
+
+        <br>
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 横長広告 -->
+        <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5924490903263360"
+              data-ad-slot="6254596512"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+        <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <br>
+
+        <span id="sky"></span>
+        <h3 class="title">空中世界（10階）</h3>
+        <li><a href="10f_sky/sky.html">空中世界（10階）</a>←地図</li>
+          <p>
+            びゃっこが支配する世界。白虎に対抗する組織、レジスタンスのリーダーだったシャルルの双子の娘である「ジャンヌ」と「ミレイユ」がクリスタルの鍵を握っており、白虎はそれを狙っている。<br>
+            妹思いの姉、ジャンヌと、裏切りの妹、ミレイユ。ミレイユは白虎の側について姉のジャンヌを売ってしまう。<br>
+            ミレイユはスクウェア三大悪女として知られている。
+          </p>
+
+          <br>
+          三大悪女について参考<br>
+          <ul>
+            <li><a href="https://dic.pixiv.net/a/%E3%82%B9%E3%82%AF%E3%82%A6%E3%82%A7%E3%82%A2%E4%B8%89%E5%A4%A7%E6%82%AA%E5%A5%B3" target="_blank" rel="noreferrer">pixiv百科事典 スクウェア三大悪女</a></li>
+            <li><a href="https://dic.nicovideo.jp/a/%E3%82%B9%E3%82%AF%E3%82%A6%E3%82%A7%E3%82%A23%E5%A4%A7%E6%82%AA%E5%A5%B3" target="_blank" rel="noreferrer">ニコニコ大百科 スクウェア3大悪女</a></li>
+          </ul>
+
+          <br>
+          <p>
+            <img src="10f_sky/img/resistance.jpg" width="300">
+            <img src="10f_sky/img/shall.jpg" width="300">
+            <img src="10f_sky/img/shall_daghter.jpg" width="300">
+            <img src="10f_sky/img/whereis_crystal.jpg" width="300">
+            <img src="10f_sky/img/jannu.jpg" width="300"><br/>
+
+            <br/>
+            <img src="10f_sky/img/mireiyu1.jpg" width="300">
+            <img src="10f_sky/img/mireiyu2.jpg" width="300"><br/>
+
+            <br/>
+            <img src="10f_sky/img/byakkosen1.jpg" width="300">
+            <img src="10f_sky/img/byakkosen2.jpg" width="300">
+            <img src="10f_sky/img/byakkosen3.jpg" width="300">
+            <img src="10f_sky/img/crystal.jpg" width="300"><br/>
+
+            <br/>
+            白虎は「クリスタル」という効果のない攻撃をしてくるのですが、バグとかではなく意図的に狙った行動らしいですね。<br/>
+            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ストーリー的に狙った行動です。 <a href="https://t.co/BVG4sRsOVQ">https://t.co/BVG4sRsOVQ</a></p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1337779779177607170?ref_src=twsrc%5Etfw">December 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </p>
+
+        <br>
+        <span id="13f14f"></span>
+        <h3 class="title">渇いた世界（13階）と洪水の世界（14階）</h3>
+        <li><a href="13f14f/13f14f.html">渇いた世界（13階）と洪水の世界（14階）</a>←地図</li>
+          <p>
+            13階は、雨が降らないために地面が干乾びてしまい、苦しんでいるタコ達が住む世界。<br/>
+            14階は、水があふれ、水浸しになってしまっている世界。<br/>
+            13階と14階は繋がっていて、本来であれば14階の水が13階に流れていたが、水の流れが詰まってしまったために13階も14階も困ってしまっている。<br/>
+            詰まりを解消して助けてあげるというのがこの階のイベント。<br/>
+
+            <br/>
+            13階（詰まり解消前）<br/>
+            <img src="13f14f/img/13f/before_rain/norain.jpg" width="300">
+            <img src="13f14f/img/13f/before_rain/thirsty.jpg" width="300"><br/>
+            14階（詰まり解消前）<br/>
+            <img src="13f14f/img/14f/tsumari_now/mizukasa.jpg" width="300">
+            <img src="13f14f/img/14f/tsumari_now/kanaduchi.jpg" width="300">
+            <img src="13f14f/img/14f/tsumari_now/takashikungaitta.jpg" width="300">
+            <img src="13f14f/img/14f/tsumari_now/gomenyo.jpg" width="300"><br/>
+
+            <br/>
+            詰まりを解消する主人公<br/>
+            <img src="13f14f/img/14f/tsumari_now/tsumatteru.jpg" width="300"><br/>
+
+            <br/>
+            13階（詰まり解消後）<br/>
+            <img src="13f14f/img/13f/after_rain/gokuraku.jpg" width="300">
+            <img src="13f14f/img/13f/after_rain/huttekita.jpg" width="300"><br/>
+            14階（詰まり解消後）<br/>
+            <img src="13f14f/img/14f/no_tsumari/daimaouisashura.jpg" width="300">
+            <img src="13f14f/img/14f/no_tsumari/ashurasendshi.jpg" width="300"><br/>
+          </p>
+
+        <br>
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 横長広告 -->
+        <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5924490903263360"
+              data-ad-slot="6254596512"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+        <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <br>
+
+        <span id="city"></span>
+        <h3 class="title">都市世界(16階)</h3>
+        <li><a href="16f_city/city.html">都市世界(16階)</a>←地図</li>
+          <p>
+            第16階層にある荒廃した都市世界。地下鉄が存在していたり、「アキバ」「アメヨコ」「シンジュク」といった見覚えのある建物や町もあり、<br>
+            まるで東京を思わせる雰囲気を醸し出しています。<br>
+            朱雀を倒してクリスタルを手に入れると塔を登れるようになります。<br>
+            <img src="16f_city/img/ameyoko.jpg" width="300">
+            <img src="16f_city/img/hatsuden.jpg" width="300">
+            <img src="16f_city/img/akiba.jpg" width="300">
+            <img src="16f_city/img/shinjuku.jpg" width="300">
+            <img src="16f_city/img/suzaku.jpg" width="300">
+            <img src="16f_city/img/crystal.jpg" width="300"><br/>
+          </p>
+
+        <br>
+        <span id="company"></span>
+        <h3 class="title">建築世界(18階)</h3>
+        <li><a href="18f_company/company.html">建築世界(18階)</a>←地図</li>
+          <p>
+            アシュラのおかげで潤っている世界。台詞からして土木建築会社でしょうか。こういうのはいつの時代でも当てはまる話なんですかね。<br>
+            そしてここで神の存在が示唆される。<br>
+            <img src="18f_company/img/ashurasamasama.jpg" width="300">
+            <img src="18f_company/img/kamisama.jpg" width="300"><br/>
+          </p>
+
+        <br>
+        <span id="shelter"></span>
+        <h3 class="title">シェルター(19階)</h3>
+        <li><a href="19f_shelter/shelter.html">シェルター(19階)</a>←地図</li>
+          <p>
+            子供もその親も死んでいる救いのない世界。<br>
+            <img src="19f_shelter/img/kodomo.jpg" width="300">
+            <img src="19f_shelter/img/tetyo1.jpg" width="300">
+            <img src="19f_shelter/img/tetyo2.jpg" width="300">
+            <img src="19f_shelter/img/tetyo3.jpg" width="300">
+            <img src="19f_shelter/img/tetyo4.jpg" width="300">
+            <img src="19f_shelter/img/tetyo5.jpg" width="300"><br>
+          </p>
+
+        <br>
+        <span id="record"></span>
+        <h3 class="title">記録室（20階）</h3>
+        <li><a href="20f_record/record.html">記録室（20階）</a>←地図</li>
+          <p>
+            過去に楽園を目指した魔界塔士がいつどこで絶命したのかが記録されている。<br>
+            アーサー：11階 1919年03月21日<br>
+            くろう　：13階 1950年02月18日<br>
+            ハーン　：19階 1972年06月14日<br>
+            ジーク　：06階 1924年02月12日<br>
+            リズ　　：12階 1980年01月28日<br>
+            誰がなんのためにこんなことを記録しているのでしょうか。そして主人公（「おとこ」という名前にしている）はどこまで辿り着けるのか。<br>
+            <img src="20f_record/img/aser.jpg" width="300">
+            <img src="20f_record/img/crow.jpg" width="300">
+            <img src="20f_record/img/harn.jpg" width="300">
+            <img src="20f_record/img/jeek.jpg" width="300">
+            <img src="20f_record/img/riz.jpg" width="300">
+            <img src="20f_record/img/player.jpg" width="300"><br/>
+          </p>
+
+        <br>
+        <span id="hanabatake"></span>
+        <h3 class="title">花畑（21階）</h3>
+        <li><a href="21f_hanabatake/hanabatake.html">花畑（21階）</a>←地図</li>
+          <p>
+            神に言われたことに忠実に、ただひたすら魔界塔士を待つ老人がいる世界。<br>
+            <img src="21f_hanabatake/img/roujin1.jpg" width="300">
+            <img src="21f_hanabatake/img/roujin2.jpg" width="300">
+            <img src="21f_hanabatake/img/roujin3.jpg" width="300">
+            <img src="21f_hanabatake/img/roujin4.jpg" width="300">
+            <img src="21f_hanabatake/img/roujin5.jpg" width="300">
+            <img src="21f_hanabatake/img/roujin6.jpg" width="300"><br/>
+          </p>
+
+        <br>
+        <span id="ashura"></span>
+        <h3 class="title">アシュラ(23階)</h3>
+        <li><a href="23f_ashura/ashura.html">アシュラ(23階)</a>←地図</li>
+          <p>
+            アシュラがいるフロア。一部の人間はこのアシュラが四天王を送り出した大悪魔で、諸悪の根源だと認識しているようだが果たして・・・？<br>
+            <img src="23f_ashura/img/ashura1.jpg" width="300">
+            <img src="23f_ashura/img/ashura2.jpg" width="300">
+            <img src="23f_ashura/img/ashura3.jpg" width="300">
+            <img src="23f_ashura/img/ashura4.jpg" width="300">
+            <img src="23f_ashura/img/otoshiana.jpg" width="300">
+            <img src="23f_ashura/img/voice.jpg" width="300"><br/>
+          </p>
+
+        <br>
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 横長広告 -->
+        <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5924490903263360"
+              data-ad-slot="6254596512"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+        <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <br>
+
+        <span id="true_tower"></span>
+        <h3 class="title">真の塔</h3>
+        <li>真の塔</li>
+          <p>
+            この塔を登ると真の楽園がある・・・？<br>
+            各世界で会った人たちがそれぞれ自分の道を見つけて生きていく姿を見て主人公は何を思うのか。<br>
+            <img src="shinnotou/img/shiawase.jpg" width="300">
+            <img src="shinnotou/img/taisetsunamono.jpg" width="300">
+            <img src="shinnotou/img/mireiyu1.jpg" width="300">
+            <img src="shinnotou/img/mireiyu2.jpg" width="300">
+            <img src="shinnotou/img/sayaka1.jpg" width="300">
+            <img src="shinnotou/img/sayaka2.jpg" width="300">
+            <img src="shinnotou/img/ashuramabo.jpg" width="300">
+            <img src="shinnotou/img/antaittai.jpg" width="300"><br>
+
+            <br>
+            強力になった四天王を倒して最上階まで進む。<br>
+            <img src="shinnotou/img/toushi_genb.png" width="300">
+            <img src="shinnotou/img/toushi_seiryu.png" width="300">
+            <img src="shinnotou/img/toushi_byako.png" width="300">
+            <img src="shinnotou/img/toushi_suzak.png" width="300">
+          </p>
+
+        <br>
+        <span id="last_floor"></span>
+        <h3 class="title">最上階</h3>
+        <li><a href="last_floor/last_floor.html">最上階</a>←地図</li>
+          <p>
+            そして最上階。何も無い空間にかみがいる。全て神の掌の上で転がされていたのだということを知る。<br/>
+            <img src="last_floor/img/before_god/kami1.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami2.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami3.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami4.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami5.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami6.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami7.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami8.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami9.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami10.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami11.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami12.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami13.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami14.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami15.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami16.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami17.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami18.jpg" width="300"/>
+            <img src="last_floor/img/before_god/kami19.jpg" width="300"/><br/>
+
+            <br/>
+            神を倒すと扉があり、その先に楽園があるかもしれないが、主人公が選んだのは「自分たちの世界に帰ること」。<br>
+            いろんな世界があるけど、楽園なんてそんな都合のいいものはなく、今自分がいる世界を大切にしましょう。<br>
+            ということを製作者は伝えたかったのかなと、個人的には解釈しています。<br>
+            <img src="last_floor/img/after_god/talk1.jpg" width="300"/>
+            <img src="last_floor/img/after_god/talk2.jpg" width="300"/>
+            <img src="last_floor/img/after_god/talk3.jpg" width="300"/>
+            <img src="last_floor/img/after_god/talk4.jpg" width="300"/>
+            <img src="last_floor/img/after_god/talk5.jpg" width="300"/>
+            <img src="last_floor/img/after_god/talk6.jpg" width="300"/><br/>
+
+          </p>
+        </ul>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">そんな都合のいい楽園なんかないんだ、というのがテーマなので、少なくとも扉の向こうが楽園でないのは確かですね。 <a href="https://t.co/j2pB2idObU">https://t.co/j2pB2idObU</a></p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1337752568055824384?ref_src=twsrc%5Etfw">December 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">バトルでは、「かみは　しんだ」と出ますが、どうなんでしょうね。 <a href="https://t.co/Dwh5BqJuui">https://t.co/Dwh5BqJuui</a></p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/1337688995313029120?ref_src=twsrc%5Etfw">December 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <br/><br/>
+        <p>
+          という感じで独特な世界観の魔界塔士サガですが、最初にも書いた通り、今なら<a href="https://www.jp.square-enix.com/saga_collection/" target="_blank" rel="noreferrer">SaGa COLLECTION</a> という形で手軽にプレイできるので是非プレイしてみてください。<br/>
+          <font size="20">以上</font>
+        </p>
+
+      <br>
+      参考<br>
+      <ul>
+        <li><a href="https://w.atwiki.jp/aniwotawiki/pages/26146.html" target="_blank" rel="noreferrer">アニヲタWiki(仮) 塔(魔界塔士Sa・Ga)</a></li>
+        <li><a href="https://ja.wikipedia.org/wiki/%E9%AD%94%E7%95%8C%E5%A1%94%E5%A3%ABSa%E3%83%BBGa" target="_blank" rel="noreferrer">Wikipedia 魔界塔士Sa・Ga</a></li>
+        <li><a href="https://gcgx.games/saga-gb/story.html" target="_blank" rel="noreferrer">魔界塔士Sa・Ga（GB）</a></li>
+        <li><a href="https://dic.pixiv.net/a/%E3%82%B9%E3%82%AF%E3%82%A6%E3%82%A7%E3%82%A2%E4%B8%89%E5%A4%A7%E6%82%AA%E5%A5%B3" target="_blank" rel="noreferrer">pixiv百科事典 スクウェア三大悪女</a></li>
+        <li><a href="https://dic.nicovideo.jp/a/%E3%82%B9%E3%82%AF%E3%82%A6%E3%82%A7%E3%82%A23%E5%A4%A7%E6%82%AA%E5%A5%B3" target="_blank" rel="noreferrer">ニコニコ大百科 スクウェア3大悪女</a></li>
+        <li><a href="https://w.atwiki.jp/aniwotawiki/pages/26146.html" target="_blank" rel="noreferrer">アニヲタWiki(仮) 塔(魔界塔士Sa・Ga)</a></li>
+        <li><a href="https://renote.net/articles/13228" target="_blank" rel="noreferrer">魔界塔士 Sa・Ga（The Final Fantasy Legend）のネタバレ解説・考察まとめ</a></li>
+        <li><a href="https://gesato.com/gb/saga1/review.html" target="_blank" rel="noreferrer">ゲームの里 魔界塔士サガ</a></li>
+      </ul>
+
+      <br><br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br><br>
+
+    </section><!-- section class="box" -->
+
+    <footer>
+      <p class="rights">
+        <!-- サガコレの権利表記 -->
+        ©1989,1990,1991,1993,2020 SQUARE ENIX CO., LTD. All Rights Reserved.<br>
+        当該作品の転載・配布は禁止いたします。<br>
+        注：本サイトは上記権利者の協力・要請のもとに作成されたものではありません。<br>
+      </p>
+
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>
