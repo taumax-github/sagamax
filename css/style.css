@@ -66,21 +66,10 @@ img {
 	flex-wrap: wrap;
 	list-style: none;
     background: rgba(112, 107, 107, 0.5);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
 }
 
 .breadcrumb li:not(:last-of-type)::after {
-	margin: 0.6em; /* 記号の左右の余白 */
-	color: #fff; /* 記号の色 */
     background: rgba(112, 107, 107, 0.5);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-	padding-left: 0px;
 }
 
 #contents li.breadcrumbli {
