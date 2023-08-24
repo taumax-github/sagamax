@@ -66,6 +66,10 @@ img {
 	flex-wrap: wrap;
 	list-style: none;
     background: rgba(112, 107, 107, 0.5);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .breadcrumb li:not(:last-of-type)::after {
