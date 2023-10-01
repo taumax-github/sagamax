@@ -742,5 +742,15 @@
   <priority>0.5</priority>
   <lastmod>2023-05-02T16:30:58+09:00</lastmod>
 </url>
+<url>
+  <loc>https://taumax-github.github.io/sagamax/contents/emerald/index_emerald_beyond.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2023-09-23T20:30:00+09:00</lastmod>
+</url>
+<url>
+  <loc>https://taumax-github.github.io/sagamax/contents/emerald/before_release.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2023-09-23T20:30:00+09:00</lastmod>
+</url>
 
 </urlset>
