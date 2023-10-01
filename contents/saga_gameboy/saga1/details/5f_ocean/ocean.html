@@ -32,18 +32,16 @@
 
     <script type="text/javascript">
       ;(function($) {
-           $(window).on("load", function() {
-               //imgのIDやクラスを指定
-               var $img = $("#zoomImg").imgViewer2(
-                       {
-                       //画像の揺れの改善
-                       onReady: function() {
-                           this.setZoom(2);
-                           this.setZoom(1);
-                       }
-                   }
-               );
-           });
+        $(window).on("load", function() {
+          //imgのIDやクラスを指定
+          var $img = $("#zoomImg").imgViewer2({
+            //画像の揺れの改善
+            onReady: function() {
+              this.setZoom(2);
+              this.setZoom(1);
+            }
+          });
+        });
       })(jQuery);
     </script>
 
@@ -78,6 +76,8 @@
   </ul>
   <nav>
     <ul class="indent_no">
+      <li><a href="#map">地図</a></li>
+      <li><a href="#serif">台詞集</a></li>
     </ul>
   </nav>
 </header>
@@ -89,6 +89,8 @@
   <div id="menubar-s" align="center">
     <nav>
       <ul class="indent_no">
+        <li><a href="#map">地図</a></li>
+        <li><a href="#serif">台詞集</a></li>
       </ul>
     </nav>
     <h1 class="logo">
@@ -148,6 +150,7 @@
       <p style="color: #FFFFFF;"><a href="../../../../../index.html" style="color: #00bfff;">ホーム</a> > <a href="../../../index_saga_gameboy.html">ＧＢサガ</a> > <a href="../../saga1_index.html">魔界塔士Sa・Ga</a> > <a href="../worldview.html">魔界塔士Sa・Gaについて</a> > 海洋世界(5階)</p>
 
       <br><br>
+      <span id="map"></span>
       <h3 class="title">海洋世界(5階)</h3>
       <p>
         <img id="zoomImg" src="img/inandout.png" style="max-width: 800px;width:100%">
@@ -168,6 +171,7 @@
       </script>
       <br>
 
+      <span id="serif"></span>
       <h3 class="title">台詞</h3>
       <p>
         <img src="img/seiryu_ryuou.jpg" width="300"/>

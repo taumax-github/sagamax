@@ -33,18 +33,19 @@
 
     <script type="text/javascript">
       ;(function($) {
-           $(window).on("load", function() {
-               //imgのIDやクラスを指定
-               var $img = $("#zoomImg").imgViewer2(
-                       {
-                       //画像の揺れの改善
-                       onReady: function() {
-                           this.setZoom(2);
-                           this.setZoom(1);
-                       }
-                   }
-               );
-           });
+        $(window).on("load", function() {
+          //imgのIDやクラスを指定
+          let zoomImgList = ["#zoomImg1", "#zoomImg2", "#zoomImg3", "#zoomImg4", "#zoomImg5", "#zoomImg6", "#zoomImg7"]
+          zoomImgList.forEach((img) => {
+            var $img = $(img).imgViewer2({
+              //画像の揺れの改善
+              onReady: function() {
+                this.setZoom(2);
+                this.setZoom(1);
+              }
+            });
+          })
+        });
       })(jQuery);
     </script> 
 
@@ -79,6 +80,14 @@
   </ul>
   <nav>
     <ul class="indent_no">
+      <li><a href="#map_outside">地図(外)</a></li>
+      <li><a href="#subway1">地下鉄①②</a></li>
+      <li><a href="#subway2">地下鉄③④</a></li>
+      <li><a href="#subway3">地下鉄⑤⑥</a></li>
+      <li><a href="#subway4">地下鉄⑦⑧</a></li>
+      <li><a href="#subway5">地下鉄⑨⑩</a></li>
+      <li><a href="#hatsuden_ent">発電所入口</a></li>
+      <li><a href="#serif">台詞集</a></li>
     </ul>
   </nav>
 </header>
@@ -90,6 +99,14 @@
   <div id="menubar-s" align="center">
     <nav>
       <ul class="indent_no">
+        <li><a href="#map_outside">地図(外)</a></li>
+        <li><a href="#subway1">地下鉄①②</a></li>
+        <li><a href="#subway2">地下鉄③④</a></li>
+        <li><a href="#subway3">地下鉄⑤⑥</a></li>
+        <li><a href="#subway4">地下鉄⑦⑧</a></li>
+        <li><a href="#subway5">地下鉄⑨⑩</a></li>
+        <li><a href="#hatsuden_ent">発電所入口</a></li>
+        <li><a href="#serif">台詞集</a></li>
       </ul>
     </nav>
     <h1 class="logo">
@@ -149,9 +166,53 @@
       <p style="color: #FFFFFF;"><a href="../../../../../index.html" style="color: #00bfff;">ホーム</a> > <a href="../../../index_saga_gameboy.html">ＧＢサガ</a> > <a href="../../saga1_index.html">魔界塔士Sa・Ga</a> > <a href="../worldview.html">魔界塔士Sa・Gaについて</a> > 都市世界(16階)</p>
 
       <br><br>
-      <h3 class="title">都市世界(16階)</h3>
+      <span id="map_outside"></span>
+      <h3 class="title">都市世界の地図(16階)</h3>
+      <h4 class="title">外</h4>
       <p>
-        <img id="zoomImg" src="img/outside.png" alt="" style="max-width: 800px;width:100%"><br>
+        <img id="zoomImg1" src="img/outside.png" alt="" style="max-width: 800px;width:100%"><br>
+      </p>
+
+      <br>
+      <span id="subway1"></span>
+      <h4 class="title">地下鉄①②</h4>
+      <p>
+        <img id="zoomImg2" src="img/subway12.png" alt="" style="max-width: 800px;width:100%"><br>
+      </p>
+
+      <br>
+      <span id="subway2"></span>
+      <h4 class="title">地下鉄③④</h4>
+      <p>
+        <img id="zoomImg3" src="img/subway34.png" alt="" style="max-width: 800px;width:100%"><br>
+      </p>
+
+      <br>
+      <span id="subway3"></span>
+      <h4 class="title">地下鉄⑤⑥</h4>
+      <p>
+        <img id="zoomImg4" src="img/subway56.png" alt="" style="max-width: 800px;width:100%"><br>
+      </p>
+
+      <br>
+      <span id="subway4"></span>
+      <h4 class="title">地下鉄⑦⑧</h4>
+      <p>
+        <img id="zoomImg5" src="img/subway78.png" alt="" style="max-width: 800px;width:100%"><br>
+      </p>
+
+      <br>
+      <span id="subway5"></span>
+      <h4 class="title">地下鉄⑨⑩</h4>
+      <p>
+        <img id="zoomImg6" src="img/subway910.png" alt="" style="max-width: 800px;width:100%"><br>
+      </p>
+
+      <br>
+      <span id="hatsuden_ent"></span>
+      <h4 class="title">発電所</h4>
+      <p>
+        <img id="zoomImg7" src="img/hatsuden_ent.png" alt="" style="max-width: 800px;width:100%"><br>
       </p>
 
       <br>
@@ -169,6 +230,7 @@
       </script>
       <br>
 
+      <span id="serif"></span>
       <h3 class="title">台詞</h3>
       <p>
         <img src="img/ameyoko.jpg" width="300">
