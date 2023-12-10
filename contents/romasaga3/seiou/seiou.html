@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary_large_image" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:url" content="https://taumax-github.github.io/sagamax/contents/romasaga3/seiou/seiou.html" /> <!--記事のURL-->
+    <meta property="og:title" content="ロマサガ3 聖王と聖王十二将" /> <!--記事のタイトル-->
+    <meta property="og:description" content="ロマサガ3の聖王と聖王十二将について" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/romasaga3/twitter_card.png" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/print.css" media="print">
+    <script src="../../../js/openclose.js"></script>
+    <script src="../../../js/tablecontrol.js"></script>
+
+    <title>聖王と聖王十二将</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../images/icon_top.png" alt="TOP">
+      <br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="#seiou">聖王</a></li>
+      <li><a href="#seiou_relic">聖王が残したもの</a></li>
+      <li><a href="#three_greats">聖王三傑</a></li>
+      <li><a href="#ferdinand">ﾌｪﾙﾃﾞｨﾅﾝﾄ</a></li>
+      <li><a href="#vassar">ｳﾞｧｯｻｰﾙ</a></li>
+      <li><a href="#paurus">ﾊﾟｳﾙｽ</a></li>
+      <li><a href="#twelve_generals">聖王12将</a></li>
+      <li><a href="#hiruda">ﾋﾙﾀﾞ</a></li>
+      <li><a href="#auto_man">ｵﾄﾏﾝ</a></li>
+      <li><a href="#soap">ｿｰﾌﾟ</a></li>
+      <li><a href="#huruburait_12">ﾌﾙﾌﾞﾗｲﾄ12世</a></li>
+      <li><a href="#charls">ﾁｬｰﾙｽﾞ</a></li>
+    </ul>
+  </nav>
+</header>
+<!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul class="icon">
+        <li>
+          <li><a href="#seiou">聖王</a></li>
+          <li><a href="#seiou_relic">聖王が残したもの</a></li>
+          <li><a href="#three_greats">聖王三傑</a></li>
+          <li><a href="#ferdinand">フェルディナント</a></li>
+          <li><a href="#vassar">ヴァッサール</a></li>
+          <li><a href="#paurus">パウルス</a></li>
+          <li><a href="#twelve_generals">聖王12将</a></li>
+          <li><a href="#hiruda">ヒルダ</a></li>
+          <li><a href="#auto_man">オトマン</a></li>
+          <li><a href="#soap">ソープ</a></li>
+          <li><a href="#huruburait_12">フルブライト12世</a></li>
+          <li><a href="#charls">チャールズ</a></li>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+    </ul>
+  </div>
+  <!--/#menubar-s-->
+</header>
+<!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container" style="background: url(../background_0.5.png) ;background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <h2 class="title">聖王と聖王十二将</h2>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "sagamaxトップ",
+            "item": "https://taumax-github.github.io/sagamax/index.html"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ロマサガ３",
+            "item": "https://taumax-github.github.io/sagamax/contents/romasaga3/index_romasaga3.html"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "世界観",
+            "item": "https://taumax-github.github.io/sagamax/contents/romasaga3/world.html"
+          },{
+            "@type": "ListItem",
+            "position": 4,
+            "name": "聖王と聖王十二将",
+            "item": "https://taumax-github.github.io/sagamax/contents/romasaga3/seiou/seiou.html"
+          }]
+        }
+      </script>
+
+      <ul class="breadcrumb">
+        <li class="breadcrumbli"><a href="../../../index.html">ホーム</a></li>
+        <li class="breadcrumbli"> > <a href="../index_romasaga3.html">ロマサガ３</a></li>
+        <li class="breadcrumbli"> > <a href="../world.html">世界観</a></li>
+        <li class="breadcrumbli"> > 聖王と聖王十二将</li>
+      </ul>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="seiou"></span>
+      <h3 class="title">聖王</h3>
+      <p>
+        聖王は300年前の死食を生き延びた人物。24歳の時に、聖王十二将と共に聖王軍を結成し、四魔貴族をアビスに追い返した。<br/>
+        ロマサガ3のパッケージでは女性で、ゲームのオープニングの聖王は男性のように見える。ロマサガRSでは女性の姿をしている。<br/>
+
+        <br/>
+        ロマサガ3のパッケージ。左が聖王。女性に見える。<br/>
+        <img src="img/パッケージ.jpg" width="300"/><br/>
+
+        <br/>
+        ロマサガ3オープニングの聖王。男性に見える。<br/>
+        <img src="img/オープニングの聖王.jpg" width="300"/><br/>
+
+        <br/>
+        ロマサガRSの聖王<br/>
+        <img src="img/ロマサガRSの聖王.jpg" width="300"/><br/>
+
+        <br/>
+        河津さんの中では女性だったがその設定が充分に共有されておらず、このような齟齬が発生したらしい（以下ポスト参照）。<br/>
+      </p>
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">あと4日です。ロマサガ３の聖王。自分の中では最初から女と決まっていたのですが、高井浩君がオープニングの映像を作ってて、聖王のシルエットが男だつたので、聖王は女、と言ったら「有りがち。サガらしくない」とか言われました。聖王が女というネタばらしする必要も無いので、絵はそのままに。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/542995672819965952?ref_src=twsrc%5Etfw">December 11, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <br/>
+      <p>
+        聖王はランスの町で生まれ育った。以下画像の「ランスの娘」は、ロマサガRSで登場した幼い頃の聖王。<br/>
+        <img src="../ロマサガRS/幼少期/ランスの娘.png" width="300"/><br/>
+        ※画像は抜粋しているので詳細は<a href="https://www.youtube.com/watch?v=Hm1drHMqD6M&list=PLF8t5qaM5RIxEvXan6H3QwDVo_S33B3kU&index=32&t=58s" target="_blank" rel="noreferrer">リンク先の動画</a>参照。<br/>
+
+        <br/>
+        画面下にいるのは、後の聖王十二将となる<a href="#soap">ソープ</a>と<a href="#huruburait_12">フルブライト12世</a>。左がソープで右がフルブライト12世。<br/>
+        <img src="../ロマサガRS/幼少期/ソープ.png" width="300"/>
+        <img src="../ロマサガRS/幼少期/フルブライト12世.png" width="300"/><br/>
+        
+        <br/>
+        聖王は12歳の時に姉と共に奴隷商人に攫われるが、奴隷商人ごとモンスターに襲われたのち、レオニードに拾われる。<br/>
+        <img src="../ロマサガRS/幼少期/人さらい1.png" width="300"/>
+        <img src="../ロマサガRS/幼少期/人さらい2.png" width="300"/>
+        <img src="../ロマサガRS/幼少期/人さらい3.png" width="300"/>
+        <img src="../ロマサガRS/幼少期/人さらい4.png" width="300"/>
+        <img src="../ロマサガRS/幼少期/人さらい5.png" width="300"/><br/>
+
+        <br/>
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 横長広告 -->
+        <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5924490903263360"
+              data-ad-slot="6254596512"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+        <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+  
+          <br/>
+        レオニードの元を離れた聖王はユーステルムにて、後の聖王十二将となる<a href="#hiruda">ヒルダ</a>、<a href="#ferdinand">フェルディナント</a>と出会う。<br/>
+        <img src="../ロマサガRS/幼少期/ユーステルム1.png" width="300"/>
+        <img src="../ロマサガRS/幼少期/ユーステルム2.png" width="300"/><br/>
+
+        <br/>
+        その後ユーステルムが魔物に襲われた際、自分を囮にユーステルムから魔物を引き揚げさせる。<br/>
+        <img src="../ロマサガRS/幼少期/ユーステルム3.png" width="300"/>
+        <img src="../ロマサガRS/幼少期/ユーステルム4.png" width="300"/><br/>
+
+        <br/>
+        ユーステルムから離れた後、結局奴隷として捕まっていたところ、結果的に<a href="#paurus">パウルス</a>に助けられる（パウルスは後の聖王三傑の一人だが、この時はアラケスの部下）。<br/>
+        <img src="../ロマサガRS/パウルスとの出会い/パウルス1.png" width="300"/>
+        <img src="../ロマサガRS/パウルスとの出会い/パウルス2.png" width="300"/>
+        <img src="../ロマサガRS/パウルスとの出会い/パウルス3.png" width="300"/>
+        <img src="../ロマサガRS/パウルスとの出会い/パウルス4.png" width="300"/>
+        <img src="../ロマサガRS/パウルスとの出会い/パウルス5.png" width="300"/><br/>
+        ※画像は抜粋しているので詳細は<a href="https://www.youtube.com/watch?v=GgiudiAOgFs&list=PLF8t5qaM5RIxEvXan6H3QwDVo_S33B3kU&index=34&t=343s" target="_blank" rel="noreferrer">リンク先の動画</a>参照。<br/>
+
+        <br/>
+        練磨の書によれば、『7年の奴隷生活の後、フルブライト12世の養子となった』とある（練磨の書 P225 聖王の伝説より）。養子になった時の聖王は18歳。<br/>
+        パウルスに助けられて船で漂流していたところ、フルブライト12世に拾われ、養子になる。<br/>
+        <img src="../ロマサガRS/養子になる/養子になる1.png" width="300"/>
+        <img src="../ロマサガRS/養子になる/養子になる2.png" width="300"/>
+        <img src="../ロマサガRS/養子になる/養子になる3.png" width="300"/>
+        <img src="../ロマサガRS/養子になる/養子になる4.png" width="300"/>
+        <img src="../ロマサガRS/養子になる/養子になる5.png" width="300"/>
+        <img src="../ロマサガRS/養子になる/養子になる6.png" width="300"/><br/>
+        ※画像は抜粋しているので詳細は以下<a href="https://www.youtube.com/watch?v=GgiudiAOgFs&list=PLF8t5qaM5RIxEvXan6H3QwDVo_S33B3kU&index=31&t=500s" target="_blank" rel="noreferrer">リンク先の動画</a>参照。<br/>
+
+        <br/>
+        この後聖王は、四魔貴族に立ち向かうためウィルミントンで鍛錬を始めた。ピドナの武具工房が協力を申し出、のちの<a href="seiou_maou_ibutsu.html">聖王遺物</a>を作り上げる。<br/>
+        24歳の時、フルブライト12世と共に各地の諸侯を召集。聖王十二将とともに聖王軍を結成し、四魔貴族に立ち向かう。<br/>
+        四魔貴族にはすんなり勝てたわけではなく、苦戦を強いられたようである。<br/>
+        アラケス以外との戦いの様子は、ロマサガRS及びロマサガ3のゲーム中で詩人がその様子を語っています。<br/>
+      </p>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <h4 class="title">アウナス</h4>
+      <p>
+        アウナスとの戦いは、ロマサガRSのポルカ編、メイン1部2章第8話-後編で少しですが語られています（詳細は<a href="https://www.youtube.com/watch?v=bVJNw2-Lu_g&list=PLF8t5qaM5RIxEvXan6H3QwDVo_S33B3kU&index=32&t=16s" target="_blank" rel="noreferrer">リンク先の動画</a>参照）。<br/>
+        以下、動画の抜粋。<br/>
+
+        <br/>
+        火術要塞を攻略するために玄武術士ヴァッサールの協力を得ようとするが、断られる。<br/>
+        <img src="../ロマサガRS/火術要塞へ/ヴァッサール2.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/ヴァッサール1.png" width="300"/><br/>
+
+        <br/>
+        ヴァッサールの協力を得られないまま火術要塞のアウナスを討伐しに行くが、失敗。<br/>
+        <img src="../ロマサガRS/火術要塞へ/火術要塞1.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/火術要塞2.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/火術要塞3.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/火術要塞4.png" width="300"/><br/>
+
+        <br/>
+        ヴァッサールの助言を得て、四魔貴族を倒す志のある者を集めるため、聖王を名乗る。<br/>
+        <img src="../ロマサガRS/火術要塞へ/聖王誕生1.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/聖王誕生2.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/聖王誕生3.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/聖王誕生4.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/聖王誕生5.png" width="300"/>
+        <img src="../ロマサガRS/火術要塞へ/聖王誕生6.png" width="300"/><br/>
+
+        <br/>
+        この後アウナスをどうやって倒したのかは明かされていないが、集まった人で協力して倒したってことだと思われる。<br/>
+      </p>
+
+      <br/>
+      <h4 class="title">フォルネウス</h4>
+      <p>
+        フォルネウスとの戦いの様子はロマサガ3のゲーム中で詩人が以下のように語っています。<br/>
+        フォルネウスには7度破れた後、ヴァッサールの助言を得て、オリハルコーンと玄武術士の力でヴァンガードを動かし、8度目の戦いで勝利を収める。<br/>
+        <img src="img/詩人/バンガードとヴァッサール/古い詩2.jpg" width="400"/>
+        <img src="img/詩人/バンガードとヴァッサール/古い詩3.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <h4 class="title">ビューネイ</h4>
+      <p>
+        ビューネイとの戦いの様子はロマサガ3のゲーム中で詩人が以下のように語っています。<br/>
+        聖王はビューネイには相手にされなかったが、一時的に<a href="dora_guein.html">ドーラ（グゥエインの母親）</a>の協力を得て、討伐に成功。<br/>
+        <img src="img/ドーラとグゥエイン/聖王とドーラ_小さな村/聖王とドーラ1.jpg" width="400"/>
+        <img src="img/ドーラとグゥエイン/聖王とドーラ_小さな村/聖王とドーラ2.jpg" width="400"/><br/>
+
+        <br/>
+        しかしビューネイを討伐した後、人間の村を襲い、宝をかすめ、肉を食らったドーラは結局聖王に倒されてしまう。<br/>
+        この時、ドーラの心境はどのようなものだったのでしょうか。ここに関してはグゥエインとの会話で少しだけ語られているので、<a href="dora_guein.html">ドーラとグゥエイン</a>の頁をご参照ください。<br/>
+        <img src="img/ドーラとグゥエイン/聖王とドーラ_小さな村/聖王とドーラ3.jpg" width="400"/>
+        <img src="img/ドーラとグゥエイン/聖王とドーラ_小さな村/聖王とドーラ4.jpg" width="400"/>
+        <img src="img/ドーラとグゥエイン/聖王とドーラ_小さな村/聖王とドーラ5.jpg" width="400"/>
+        <img src="img/ドーラとグゥエイン/聖王とドーラ_小さな村/聖王とドーラ6.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <h4 class="title">アラケス</h4>
+      <p>
+        アラケスとの戦いの様子はロマサガRSでもロマサガ3のゲーム中でも語られていませんが、設定上は以下の通り。<br/>
+        <a href="#paurus">パウルス</a>の反逆で魔王殿を開城。そこでアラケスと戦い勝利するも、背後を守っていた<a href="#auto_man">オトマン</a>は戦死。魔王殿の奥、アラケスの領域は<a href="seiou_maou_ibutsu.html#ring">王家の指輪</a>によって封印される。<br/>
+      </p>
+
+      <br/>
+      こうして聖王は、アウナス、フォルネウス、ビューネイ、アラケス全ての四魔貴族に勝利。アビスに追い返し、ゲートを封印したとされています。<br/>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="seiou_relic"></span>
+      <h3 class="title">聖王が残したもの</h3>
+      <p>
+        四魔貴族を倒した聖王は、後世のためにいくつかの物を残しました。聖王遺物、聖王廟と最強術です。これは現世にも残されています。<br/>
+      </p>
+
+      <br/>
+      <h4 class="title">聖王遺物</h4>
+      <p>
+        聖王及び聖王十二将が四魔貴族を倒す際に使用した武器や防具は、聖王遺物として今でも残っています。詳細は別ページにまとめているのでそちら（<a href="seiou_maou_ibutsu.html">聖王遺物と魔王遺物</a>）をご参照ください。<br/>
+      </p>
+
+      <br/>
+      <h4 class="title">聖王廟</h4>
+      <p>
+        四魔貴族を倒したのち、聖王は生まれのランスに戻り、聖王廟を建設。アビスゲートが開く日に備えて、ゲートを閉じる力を持ったものを選ぶ試練を残しました。<br/>
+        <img src="img/試練の話/聖王廟の本当の目的1.jpg" width="400"/>
+        <img src="img/試練の話/聖王廟の本当の目的2.jpg" width="400"/>
+        <img src="img/試練の話/聖王廟の本当の目的3.jpg" width="400"/>
+        <img src="img/試練の話/聖王廟の本当の目的4.jpg" width="400"/>
+        <img src="img/試練の話/聖王廟の本当の目的5.jpg" width="400"/>
+        <img src="img/試練の話/聖王廟の本当の目的6.jpg" width="400"/>
+        <img src="img/試練の話/聖王廟の本当の目的7.jpg" width="400"/><br/>
+
+        <br/>
+        ハリードは聖王廟を『墓』と言っていたり、ランスの町の人は『聖王様をまつる聖王廟』と言っているので、ここに聖王が埋葬されてるらしい。<br/>
+        <img src="img/ランスにある聖王の墓.jpg" width="400"/>
+        <img src="img/聖王をまつる聖王廟.jpg" width="400"/><br/>
+
+        <br/>
+        河津さんも『聖王のお墓』と言っている。<br/>
+      </p>
+
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ロマサガ３のランス。聖王廟、つまり聖王のお墓がある町です。名前はフランスのランスから。かつてはフランス国王の戴冠式が行われていた伝統のある古い街ですね。ポドールイは吸血鬼が治める町。雪だるまの町やエビの町があったりと、ロマサガ３の町はバラエティに富んでますね。</p>&mdash; 河津秋敏 (@SaGa30kawazu) <a href="https://twitter.com/SaGa30kawazu/status/535757280436699137?ref_src=twsrc%5Etfw">November 21, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <br/>
+      <p>
+        自分が生きている間に自分の『廟』を作って自分の墓としたって事ですかね・・・？建設当時は聖王廟という名前ではなかった可能性もある・・・のかな？（妄想です）<br/>
+      </p>
+
+      <br/>
+      <h4 class="title">最強術</h4>
+      <p>
+        最強術も残しました。ゲーム中では四魔貴族（影）を倒すことで使えるようになります。<br/>
+        なぜ四魔貴族を倒すと最強術が使えるようになるのかについては<a href="../yonma/yonma.html">こちらで少し考察している</a>のでご参考にどうぞ。<br/>
+        使えるようになった最強術はなぜかアンナが伝授してくれます。<br/>
+        <img src="img/最強術について/聖王から伝わる最強術1.jpg" width="400"/>
+        <img src="img/最強術について/聖王から伝わる最強術2.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="three_greats"></span>
+      <h3 class="title">聖王三傑</h3>
+      <p>
+        聖王は、魔王ほど突出した能力は持たなかったが、仲間に恵まれ、その仲間と協力して四魔貴族と戦い、勝利しました。<br/>
+        その12名の仲間を聖王12将と呼び、その中でも代表格の3名を聖王三傑と呼びます。<br/>
+        設定が明らかにされている聖王十二将は以下8名。残り4名は設定はおろか、名前すら明かされていません。<br/>
+      </p>
+
+      <table border="1">
+        <tr><th>#</th><th>名前</th><th>概要</th></tr>
+        <tr><td>1</td><td><a href="#ferdinand">フェルディナント</a></td><td>聖王三傑の1人。七星剣の使い手。</td></tr>
+        <tr><td>2</td><td><a href="#vassar">ヴァッサール</a></td><td>聖王三傑の1人。玄武術が得意。</td></tr>
+        <tr><td>3</td><td><a href="#paurus">パウルス</a></td><td>聖王三傑の1人。後のメッサーナの国王。</td></tr>
+        <tr><td>4</td><td><a href="#hiruda">ヒルダ</a></td><td>フェルディナントの妻。マスカレイドの使い手。</td></tr>
+        <tr><td>5</td><td><a href="#soap">ソープ</a></td><td>元聖王の兜の所有者。</td></tr>
+        <tr><td>6</td><td><a href="#auto_man">オトマン</a></td><td>元銀の手の所有者。</td></tr>
+        <tr><td>7</td><td><a href="#huruburait_12">フルブライト12世</a></td><td>フルブライト将軍とも呼ばれる。聖王を養子に迎え入れる。</td></tr>
+        <tr><td>8</td><td><a href="#charls">チャールズ</a></td><td>フルブライト12世の息子。戦死。</td></tr>
+      </table>
+      <br/>
+
+      <br/>
+      <span id="ferdinand"></span>
+      <h4 class="title">フェルディナント</h4>
+      <p>
+        <img src="img/12将画像/feldinant.png" width="300"/><br/>
+        ※画像は<a href="https://gamerch.com/saga-reuniverse/entry/228956" target="_blank" rel="noreferrer">こちら</a>から抜粋<br/>
+
+        <br/>
+        フェルディナントは聖王三傑の1人。七星剣の使い手。<br/>
+        以下画像はゲーム中のユーステルムの町の人との会話。フェルディナントとその妻ヒルダはユーステルム出身。<br/>
+        <img src="img/ヒルダとフェルディナント/フェルディナントと妻のヒルダ_ユーステルム.jpg" width="400"/><br/>
+
+        <br/>
+        四魔貴族を追い返した後、メッサーナ王国の国王に推薦されるが辞退。<br/>
+        自らが国を建てる予言を得ると、かつて魔王に滅ぼされたロアーヌの廃墟に向けて旅立った。<br/>
+        <img src="img/詩人/ミュルスとフェルディナント/フェルディナントの詩1.jpg" width="400"/><br/>
+
+        <br/>
+        ヨルド海を渡り、ミュルスの森を切り開き、ようやくロアーヌの廃墟へたどり着いた。勇者の後には人が続き、道ができ、やがて大きな都になった。こうしてロアーヌの都は再興し、ミュルスは港に発展。フェルディナントは初代ロアーヌ候となる。<br/>
+        <img src="img/詩人/ミュルスとフェルディナント/フェルディナントの詩2.jpg" width="400"/>
+        <img src="img/詩人/ミュルスとフェルディナント/フェルディナントの詩3.jpg" width="400"/><br/>
+
+        <br/>
+        詩人の詩の中にあるヨルド海はメッサーナとロアーヌ地方の間にある海<br/>
+        <img src="img/詩人/ミュルスとフェルディナント/ヨルド海1.jpg" width="400"/>
+        <img src="img/詩人/ミュルスとフェルディナント/ヨルド海2.jpg" width="400"/><br/>
+
+        <br/>
+        現在においても、フェルディナントがあつらえた玉座は栄光あるものとして扱われている。<br/>
+        <img src="img/ヒルダとフェルディナント/初代フェルディナント1.jpg" width="400"/>
+        <img src="img/ヒルダとフェルディナント/初代フェルディナント2.jpg" width="400"/>
+        <img src="img/ヒルダとフェルディナント/ロアーヌ候の玉座.jpg" width="400"/><br/>
+
+        <br/>
+        ロマサガRSのフェルディナントの詳細<br/>
+        <img src="img/ロマサガRSのキャラ紹介/フェルディナント.jpg" width="400"/><br/>
+
+      </p>
+
+      <br/>
+      <span id="vassar"></span>
+      <h4 class="title">ヴァッサール</h4>
+      <p>
+        <img src="img/12将画像/vasar.png" width="300"/><br/>
+        ※画像は<a href="https://gamerch.com/saga-reuniverse/entry/165745" target="_blank" rel="noreferrer">こちら</a>から抜粋<br/>
+
+        <br/>
+        ヴァッサールは聖王三傑の一人で、玄武術士。魔海候フォルネウスを倒すためにバンガードを動かして海底宮に潜入し、フォルネウス撃破へと導いた人物。<br/>
+        玄武術の本場であるモウゼスは彼が起こした街だとされている。また、ゲーム中で玄武術を教えてくれる人が多いのは彼の名声によるものらしい。<br/>
+        <img src="img/詩人/バンガードとヴァッサール/古い詩1.jpg" width="400"/>
+        <img src="img/詩人/バンガードとヴァッサール/古い詩2.jpg" width="400"/>
+        <img src="img/詩人/バンガードとヴァッサール/古い詩3.jpg" width="400"/><br/>
+
+        <br/>
+        詩人の詩の中にある西大洋はガーター半島の左側の海。<br/>
+        <img src="img/詩人/バンガードとヴァッサール/西大洋.jpg" width="400"/><br/>
+
+        <br/>
+        ロマサガRSのヴァッサールの詳細<br/>
+        <img src="img/ロマサガRSのキャラ紹介/ヴァッサール.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <span id="paurus"></span>
+      <h4 class="title">パウルス</h4>
+      <p>
+        <img src="img/12将画像/paurus.png" width="300"/><br/>
+        ※画像は<a href="https://gamerch.com/saga-reuniverse/entry/162338" target="_blank" rel="noreferrer">こちら</a>から抜粋<br/>
+
+        <br/>
+        ゲーム中では名前すら登場しないが、聖王三傑の一人。元々アラケスの配下だったが、アラケスを裏切って聖王の側につく。<br/>
+        アラケスを裏切り、魔王殿への道をあけたことで聖王軍はアラケスを撃退する事に成功した。<br/>
+        翌年四魔貴族残党掃討で活躍。その功績で聖王三傑に加えられ、メッサーナ王国の国王となった。<br/>
+        メッサーナはスタンレー、ファルスやピドナ、リブロフ辺りの地域。<br/>
+        <img src="../img/map/メッサーナ/メッサーナ北.jpg" width="400"/>
+        <img src="../img/map/メッサーナ/メッサーナ南.jpg" width="400"/><br/>
+
+        <br/>
+        ロマサガRSのパウルスの詳細<br/>
+        <img src="img/ロマサガRSのキャラ紹介/パウルス.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="twelve_generals"></span>
+      <h3 class="title">聖王十二将</h3>
+      <p>
+        聖王三傑には入らなかったものの、聖王十二将と呼ばれる人物たち。<br/>
+      </p>
+
+      <br/>
+      <span id="hiruda"></span>
+      <h4 class="title">ヒルダ</h4>
+      <p>
+        <img src="img/12将画像/hilda.png" width="300"/><br/>
+        ※画像は<a href="https://gamerch.com/saga-reuniverse/entry/238819" target="_blank" rel="noreferrer">こちら</a>から抜粋<br/>
+
+        <br/>
+        ヒルダはフェルディナントと同じくユーステルム出身で、フェルディナントの妻。<br/>
+        <img src="img/ヒルダとフェルディナント/フェルディナントと妻のヒルダ_ユーステルム.jpg" width="400"/><br/>
+
+        <br/>
+        <a href="seiou_maou_ibutsu.html#masquerade">マスカレイド</a>の使い手で、モニカの先祖に当たる人物。<br/>
+        <img src="img/ヒルダとフェルディナント/モニカはヒルダの祖先1.jpg" width="400"/>
+        <img src="img/ヒルダとフェルディナント/モニカはヒルダの祖先2.jpg" width="400"/>
+        <img src="img/ヒルダとフェルディナント/モニカはヒルダの祖先3.jpg" width="400"/><br/>
+
+        <br/>
+        マスカレイドは後にロアーヌの家宝になり、フランツ侯爵（ミカエルの父親）がモニカの護衛のために、侍女のカタリナに預けている。<br/>
+
+        <br/>
+        ロマサガRSのヒルダの詳細<br/>
+        <img src="img/ロマサガRSのキャラ紹介/ヒルダ.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <span id="auto_man"></span>
+      <h4 class="title">オトマン</h4>
+      <p>
+        <img src="img/12将画像/auto_man.png" width="300"/><br/>
+        ※画像は<a href="https://gamerch.com/saga-reuniverse/entry/228952" target="_blank" rel="noreferrer">こちら</a>から抜粋<br/>
+
+        <br/>
+        死食のあとの混乱を逃れ、森の中で一人剣の修行に明け暮れていた人物。聖王と出会い諭されると、四魔貴族を打倒すべく聖王軍に加わった。<br/>
+        ビューネイとの戦いの最中に左腕を失い、聖王から<a href="seiou_maou_ibutsu.html#silver_hand">銀の手</a>を授かる。<br/>
+        失われた左腕にはめると、銀の手はひとりでに剣を握り、自在に振り下ろした。まさに鬼に金棒、オトマンは二刀流で戦えるようになる。<br/>
+        銀の手はオトマンが寝ていても休むことはなく、夜襲から何度も彼を救った。<br/>
+        アラケスとの戦いの最中オトマンは戦死するが、銀の手は戦い続け、聖王の背後を護り切る。<br/>
+        銀の手が自動で動くautoとmanを組み合わせた造語になっている。<br/>
+
+        <br/>
+        ロマサガRSのオトマンの詳細<br/>
+        <img src="img/ロマサガRSのキャラ紹介/オトマン.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <span id="soap"></span>
+      <h4 class="title">ソープ</h4>
+      <p>
+        <img src="img/12将画像/soap.png" width="300"/><br/>
+        ※画像は<a href="https://gamerch.com/saga-reuniverse/entry/251515" target="_blank" rel="noreferrer">こちら</a>から抜粋<br/>
+
+        <br/>
+        聖王の護衛兵を務める。元々臆病者だったが、聖王から渡された兜をかぶると、不思議と恐れがなくなった。<br/>
+        戦いを重ねるごとに本当の勇者になり、アラケスとの決戦の前に、この大事な兜を息子に預けて出陣した。<br/>
+        これがのちの<a href="seiou_maou_ibutsu.html#holy_king_helm">聖王の兜</a>で、聖王廟に祭られている。<br/>
+        ロマサガRSの設定ではフルブライト12世の旅の相方で、用心棒を務める。<br/>
+
+        <br/>
+        ロマサガRSのソープの詳細<br/>
+        <img src="img/ロマサガRSのキャラ紹介/ソープ.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="huruburait_12"></span>
+      <h4 class="title">フルブライト12世(フルブライト将軍)</h4>
+      <p>
+        <img src="img/12将画像/fulbrait.png" width="300"/><br/>
+        ※画像は<a href="https://gamerch.com/saga-reuniverse/entry/225238" target="_blank" rel="noreferrer">こちら</a>から抜粋<br/>
+
+        <br/>
+        フルブライト12世は、ロマサガ3のゲーム中で仲間にできるキャラクターの1人であるフルブライト23世の祖先にあたる人物。フルブライト将軍とも呼ばれる。<br/>
+        奴隷だった聖王を養子とし、共に四魔貴族と戦った。この功績をたたえられ、フルブライト家は聖王ゆかりの名家として大成。<br/>
+        彼の家はフルブライト商会に発展するが、現在はあくどい商売を続けるヤーマスのドフォーレ商会に押されている。<br/>
+
+        <br/>
+        ロマサガRSのフルブライト12世の詳細<br/>
+        <img src="img/ロマサガRSのキャラ紹介/フルブライト12世.jpg" width="400"/><br/>
+      </p>
+
+      <br/>
+      <span id="charls"></span>
+      <h4 class="title">チャールズ</h4>
+      <p>
+        聖王十二将の一人であり、フルブライト12世の実子。<br/>
+        フルブライト12世の養子となった聖王と共に育ったが、戦死したとされている。<br/>
+        トレードゲームに、ウィルミントンのチャールズ自由工房という物件が存在する。恐らくゆかりのものだろう。<br/>
+        <img src="img/チャールズ自由工房.jpg" width="400"/><br/>
+      </p>
+
+      <br/><br/>
+      参考<br/>
+      <ul>
+        <li><a href="https://dra.jp/game/romancing-saga3/event/lance-region/matriarch-mausoleum.html" target="_blank" rel="noreferrer">Neetlife Game 聖王廟</a></li>
+        <li><a href="https://dra.jp/game/romancing-saga3/character/matriarch.html" target="_blank" rel="noreferrer">Neetlife Game 聖王</a></li>
+        <li><a href="https://dra.jp/game/romancing-saga3/character/matriarch-12general.html" target="_blank" rel="noreferrer">Neetlife Game 聖王十二将</a></li>
+        <li><a href="https://dra.jp/game/romancing-saga3/character/child-of-destiny.html" target="_blank" rel="noreferrer">Neetlife Game 宿命の子</a></li>
+        <li><a href="https://wikiwiki.jp/sagadic/%E3%80%90%E8%81%96%E7%8E%8B%E5%8D%81%E4%BA%8C%E5%B0%86%E3%80%91" target="_blank" rel="noreferrer">サガ用語辞典 Wiki* 【聖王十二将】</a></li>
+        <li><a href="https://wikiwiki.jp/sagadic/%E3%80%90%E3%83%95%E3%83%AB%E3%83%96%E3%83%A9%E3%82%A4%E3%83%8812%E4%B8%96%E3%80%91" target="_blank" rel="noreferrer">サガ用語辞典 Wiki* 【フルブライト12世】</a></li>
+        <li><a href="https://wikiwiki.jp/sagadic/%E3%80%90%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AB%E3%82%BA%28RS3%29%E3%80%91" target="_blank" rel="noreferrer">サガ用語辞典 Wiki* 【チャールズ(RS3)】</a></li>
+        <li><a href="https://wikiwiki.jp/sagadic/%E3%80%90%E3%83%B4%E3%82%A1%E3%83%83%E3%82%B5%E3%83%BC%E3%83%AB%E3%80%91" target="_blank" rel="noreferrer">サガ用語辞典 Wiki 【ヴァッサール】</a></li>
+        <li><a href="https://wikiwiki.jp/sagadic/%E3%80%90%E3%83%92%E3%83%AB%E3%83%80%E3%80%91" target="_blank" rel="noreferrer">サガ用語辞典 Wiki 【ヒルダ】</a></li>
+        <li><a href="http://www.kobayashi-tomomi.com/blog/index.php?itemid=442" target="_blank" rel="noreferrer">小林知美Blog 聖王十二将</a></li>
+        <li><a href="https://gamerch.com/saga-reuniverse/entry/228956" target="_blank" rel="noreferrer">ロマサガRS（リユニバース）攻略Wiki フェルディナント</a></li>
+        <li><a href="https://gamerch.com/saga-reuniverse/entry/165745" target="_blank" rel="noreferrer">ロマサガRS（リユニバース）攻略Wiki ヴァッサール</a></li>
+        <li><a href="https://gamerch.com/saga-reuniverse/entry/162338" target="_blank" rel="noreferrer">ロマサガRS（リユニバース）攻略Wiki パウルス</a></li>
+        <li><a href="https://gamerch.com/saga-reuniverse/entry/238819" target="_blank" rel="noreferrer">ロマサガRS（リユニバース）攻略Wiki ヒルダ</a></li>
+        <li><a href="https://gamerch.com/saga-reuniverse/entry/228952" target="_blank" rel="noreferrer">ロマサガRS（リユニバース）攻略Wiki オトマン</a></li>
+        <li><a href="https://gamerch.com/saga-reuniverse/entry/251515" target="_blank" rel="noreferrer">ロマサガRS（リユニバース）攻略Wiki ソープ</a></li>
+        <li><a href="https://gamerch.com/saga-reuniverse/entry/225238" target="_blank" rel="noreferrer">ロマサガRS（リユニバース）攻略Wiki フルブライト12世</a></li>
+      </ul>
+
+      <br/><br/><br/><br/><br/><br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br/><br/>
+  
+    </section><!-- section class="box" -->
+
+    <footer>
+      <p class="rights">
+        <!-- ロマサガ3の権利表記 -->
+        © 1995, 2019 SQUARE ENIX CO., LTD. All Rights Reserved.<br/>
+        Planned & Developed by ArtePiazza<br/>
+        ILLUSTRATION: TOMOMI KOBAYASHI<br/>
+        当該作品の転載・配布は禁止いたします。<br/>
+      </p>
+
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>

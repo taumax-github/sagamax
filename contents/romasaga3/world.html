@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary_large_image" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:url" content="https://taumax-github.github.io/sagamax/contents/romasaga3/world.html" /> <!--記事のURL-->
+    <meta property="og:title" content="ロマサガ3の世界観" /> <!--記事のタイトル-->
+    <meta property="og:description" content="ロマサガ3の世界で起きていることまとめ" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/romasaga3/twitter_card.png" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/print.css" media="print">
+    <script src="../../js/openclose.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script src="../../js/imgViewer2.js"></script>
+
+    <script type="text/javascript">
+      ;(function($) {
+        $(window).on("load", function() {
+          // imgのIDやクラスを指定
+          var $img = $("#zoomImg").imgViewer2({
+            // 画像の揺れの改善
+            onReady: function() {
+              this.setZoom(2);
+              this.setZoom(1);
+            }
+          });
+        });
+      })(jQuery);
+    </script>
+
+    <title>ロマサガ3の世界観</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../images/icon_top.png" alt="TOP"><br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../images/icon_twitch.webp" alt="twitch"></a></li>
+  </ul>
+  <nav>
+    <ul class="indent_no">
+      <li><a href="#firstly">はじめに</a></li>
+      <li><a href="#event">出来事</a></li>
+      <li><a href="#timeline">年表</a></li>
+      <li><a href="#charas">キャラ相関図</a></li>
+      <li><a href="#deep_dive">深掘り</a></li>
+    </ul>
+  </nav>
+</header>
+<!--/.pc-->
+
+<!--小さな端末用（800px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（800px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+      <ul class="icon">
+        <li><a href="#firstly">はじめに</a></li>
+        <li><a href="#event">出来事</a></li>
+        <li><a href="#timeline">年表</a></li>
+        <li><a href="#charas">キャラ相関図</a></li>
+        <li><a href="#deep_dive">深掘り</a></li>
+      </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../images/icon_twitch.webp" alt="twitch"></a></li>
+    </ul>
+  </div><!--/#menubar-s-->
+</header><!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container" style="background: url(background_0.5.png) ;background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+
+      <h2 class="title">ロマサガ3の世界観</h2>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "sagamaxトップ",
+            "item": "https://taumax-github.github.io/sagamax/index.html"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ロマサガ３",
+            "item": "https://taumax-github.github.io/sagamax/contents/romasaga3/index_romasaga3.html"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "世界観",
+            "item": "https://taumax-github.github.io/sagamax/contents/romasaga3/world.html"
+          }]
+        }
+      </script>
+
+      <ul class="breadcrumb">
+        <li class="breadcrumbli"><a href="../../index.html">ホーム</a></li>
+        <li class="breadcrumbli"> > <a href="./index_romasaga3.html">ロマサガ３</a></li>
+        <li class="breadcrumbli"> > 世界観</li>
+      </ul>
+
+      <br>
+      <div id="firstly"></div>
+      <h3 class="title">はじめに</h3>
+      <p>
+        ロマサガ3はサガシリーズでも人気の高いシリーズで、先日28周年を迎えました(1995年11月11日発売)。<br/>
+        私も子供の頃プレイして好きなゲームの一つなのですが、何年か前にロマサガRSで聖王が登場したあたりから、「そういえばロマサガ3の物語的なところがあんまりよくわかってないな」と思うようになりました。聖王という名前はゲーム中でも出ては来るものの、どういった人物だったのかよくわかってない。女性であるということすらロマサガRSで初めて知りました。聖王以外にもルートヴィッヒとかマクシムスとかもロマサガRSで実装されましたが、特にルートヴィッヒについては「そういえばこの名前見覚えあるけど結局何なんだっけ？」という感じでした。<br/>
+        そんな管理人がロマサガ3の物語に目を向けながら改めてロマサガ3をプレイして気付いたことや、気になって調べたことを整理したのがこの記事です。<br/>
+        <font color="yellow">ロマサガ3のネタバレを含むのでネタバレを見たくない方はこの先に進まないようにしてください。</font>
+      </p>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <div id="event"></div>
+      <h3 class="title">ロマサガ3の世界の出来事</h3>
+      <p>
+        オープニングにもあるように、ロマサガ3の世界では300年に1度『死食』というものが発生し、その年に生まれた新しい生命はすべて死んでしまうという設定があります。<br/>
+        しかしその死食を生き延びる子供が生まれます。600年前の死食を生き延びた子供は『魔王』として世界に君臨し、アビスという、現世とは別の世界から四魔貴族を率いて世界を支配しました。しかし魔王は急に姿を消し、四魔貴族が世界を支配します。<br/>
+        そこからさらに300年後に死食が発生。その時の死食を生き延びた子供は『聖王』となり、世界を支配していた四魔貴族をアビスへと追い返しました。<br/>
+        <img src="img/死食.jpg" width="400"/>
+        <img src="img/魔王.jpg" width="400"/>
+        <img src="img/聖王.jpg" width="400"/>
+        <img src="img/魔王か聖王か.jpg" width="400"/><br/>
+
+        <br/>
+        印象的なオープニングだし、実際ボスとして四魔貴族も登場するのでゲームプレイ中はそっちに目が行きがちですが、一方で、オープニングでは語られていない人間同士の争いも頻繁に起きています。主な出来事としては以下があります。<br/>
+      </p>
+      <ul>
+        <li>メッサーナ王国の国王であるアルバート国王が急死</li>
+        <li>主人公の一人であるハリードの出身地、ゲッシア王朝が神王教団との争いで滅亡</li>
+        <li>ミューズの父親であるクレメンスの暗殺。混乱に乗じて聖王の槍盗難</li>
+        <li>ミカエル、モニカの親であるフランツがミカエルの従兄であるゴドウィンによって殺害。ゴドウィンによるクーデター発生。</li>
+      </ul>
+
+      <br/>
+      <p>
+        ロマサガ3の世界で起きたことについて、オープニングに関連する話と人間同士の争いの話しの両方を年表でまとめてみました。<br/>
+      </p>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br/>
+
+      <br/>
+      <div id="timeline"></div>
+      <h3 class="title">年表</h3>
+      <p>
+        HC1は聖王が生まれた年、BHは聖王が生まれる前<br/>
+      </p>
+      <table border="1">
+        <tr><th>年</th><th>出来事</th></tr>
+        <tr><td>古代</td><td>世界に都市が起こりつつあり、人々が生活を始めようとしていた。</td></tr>
+        <tr>
+          <td>BH1200</td>
+          <td>
+            西方からの移住民族がマイカン半島を超え、メッサーナ王国を起こす。<br/>
+            <img src="img/マイカン半島北.jpg" width="400"/><br/>
+            <img src="img/マイカン半島南.jpg" width="400"/><br/>
+          </td>
+        </tr>
+        <tr><td>BH800</td><td>古ロアーヌ王国建国。</td></tr>
+        <tr><td>BH700</td><td>船による海上交通が発達し、世界を行き来する人々が増えた。</td></tr>
+        <tr>
+          <td>BH300</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">ゲッシア王朝建つ。</li>
+              <li class="normal" style="padding-left: 0px;">死食発生。<font color="yellow">魔王誕生</font>。世界は闇に包まれていく。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>BH270</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">魔王がアビスゲートを開き<font color="yellow">四魔貴族を呼び出す</font>。</li>
+              <li class="normal" style="padding-left: 0px;">四魔貴族を始めとした魔物たちに、西方諸国が次々と滅亡させられる（ロアーヌ、メッサーナなど）。</li>
+              <li class="normal" style="padding-left: 0px;">メッサーナ王国の首都ピドナの廃墟に魔王殿建設。</li>
+              <li class="normal" style="padding-left: 0px;">東方諸国が天の術法（陰陽術）で対抗、魔王国への反撃に成功。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>BH269</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">魔王が直々に東方遠征に出陣</li>
+              <li class="normal" style="padding-left: 0px;">ゲッシア滅亡</li>
+              <li class="normal" style="padding-left: 0px;"><font color="yellow">東方遠征中に魔王失踪</font>。</li>
+              <li class="normal" style="padding-left: 0px;">四魔貴族による世界支配の時代（四魔貴族時代）が始まる。</li>
+              <li class="normal" style="padding-left: 0px;">
+                カムシーンの勇者アル・アワドがゲッシア朝ナジュ王国を建国。<br/>
+                <img src="img/アルアワド.jpg" width="400"/>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>BH250</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">各地が魔貴族の脅威下で荒廃する中、魔貴族フォルネウスに放置された静海沿岸地方の都市国家群のみが復興、いくつかの有力商家が台頭。</li>
+              <img src="img/静海.jpg" width="400"/>
+            </ul>
+          </td>
+        </tr>
+        <tr><td>HC1</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">北部はランスの町で<font color="yellow">聖王誕生</font>。</li>
+              <li class="normal" style="padding-left: 0px;">死食発生。</li>
+              <li class="normal" style="padding-left: 0px;">魔王の再来を恐れた人々が死食を生き延びた宿命の子を殺そうとするが数奇な運命を経て成長する。</li>
+              <li class="normal" style="padding-left: 0px;">聖王が12歳で奴隷商人にさらわれ、7年間の奴隷生活で世界各地を放浪する中で後の聖王12将など多くの出会いを果たす。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>HC18</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">聖王が放浪の末に、商家フルブライト家のフルブライト12世に保護され養子に。ウィルミントンを拠点に活動を始める。</li>
+              <li class="normal" style="padding-left: 0px;">ピドナの武器工房の主が聖王に協力、聖王武具の製造が始まる。以来歴史ある工房として世界的に有名になる。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>HC24</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">聖王立つ。魔貴族たちとの戦いへ。</li>
+              <li class="normal" style="padding-left: 0px;">フルブライト家のバックアップで聖王軍誕生。勇猛な戦士が名乗りを上げる。後に聖王12将と呼ばれるフェルディナント、パウルスらも参戦。</li>
+              <li class="normal" style="padding-left: 0px;">激戦の後アビス四魔貴族を放逐し、魔王族を封印。聖王軍の勝利に終わる。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><td>HC25</td><td>聖王ランスに帰る。各都市の復興始まる。大会議（コングレス）を開いて諸侯間を平定する。</td></tr>
+        <tr>
+          <td>HC26</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">12将の一人パウルスがメッサーナ王国を再建して即位。ピドナ新市街建設。</li>
+              <li class="normal" style="padding-left: 0px;">フェルディナントは諸国を制圧し、古ロアーヌの廃墟を復興、ロアーヌ侯国建国。候位を継ぎ、後の子孫を世継ぎとする。</li>
+              <li class="normal" style="padding-left: 0px;">聖王東方の復興を断念。以後、東方は未知なる不毛の地と化す。</li>
+              <li class="normal" style="padding-left: 0px;">ピドナ新都市街の武具工房に聖王の槍が飾られる。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><td>HC282</td><td>ハリード生まれる。</td></tr>
+        <tr><td>HC288</td><td>ミカエル生まれる。</td></tr>
+        <tr><td>HC291</td><td>カタリナ生まれる。</td></tr>
+        <tr><td>HC293</td><td>トーマス生まれる。</td></tr>
+        <tr><td>HC295</td><td>ユリアン、エレン生まれる。</td></tr>
+        <tr><td>HC296</td><td>モニカ生まれる。</td></tr>
+        <tr>
+          <td>HC300</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;"><font color="yellow">サラと少年が生まれる。</font></li>
+              <li class="normal" style="padding-left: 0px;">
+                ピドナ在住の天文学者であったヨハンネス兄妹の親が死食発生日時を予言するも人心を惑わした罪で火あぶり刑に処され、残された家族はランスに移住。<br/>
+                <img src="img/天文学者が移り住んできた1.jpg" width="400"/>
+                <img src="img/天文学者が移り住んできた2.jpg" width="400"/><br/><br/>
+              </li>
+              <li class="normal" style="padding-left: 0px;">
+                死食発生。アビスゲートの封印が緩んで半開になる。<br/>
+                <img src="img/ゲートが開く1.jpg" width="400"/>
+                <img src="img/ゲートが開く2.jpg" width="400"/><br/><br/>
+              </li>
+              <li class="normal" style="padding-left: 0px;">
+                同年に生まれたユリアンの妹死亡。<br/>
+                <img src="img/ユリアンの妹1.jpg" width="400"/>
+                <img src="img/ユリアンの妹2.jpg" width="400"/>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>HC301</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">神王教団興る。</li>
+              <li class="normal" style="padding-left: 0px;">
+                メッサーナ王国の国王であるアルバート国王が急死。<br/>
+                ※ゲームの舞台がHC316なので、以下画像は「15年前」と言っている<br/>
+                <img src="genzai/img/家柄/クラウディウス家/メッサーナ国王をめぐる争い/トーマス主人公1.jpg" width="400"/>
+              </li>
+              <li class="normal" style="padding-left: 0px;">10年間に渡る内乱発生（メッサーナの乱）。</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><td>HC303</td><td>ミカエル、モニカ刺客に襲われる。</td></tr>
+        <tr><td>HC305</td><td>南方で海賊たちが暴れ回る。首領はブラック。</td></tr>
+        <tr><td>HC306</td><td>メッサーナの攻略により、海賊は沈黙。</td></tr>
+        <tr><td>HC307</td><td>カタリナがモニカ付きの侍女となる。</td></tr>
+        <tr>
+          <td>HC308</td>
+          <td>
+            ゲッシアに本拠地を移した神王教団は、弾圧に反撃。ゲッシア王朝を滅ぼす（ハマール湖の戦い）。<br/>
+            <img src="genzai/img/神王教団とゲッシア朝/神王教団とゲッシア朝1_リブロフ.jpg" width="400"/>
+            <img src="genzai/img/神王教団とゲッシア朝/神王教団とゲッシア朝2_リブロフ.jpg" width="400"/><br/>
+            ※物語のスタートがHC316なので「10年前」だと2年ずれている気がしますが、どちらが正しいのかは不明。<br/>
+          </td>
+        </tr>
+        <tr>
+          <td>HC310</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">メッサーナ王国の各都市軍団長の会戦。</li>
+              <li class="normal" style="padding-left: 0px;">
+                首都ピドナの近衛軍団長クレメンスがリブロフ軍団長ルートヴィッヒに勝利したが、直後に神王教団により暗殺されてルートヴィッヒがピドナを掌握。<br/>
+                <img src="img/クレメンス暗殺.jpg" width="400"/><br/>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>HC311</td>
+          <td>
+            ピドナの工房の親方の遺体が港で発見される。<br/>
+            <img src="img/聖王の槍1.jpg" width="400"/>
+            <img src="img/聖王の槍2.jpg" width="400"/>
+            <img src="img/聖王の槍3.jpg" width="400"/><br/>
+            ※画像から、親方が死んだのはクレメンス暗殺の1年後の話しだということがわかる。
+          </td>
+        </tr>
+        <tr>
+          <td>HC316</td>
+          <td>
+            <ul>
+              <li class="normal" style="padding-left: 0px;">
+                ロアーヌ侯フランツがゴドウィン男爵に暗殺される（OPイベントの三か月前）<br/>
+                <img src="img/フランツが死んでから3か月1.jpg" width="400"/>
+                <img src="img/フランツが死んでから3か月2.jpg" width="400"/><br/><br/>
+              </li>
+              <li class="normal" style="padding-left: 0px;">宿命の子が聖王なのか魔王なのか？物語が始まる。</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <br/>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="charas"></span>
+      <h3 class="title">キャラクター相関図</h3>
+      <p>
+        ゲーム中は結構いろいろなキャラクタが登場します。登場人物の関係性を相関図でまとめてみました。<br/>
+        <img id="zoomImg" src="img/chars.jpg" alt="chars" style="max-width: 800px;width:100%"/><br/>
+        ※図は練磨の書のキャラクター相関図を独自に加筆修正したもの<br/>
+      </p>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="deep_dive"></span>
+      <h3 class="title">深掘り</h3>
+      <p>
+        簡単に出来事をまとめると上記年表と相関図のようになります。<br/>
+        ここから先は、この中でも特にロマサガ3の世界に影響を与えている出来事について深掘りしようと思います。宿命の子（聖王、魔王、サラ、少年）に関連する人物、四魔貴族、現世の陰謀に大いに関連しているゴドウィン、ルートヴィッヒとマクシムスについてです。<br/>
+        以下のリンク先で深掘りしています。<br/>
+      </p>
+
+      <br/>
+      <h4 class="title">宿命の子関連</h4>
+      <p>
+        物語の核となる宿命の子とその周辺についてまとめたもの。<br/>
+      </p>
+
+      <ul>
+        <li><a href="seiou/seiou.html">聖王と聖王十二将</a></li>
+        <li><a href="seiou/seiou_maou_ibutsu.html">聖王遺物と魔王遺物</a></li>
+        <li><a href="seiou/dora_guein.html">ドーラとグゥエイン</a></li>
+        <li><a href="yonma/child_of_destiny.html">宿命の子</a></li>
+        <li><a href="yonma/yonma.html">現世の陰陽五行説 vs 四魔貴族の四大精霊</a></li>
+      </ul>
+  
+      <br/>
+      <h4 class="title">現世の陰謀</h4>
+      <p>
+        現世で起きている陰謀に関係する人物をまとめたもの。<br/>
+      </p>
+      <ul>
+        <li><a href="genzai/rutvih.html">ルートヴィッヒとマクシムス</a></li>
+        <li><a href="genzai/godwin.html">ゴドウィン</a></li>
+      </ul>
+
+      <!--
+      <br/>
+      <p>
+        物語への影響は小さいものの、知っていると理解が深まるもの。<br/>
+      </p>
+      <ul>
+        <li><a href="genzai/hulburait.html">フルブライト</a></li>
+        <li><a href="genzai/razaief.html">ラザイエフ</a></li>
+        <li>小ネタ（寿司のうたと井戸の魔物）</li>
+      </ul>
+      -->
+
+      <br/><br/>
+      参考<br/>
+      <ul>
+        <li><a href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%B0_%E3%82%B5%E3%83%BB%E3%82%AC3" target="_blank" rel="noreferrer">wikipedia ロマンシング サ・ガ3</a></li>
+        <li><a href="https://dictionary.sensagent.com/%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%B0_%E3%82%B5%E3%83%BB%E3%82%AC3/ja-ja/#google_vignette" target="_blank" rel="noreferrer">Definition and meaning of ロマンシング_サ・ガ3</a></li>
+        <li><a href="https://wikiwiki.jp/sagadic/%E3%80%90%E3%83%A1%E3%83%83%E3%82%B5%E3%83%BC%E3%83%8A%E7%8E%8B%E5%9B%BD%E3%80%91" target="_blank" rel="noreferrer">サガ用語辞典 Wiki 【メッサーナ王国】</a></li>
+        <li><a href="https://wikiwiki.jp/sagadic/%E3%80%90%E3%83%8F%E3%83%9E%E3%83%BC%E3%83%AB%E6%B9%96%E3%81%AE%E6%88%A6%E3%81%84%E3%80%91" target="_blank" rel="noreferrer">サガ用語辞典 Wiki 【ハマール湖の戦い】</a></li>
+        <li><a href="https://dra.jp/game/romancing-saga3/event/chronology.html" target="_blank" rel="noreferrer">Neetlife Game 年表</a></li>
+        <li><a href="https://dra.jp/game/romancing-saga3/event/opening/story-problem.html" target="_blank" rel="noreferrer">Neetlife Game ストーリーの問題点</a></li>
+        <li><a href="https://www.weblio.jp/wkpja/content/%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%B0+%E3%82%B5%E3%83%BB%E3%82%AC3_%E6%AD%B4%E5%8F%B2" target="_blank" rel="noreferrer">weblio ロマンシング サ・ガ3</a></li>
+        <li><a href="https://www.weblio.jp/wkpja/content/%E3%83%AD%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%B0+%E3%82%B5%E3%83%BB%E3%82%AC3_%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9" target="_blank" rel="noreferrer">weblio ロマンシング サ・ガ3登場人物</a></li>
+      </ul>
+
+      <br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5924490903263360"
+            data-ad-slot="6254596512"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+      <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br/>
+
+    </section><!-- section class="box" -->
+
+    <footer>
+      <div class="outer">
+        <div class="inner">
+          <p class="rights">
+            <!-- ロマサガ3の権利表記 -->
+            © 1995, 2019 SQUARE ENIX CO., LTD. All Rights Reserved.<br/>
+            Planned & Developed by ArtePiazza<br/>
+            ILLUSTRATION: TOMOMI KOBAYASHI<br/>
+            当該作品の転載・配布は禁止いたします。<br/>
+          </p>
+        </div>
+      </div>
+
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　800px以下-->
+  <script>
+    if (OCwindowWidth() <= 800) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>
