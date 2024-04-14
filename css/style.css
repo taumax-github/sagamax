@@ -253,7 +253,6 @@ caption {
   height: 100%;
 }
 
-
 .embed_own {
   position: relative;
   height: 82%;
@@ -498,6 +497,7 @@ a:hover {
 	height: 100%;
 	width: 100%;
 }
+
 /*トップページのcontentsブロック。Whats's Newブロックの表示箇所です。*/
 .home #contents {
 	height: auto;
@@ -507,11 +507,11 @@ a:hover {
 	right: 0%;		/*右からの配置指定*/
 }
 
-#contents li {
-  list-style-type: none;
-  background: url(../images/right.png) no-repeat left center;
+#contents li.normal {
+  list-style-type: disc;
+  list-style: inside;
+  background: none;
   padding-left: 40px;
-  background-position:0px 4px;
 }
 
 #contents li.none {
@@ -520,11 +520,11 @@ a:hover {
   padding-left: 0px;
 }
 
-#contents li.normal {
-	list-style-type: disc;
-	list-style: inside;
-	background: none;
-	padding-left: 40px;
+#contents li {
+  list-style-type: none;
+  background: url(../images/right.png) no-repeat left center;
+  padding-left: 40px;
+  background-position:0px 4px;
 }
 
 /*header（大きな端末用：左ブロック）
