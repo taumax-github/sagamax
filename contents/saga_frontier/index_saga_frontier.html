@@ -52,8 +52,14 @@
     <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../images/icon_twitter.png" alt="Twitter"></a></li>
     <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
     <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../images/icon_twitch.webp" alt="twitch"></a></li>
   </ul>
   <nav>
+    <ul class="indent_no">
+      <li><a href="#fundamental">基本情報</a></li>
+      <li><a href="#stream">実況プレイ</a></li>
+      <li><a href="#public_info">公式生放送</a></li>
+    </ul>
   </nav>
 </header>
 <!--/.pc-->
@@ -63,6 +69,11 @@
   <!--小さな端末用（768px以下端末）メニュー-->
   <div id="menubar-s" align="center">
     <nav>
+      <ul class="icon">
+        <li><a href="#fundamental">基本情報</a></li>
+        <li><a href="#stream">実況プレイ</a></li>
+        <li><a href="#public_info">公式生放送</a></li>
+      </ul>
     </nav>
     <h1 class="logo">
       <a href="https://taumax-github.github.io/sagamax/">
@@ -75,12 +86,13 @@
       <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../images/icon_twitter.png" alt="Twitter"></a></li>
       <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
       <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../images/icon_twitch.webp" alt="twitch"></a></li>
     </ul>
   </div><!--/#menubar-s-->
 </header><!--/.sh-->
 
 <body class="defaultbody">
-  <div id="container">
+  <div id="container" style="background-image: url(./image/background_0.4.png); background-attachment: fixed;">
   <div id="contents">
   <div id="main">
     <span id="pagetop"></span>
@@ -90,27 +102,52 @@
 
       <h2 class="title">ｓａｇａｍａｘのサガフロンティア</h2>
 
-      <p style="color: #FFFFFF;"><a href="../../index.html" style="color: #00bfff;">ホーム</a> > サガフロンティア</p>
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "sagamaxトップ",
+            "item": "https://taumax-github.github.io/sagamax/index.html"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "サガフロindex",
+            "item": "https://taumax-github.github.io/sagamax/contents/saga_frontier/index_saga_frontier.html"
+          }]
+        }
+      </script>
 
+      <ul class="breadcrumb">
+        <li class="breadcrumbli"><a href="../../index.html" style="color: #00bfff;">ホーム</a></li>
+        <li class="breadcrumbli"> > サガフロンティア</li>
+      </ul>
+
+      <br/><br/>
+      <span id="fundamental"></span>
       <h3 class="title">基本情報</h3>
       <ul>
         <li><a href="equipments/equipment_info.html">【整備中】防具・盾情報</a></li>
       </ul>
 
       <br>
+      <span id="stream"></span>
       <h3 class="title">実況プレイ</h3>
       <table style="background-color: transparent">
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_emilia.png"    width="50"></td><td style="background-color: transparent;"><a href="jikkoyu_play/emilia.html" >エミリア編</a></td></tr>
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_lute.png"      width="60"></td><td style="background-color: transparent;"><a href="jikkoyu_play/lute.html"   >リュート編</a></td></tr>
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_asellus.png"   width="50"></td><td style="background-color: transparent;"><a href="jikkoyu_play/asellus.html">アセルス編</a></td></tr>
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_t260g.png"     width="60"></td><td style="background-color: transparent;"><a href="jikkoyu_play/t260g.html"  >T260G編</a></td></tr>
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_blue.png"      width="50"></td><td style="background-color: transparent;"><a href="jikkoyu_play/blue.html"   >ブルー編</a></td></tr>
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_red.png"       width="50"></td><td style="background-color: transparent;"><a href="jikkoyu_play/red.html"    >レッド編</a></td></tr>
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_coon.png"      width="60"></td><td style="background-color: transparent;"><a href="jikkoyu_play/coon.html"   >クーン編</a></td></tr>
-        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_fuse.png"      width="50"></td><td style="background-color: transparent;"><a href="jikkoyu_play/fuse.html"   >ヒューズ編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_emilia.png"    width="50"></td><td style="background-color: transparent;"><a href="jikkyou_play/emilia.html" >エミリア編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_lute.png"      width="60"></td><td style="background-color: transparent;"><a href="jikkyou_play/lute.html"   >リュート編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_asellus.png"   width="50"></td><td style="background-color: transparent;"><a href="jikkyou_play/asellus.html">アセルス編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_t260g.png"     width="60"></td><td style="background-color: transparent;"><a href="jikkyou_play/t260g.html"  >T260G編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_blue.png"      width="50"></td><td style="background-color: transparent;"><a href="jikkyou_play/blue.html"   >ブルー編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_red.png"       width="50"></td><td style="background-color: transparent;"><a href="jikkyou_play/red.html"    >レッド編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_coon.png"      width="60"></td><td style="background-color: transparent;"><a href="jikkyou_play/coon.html"   >クーン編</a></td></tr>
+        <tr><td style="background-color: transparent; text-align: right;"><img src="image/icon_fuse.png"      width="50"></td><td style="background-color: transparent;"><a href="jikkyou_play/fuse.html"   >ヒューズ編</a></td></tr>
       </table>
 
       <br>
+      <span id="public_info"></span>
       <h3 class="title">公式生放送</h3>
       <ul>
         <li>2021/04/14：<a href="namahousou/20210414/sagafro_remaster.html">サガフロリマスター 祝！発売日記念SP</a></li>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- twitter投稿用の設定 -->
+    <meta name="twitter:card" content="summary" /> <!--カード種類：summary か summary_large_image-->
+    <meta name="twitter:site" content="@sagamax__" /> <!--ユーザー名-->
+    <meta property="og:title" content="サガフロンティア実況プレイ～ヒューズ編～" /> <!--記事のタイトル-->
+    <meta property="og:description" content="リマスター版サガフロンティアの実況プレイです（ヒューズ編）" /> <!--記事の要約（ディスクリプション）-->
+    <meta property="og:image" content="https://taumax-github.github.io/sagamax/contents/saga_frontier/image/sf_logo.jpg" /> <!--画像のURL-->
+
+    <link rel="icon"       href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/print.css" media="print">
+    <script src="../../../js/openclose.js"></script>
+    <script src="../../../js/giffer.js"></script>
+
+    <title>サガフロ実況～ヒューズ～</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156501005-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156501005-1');
+    </script>
+    <script data-ad-client="ca-pub-5924490903263360" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+<!--PC用（801px以上端末）で表示させるブロック-->
+<header class="pc">
+  <h1 class="logo">
+    <a href="https://taumax-github.github.io/sagamax/">
+      <img src="../../../images/icon_top.png" alt="TOP">
+      <br>
+      <font size="3px">TOP</font>
+    </a>
+  </h1>
+
+  <!--PC用（801px以上端末）メニュー-->
+  <ul class="icon">
+    <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+    <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+    <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+  </ul>
+  <nav>
+    ﾋｭｰｽﾞ&ﾘｭｰﾄ
+    <ul class="indent_no">
+      <li><a href="#lute_one">配信1</a></li>
+      <li><a href="#lute_two">配信2</a></li>
+    </ul>
+    <hr>
+    ﾋｭｰｽﾞ&ｱｾﾙｽ
+    <ul class="indent_no">
+      <li><a href="#asellus_one">配信1</a></li>
+      <li><a href="#asellus_two">配信2</a></li>
+      <li><a href="#asellus_three">配信3</a></li>
+      <li><a href="#asellus_four">配信4</a></li>
+      <li><a href="#asellus_five">配信5</a></li>
+      <!--
+      <li><a href="#six">配信6</a></li>
+      <li><a href="#seven">配信7</a></li>
+      <li><a href="#eight">配信8</a></li>
+      -->
+    </ul>
+  </nav>
+</header><!--/.pc-->
+
+<!--小さな端末用（768px以下端末）で表示させるブロック-->
+<header class="sh">
+  <!--小さな端末用（768px以下端末）メニュー-->
+  <div id="menubar-s" align="center">
+    <nav>
+    <ul class="icon">
+      ヒューズ＆リュート
+      <li><a href="#lute_one">配信1</a></li>
+      <li><a href="#lute_two">配信2</a></li>
+      <hr>
+      ヒューズ＆アセルス
+      <li><a href="#asellus_one">配信1</a></li>
+      <li><a href="#asellus_two">配信2</a></li>
+      <li><a href="#asellus_three">配信3</a></li>
+      <li><a href="#asellus_four">配信4</a></li>
+      <li><a href="#asellus_five">配信5</a></li>
+      <!--
+      <li><a href="#six">配信6</a></li>
+      <li><a href="#seven">配信7</a></li>
+      <li><a href="#eight">配信8</a></li>
+      -->
+    </ul>
+    </nav>
+    <h1 class="logo">
+      <a href="https://taumax-github.github.io/sagamax/">
+        <img src="../../../images/icon_top.png" alt="TOP">
+        <br>
+        <font size="3px">TOP</font>
+      </a>
+    </h1>
+    <ul class="icon">
+      <li><a href="https://twitter.com/sagamax__" target="_blank"><img src="../../../images/icon_twitter.png" alt="Twitter"></a></li>
+      <li><a href="https://twitter.com/sagamax_bot" target="_blank"><img src="../../../images/icon_twitter_bot.png" alt="Twitter"></a></li>
+      <li><a href="https://www.youtube.com/channel/UCFFZpzVyg22-2sxXE95cR_Q" target="_blank"><img src="../../../images/icon_youtube.png" alt="youtube"></a></li>
+      <li><a href="https://www.twitch.tv/sagamax" target="_blank"><img src="../../../images/icon_twitch.webp" alt="twitch"></a></li>
+    </ul>
+  </div><!--/#menubar-s-->
+</header><!--/.sh-->
+
+<body class="defaultbody">
+  <div id="container" style="background-image: url(../image/background_0.4.png); background-attachment: fixed;">
+  <div id="contents">
+  <div id="main">
+    <span id="pagetop"></span>
+    <section class="box">
+      <!-- tweetボタン -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
+
+      <span id="pagetop"></span>
+      <h2 class="title">サガフロ実況～ヒューズ編～</h2>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "sagamaxトップ",
+            "item": "https://taumax-github.github.io/sagamax/index.html"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "サガフロindex",
+            "item": "https://taumax-github.github.io/sagamax/contents/saga_frontier/index_saga_frontier.html"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "サガフロ実況ヒューズ編",
+            "item": "https://taumax-github.github.io/sagamax/contents/saga_frontier/jikkyou_play/fuse.html"
+          }]
+        }
+      </script>
+
+      <ul class="breadcrumb">
+        <li class="breadcrumbli"><a href="../../../index.html" style="color: #00bfff;">ホーム</a></li>
+        <li class="breadcrumbli"> > <a href="../index_saga_frontier.html">サガフロンティア</a></li>
+        <li class="breadcrumbli"> > 実況プレイ～ヒューズ編～</li>
+      </ul>
+
+      <br>
+      <h3 class="title"><img src="../image/icon_fuse.png" width="100">実況プレイ～ヒューズ編～</h3>
+
+      <br><br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <br><br>
+
+      <span id="lute_one"></span>
+      <h4 class="title">ヒューズ＆リュート編 #1</h4>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_eC8fo1-cn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <span id="lute_two"></span>
+      <h4 class="title">ヒューズ＆リュート編 #2</h4>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CdPW-EpoG6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <span id="asellus_one"></span>
+      <h4 class="title">ヒューズ＆アセルス編 #1</h4>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Yl8J8qOr1bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <span id="asellus_two"></span>
+      <h4 class="title">ヒューズ＆アセルス編 #2</h4>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AzCHqlDq9rw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <span id="asellus_three"></span>
+      <h4 class="title">ヒューズ＆アセルス編 #3</h4>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mnbSe2Xokd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <span id="asellus_four"></span>
+      <h4 class="title">ヒューズ＆アセルス編 #4</h4>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3daX4hVUTEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <span id="asellus_five"></span>
+      <h4 class="title">ヒューズ＆アセルス編 #5</h4>
+      <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/E9ZTzchihuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/><br/>
+      <!-- サントラ -->
+      サガ フロンティア オリジナル・サウンドトラック（CD）<br/>
+      <a href="https://amzn.to/3w4IrYS" target="_blank"><img src="../image/sound_track.jpg" width="300"/></a>
+
+      <br/><br/>
+      SaGa Frontier Series ACOUSTIC ARRANGEMENTS<br/>
+      <a href="https://amzn.to/4djEwI9" target="_blank"><img src="../image/acoustic.jpg" width="300"/></a>
+    </section><!-- section class="box" -->
+
+    <footer>
+      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    </footer>
+    
+
+  </div><!--/#main-->
+  </div><!--/#contents-->
+  </div><!--/#container-->
+</body>
+
+  <!--ページの上部に戻る「↑」ボタン-->
+  <p class="nav-fix-pos-pagetop"><a href="#pagetop">↑</a></p>
+
+  <!--メニュー開閉ボタン-->
+  <div id="menubar_hdr" class="close"></div>
+
+  <!--メニューの開閉処理条件設定　768px以下-->
+  <script>
+    if (OCwindowWidth() <= 768) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</html>
