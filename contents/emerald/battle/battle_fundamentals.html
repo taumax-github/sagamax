@@ -62,7 +62,12 @@
       <li><a href="#combination">連携</a></li>
       <li><a href="#exclusive_place">独壇場</a></li>
       <li><a href="#battle">バトル画面</a></li>
-      <li><a href="#interrupt">敵の連携に割り込む</a></li>
+      <li><a href="#how_to_interrupt">敵の連携に割り込む</a></li>
+      <li><a href="#select_skill">技の選択で割り込む</a></li>
+      <li><a href="#bump">バンプで移動させる</a></li>
+      <li><a href="#interrupt">インタラプトで割り込む</a></li>
+      <li><a href="#chase">チェイスで割り込む</a></li>
+      <li><a href="#reserve_cancel">リザーブ解除</a></li>
     </ul>
   </nav>
 </header>
@@ -81,7 +86,12 @@
         <li><a href="#combination">連携</a></li>
         <li><a href="#exclusive_place">独壇場</a></li>
         <li><a href="#battle">バトル画面</a></li>
-        <li><a href="#interrupt">敵の連携に割り込む</a></li>
+        <li><a href="#how_to_interrupt">敵の連携に割り込む</a></li>
+        <li><a href="#select_skill">技の選択で割り込む</a></li>
+        <li><a href="#bump">バンプで移動させる</a></li>
+        <li><a href="#interrupt">インタラプトで割り込む</a></li>
+        <li><a href="#chase">チェイスで割り込む</a></li>
+        <li><a href="#reserve_cancel">リザーブ解除</a></li>
       </ul>
     </nav>
     <h1 class="logo">
@@ -223,14 +233,15 @@
         <br/>
         話しをサガエメに戻します。<br/>
         フィールドの五行については、戦闘前に以下の画面で確認することができます。<br/>
-        <img src="./img/場の五行.jpg" width="500" /><br/>
+        下記の画面なら土行のマークがあるので、フィールドは土行です。<br/>
+        <img src="./img/フィールドの五行1.jpg" width="500" />
+        <img src="./img/フィールドの五行2.jpg" width="500" /><br/>
 
         <br/>
-        上記の図なら土行のマークがあるので、フィールドは土行です。<br/>
         これまでのサガシリーズの傾向からしておそらく、バトルの場に合った術の威力が上がるなどの効果があると思われます。ただし情報として公開されているわけではなく（たぶん）、解析も進んでいないのが現状なので『おそらくそうだろう』というのが今の位置づけです。<br/>
 
         <br/>
-        術が何行かはメニューか戦闘画面で確認することができます。<br/>
+        一方、使用する術が何行かはメニューか戦闘画面で確認することができます。<br/>
         ブラッドフリーズは金行術<br/>
         <img src="./img/ブラッドフリーズ.jpg" width="500" /><br/>
 
@@ -255,7 +266,7 @@
         <img src="./img/プロテクト1.jpg" width="500" /><br/>
 
         <br/>
-        下図は大剣のディフレクトというプロテクト技でロロをガードしようとしています。<br/>
+        以下の画像は大剣のディフレクトというプロテクト技でロロをガードしようとしています。<br/>
         <img src="./img/プロテクト2.jpg" width="500" />
         <img src="./img/プロテクト3.jpg" width="500" /><br/>
       </p>
@@ -373,7 +384,7 @@
       </script>
 
       <br/>
-      <span id="interrupt"></span>
+      <span id="how_to_interrupt"></span>
       <h3 class="title">敵の連携に割り込む</h3>
       <p>
         連携は戦闘を有利に進める上で重要です。敵も連携してくるので、連携されそうな場合は割り込んで連携させないことも重要。<br/>
@@ -396,6 +407,7 @@
       </p>
 
       <br/>
+      <span id="select_skill"></span>
       <h4 class="title">技の選択で割り込む</h4>
       <p>
         以下の画像は、選択する技で敵の連携に割り込む例です。<br/>
@@ -405,6 +417,7 @@
       </p>
 
       <br/>
+      <span id="bump"></span>
       <h4 class="title">バンプで移動させる</h4>
       <p>
         以下の画像は、バンプで移動させることで敵を移動させて連携を阻害する例です。<br/>
@@ -428,11 +441,16 @@
       </script>
 
       <br/>
+      <span id="interrupt"></span>
       <h4 class="title">インタラプトで割り込む</h4>
       <p>
+        インタラプトは、特定の属性（斬・打・突のいずれか）に反応して敵が行動する直前に割り込むことができる技です。<br/>
+        <img src="./img/インタラプト.jpg" width="500" /><br/>
+
+        <br/>
         インタラプトで割り込む例。<br/>
         インタラプトは特定の属性に反応して先に行動する技なので、これを利用することで敵の連携に割り込むことができる。<br/>
-        <img src="./img/インタラプト.jpg" width="500" /><br/>
+        <img src="./img/インタラプト1.jpg" width="500" /><br/>
 
         <br/>
         以下の画像のような状態の場合、インタラプトで敵の連携に割り込むことができます。<br/>
@@ -447,9 +465,15 @@
       <br/>
 
       <br/>
+      <span id="chase"></span>
       <h4 class="title">チェイスで割り込む</h4>
       <p>
-        チェイスで割り込む例。チェイスは狙った敵が行動した直後に発動する技なので、これを利用することで敵の連携に割り込むことができる。<br/>
+        チェイスは指定した敵の行動の直後に行動する技で、敵の連携を阻止するのに便利な技です。<br/>
+        <img src="./img/チェイス.jpg" width="500" /><br/>
+
+        <br/>
+        チェイスで割り込む例。<br/>
+        チェイスは狙った敵が行動した直後に発動する技なので、これを利用することで敵の連携に割り込むことができる。<br/>
         <img src="./img/チェイスで割り込む.jpg" width="500" /><br/>
 
         <br/>
@@ -461,7 +485,43 @@
       <br/>
 
       <br/>
-      大体こんな感じです。<br/>
+      <!-- Google AdSense -->
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 横長広告 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-5924490903263360"
+           data-ad-slot="6254596512"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <br/>
+      <span id="reserve_cancel"></span>
+      <h3 class="title">リザーブ解除</h3>
+      <p>
+        リザーブ技（インタラプト、カウンター、プロテクト、フォロー、チェイス）は、敵も使用してきます。<br/>
+        タイムライン上は『？？？』と表記されるので、何をしてくるのかわからないようになっています。<br/>
+        <img src="./img/敵のリザーブ技.jpg" width="500" /><br/>
+
+        <br/>
+        そんな時に役に立つのがリザーブ解除です。<br/>
+        以下の画像では精密射撃がリザーブ解除なので、これで『？？？』となっている敵を狙うことでリザーブ状態を解除できます。<br/>
+        <img src="./img/リザーブ解除1.jpg" width="500" />
+        <img src="./img/リザーブ解除2.jpg" width="500" /><br/>
+
+        <br/>
+        但し、精密射撃は突属性なので、敵が突属性に対するインタラプト技を使用していた場合、先にインタラプトが発動するのでリザーブ解除は不発に終わります（攻撃自体はできます）。<br/>
+        リザーブ技を甘んじて受けるというのも一つの手だとは思います。<br/>
+
+        <br/>
+        戦闘を重ねるとどの敵がどんなリザーブ技を使ってくるかを覚えてくるので、そうなってくると対処の幅も広がってきます。その辺りはまた別の機会に。<br/>
+      </p>
+
+      <br/>
+      基本的なところは大体こんな感じかなと思います。<br/>
       サガエメ（サガスカも）のバトルははまると本当に楽しいのですが、基本的なところがわからないと中々難しいと思います。<br/>
       この記事が少しでもサガエメのバトルの楽しさに気付くきっかけになれば幸いです。<br/>
       以上。<br/>
