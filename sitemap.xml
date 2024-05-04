@@ -803,6 +803,11 @@
   <lastmod>2023-09-23T20:30:00+09:00</lastmod>
 </url>
 <url>
+  <loc>https://taumax-github.github.io/sagamax/contents/emerald/battle/battle_fundamentals.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2024-05-03T21:00:00+09:00</lastmod>
+</url>
+<url>
   <loc>https://taumax-github.github.io/sagamax/contents/emerald/before_release/17worlds.html</loc>
   <priority>0.5</priority>
   <lastmod>2024-03-30T20:30:00+09:00</lastmod>
@@ -823,12 +828,17 @@
   <lastmod>2024-03-30T20:30:00+09:00</lastmod>
 </url>
 <url>
-  <loc>https://taumax-github.github.io/sagamax/contents/emerald/before_release/species.html</loc>
+  <loc>https://taumax-github.github.io/sagamax/contents/emerald/before_release/items.html</loc>
   <priority>0.5</priority>
   <lastmod>2024-03-30T20:30:00+09:00</lastmod>
 </url>
 <url>
-  <loc>https://taumax-github.github.io/sagamax/contents/emerald/before_release/weapons.html</loc>
+  <loc>https://taumax-github.github.io/sagamax/contents/emerald/before_release/others.html</loc>
+  <priority>0.5</priority>
+  <lastmod>2024-05-03T21:00:00+09:00</lastmod>
+</url>
+<url>
+  <loc>https://taumax-github.github.io/sagamax/contents/emerald/before_release/species.html</loc>
   <priority>0.5</priority>
   <lastmod>2024-03-30T20:30:00+09:00</lastmod>
 </url>
