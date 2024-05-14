@@ -1206,7 +1206,7 @@ header .icon img {
 }
 /*h2タグにclass="title"をつけたタイプ。大見出し。*/
 #main h2.title {
-	font-size: 30px;		/*文字サイズ*/
+	font-size: 40px;		/*文字サイズ*/
 	margin-bottom: 20px;	/*見出しの下に空けるスペース*/
 }
 /*h2タグにclass="title"をつけたタイプ内にあるspanタグ*/
